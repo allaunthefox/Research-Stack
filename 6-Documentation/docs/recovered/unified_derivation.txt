@@ -1,0 +1,637 @@
+UNIFIED DERIVATION: EMERGENT STRUCTURES FROM A SINGLE GEOMETRIC FIELD
+================================================================================
+
+This document establishes, by pure mathematics, the complete chain from a
+single scalar field on an n-dimensional manifold through dimensional reduction
+to a verification system on a finite-dimensional state space. All symbols denote
+pure geometric quantities. No physical interpretation is assigned.
+
+
+================================================================================
+SECTION 0: AXIOMS
+================================================================================
+
+Axiom A1. Let N be a connected, paracompact, Hausdorff, smooth manifold of
+dimension n >= 4, equipped with a smooth pseudo-Riemannian metric gamma of
+signature (-,+,+,...,+). Coordinates are denoted x^A with A in {0,1,...,n-1}.
+The metric determinant is gamma := det(gamma_AB).
+
+Axiom A2. The Levi-Civita connection nabla on N is uniquely determined by
+gamma via metric compatibility nabla_A gamma_BC = 0 and torsion freedom
+nabla_[A nabla_B] f = 0 for all smooth scalar functions f on N. The
+Christoffel symbols are
+
+    Gamma^A_{BC} = (1/2) gamma^{AD} (partial_B gamma_{DC} + partial_C gamma_{DB}
+                                    - partial_D gamma_{BC}).                    (E1)
+
+Axiom A3. There exists a smooth scalar field Phi : N -> R that is the sole
+fundamental object. No additional independent tensor fields are postulated.
+
+Axiom A4. The differential dPhi is non-vanishing on an open dense subset of N,
+ensuring that the level sets of Phi are regular embedded submanifolds of
+codimension 1.
+
+Axiom A5. Where applicable, gamma and Phi satisfy boundary conditions such that
+all integrals below are finite and surface terms from integration by parts
+vanish.
+
+Axiom A6. The geometric configuration (gamma, Phi) is determined by the
+variational principle delta S = 0 for arbitrary compactly supported variations
+delta gamma^{AB} and delta Phi.
+
+
+================================================================================
+SECTION 1: THE FIELD EQUATIONS ON N
+================================================================================
+
+Definition 1. The most general diffeomorphism-invariant functional of gamma_AB
+and Phi, involving no more than two derivatives, takes the form
+
+    S[gamma, Phi] = integral_N d^n x sqrt{|gamma|} L,                         (E2)
+
+    L = Z(Phi) R + G(Phi) gamma^{AB} (nabla_A Phi)(nabla_B Phi) + H(Phi)
+      + W(Phi) box_gamma Phi + P(Phi) gamma^{AB} gamma^{CD}
+        (nabla_A nabla_B Phi)(nabla_C nabla_D Phi)
+      + Q(Phi) R^{AB} (nabla_A Phi)(nabla_B Phi)
+      + T(Phi) R gamma^{AB} (nabla_A Phi)(nabla_B Phi)
+      + U(Phi) (nabla_A Phi)(nabla_B Phi)(nabla^A Phi)(nabla^B Phi).           (E3)
+
+Here R is the Ricci scalar of gamma, R^{AB} the Ricci tensor,
+box_gamma := gamma^{AB} nabla_A nabla_B, and Z, G, H, W, P, Q, T, U are smooth
+functions Phi -> R. The variational principle is
+
+    delta S = 0.                                                               (E4)
+
+Lemma 1. Under delta gamma^{AB},
+
+    delta sqrt{|gamma|} = -(1/2) sqrt{|gamma|} gamma_{AB} delta gamma^{AB},    (E5)
+    delta R = R_{AB} delta gamma^{AB} + nabla_A v^A,                           (E6)
+
+where v^A = gamma^{AB} (delta Gamma^C_{BC} - delta Gamma^C_{CB}).
+
+Using (E5), (E6), and discarding the divergence nabla_A(Z v^A) as a surface
+term (A5), the variation of (E2) with respect to gamma^{AB} yields a symmetric
+tensor E_{AB} defined by
+
+    E_{AB} := Z(Phi) G_{AB} + T_{AB}[Phi, nabla Phi, nabla^2 Phi; gamma],      (E7)
+
+where G_{AB} := R_{AB} - (1/2) gamma_{AB} R is the Einstein tensor of gamma,
+and T_{AB} collects all terms arising from the non-curvature sectors of L:
+
+    T_{AB} = (1/2) gamma_{AB} L_{non-R} - G(Phi)(nabla_A Phi)(nabla_B Phi)
+           - W(Phi)(nabla_A nabla_B Phi) + coupling terms from P,Q,T,U sectors. (E8)
+
+The vanishing of delta S / delta gamma^{AB} gives
+
+    E_{AB} = 0.                                                                (E9)
+
+Varying (E2) with respect to delta Phi and integrating by parts (A5) gives the
+scalar equation
+
+    D_Phi[gamma; Phi] = 0,                                                    (E10)
+
+where D_Phi denotes the differential operator obtained by collecting all terms
+from delta L / delta Phi. Equations (E9) and (E10) constitute the coupled
+system on N.
+
+Definition 2 (Fundamental n-Space Operator). The self-adjoint differential
+operator O_n acting on scalar densities on N is
+
+    O_n := -(1/sqrt{|gamma|}) partial_A ( sqrt{|gamma|} F^{AB}(Phi,nabla Phi) partial_B )
+           + V(Phi, R, R_{AB}),                                                (E11)
+
+where
+
+    F^{AB}(Phi, nabla Phi) := G(Phi) gamma^{AB} + P(Phi) nabla^A nabla^B Phi
+                            + Q(Phi) R^{AB} + T(Phi) R gamma^{AB}
+                            + U(Phi) (nabla^A Phi)(nabla^B Phi),               (E12)
+
+and V(Phi, R, R_{AB}) collects all non-derivative potential terms from the
+variation of the action.
+
+In compact form, O_n acts on a test scalar psi as
+
+    O_n psi = - nabla_A ( F^{AB} nabla_B psi ) + V psi.                       (E13)
+
+Lemma 2. The field equation (E10) is equivalent to
+
+    O_n Phi = 0,                                                               (E14)
+
+provided the higher-derivative terms P, Q, T, U are set to zero or absorbed into
+F^{AB}. In the general case, (E10) is a quasilinear fourth-order equation that
+extends (E14).
+
+Definition 3 (Spectral Decomposition). On a suitable complete slice of N, O_n
+admits a spectral decomposition with complete orthonormal eigenfunctions
+{phi_m} satisfying
+
+    O_n phi_m = lambda_m phi_m,                                               (E15)
+
+with respect to the L^2 inner product on (N, gamma). The associated heat kernel
+trace and zeta function are
+
+    K(t) := Tr e^{-t O_n} = Sigma_m e^{-t lambda_m},                           (E16)
+    zeta_{O_n}(s) := Tr O_n^{-s} = Sigma_{lambda_m != 0} lambda_m^{-s}.        (E17)
+
+The coefficients of the small-t expansion K(t) ~ Sigma_{j=0}^infty a_j(O_n)
+t^{(j-n)/2} are locally computable curvature invariants that depend
+polynomially on R_{ABCD}, nabla_A Phi, nabla_A nabla_B Phi, and gamma.
+
+
+================================================================================
+SECTION 2: EMERGENT SUBMANIFOLD VIA LEVEL SETS
+================================================================================
+
+Definition 4 (Level-Set Submanifold). Let c in R be a regular value of Phi
+(guaranteed on a dense set by A4). The codimension-1 submanifold is
+
+    M_c := { p in N : Phi(p) = c }.                                           (E18)
+
+By the regular value theorem, M_c is a smooth, closed, embedded (n-1)-dimensional
+submanifold of N. We denote its intrinsic coordinates by y^mu with
+mu in {0,1,...,n-2}.
+
+Definition 5 (Induced Metric). The inclusion map iota : M_c -> N induces the
+metric
+
+    g_{mu nu}(y) := gamma_{AB}(iota(y)) e^A_mu(y) e^B_nu(y),                 (E19)
+
+where e^A_mu := partial x^A / partial y^mu are the n-1 tangent frame fields.
+
+Definition 6 (Unit Normal). The 1-form n_A := (nabla_A Phi) / |nabla Phi|
+with |nabla Phi| := sqrt{gamma^{BC} (nabla_B Phi)(nabla_C Phi)} is orthogonal
+to M_c by construction: n_A e^A_mu = 0. The normalization
+gamma^{AB} n_A n_B = +/- 1 fixes n as the unit conormal.
+
+Definition 7 (Extrinsic Curvature). The extrinsic curvature of M_c in N is
+the symmetric tensor
+
+    K_{mu nu} := - gamma_{AB} e^A_mu nabla_A n_B e^B_nu
+               = - e^A_mu e^B_nu nabla_A n_B.                                  (E20)
+
+Equivalently,
+
+    K_{mu nu} = -(1/2) L_n gamma_{mu nu},                                      (E21)
+
+where L_n denotes the Lie derivative along the normal. The mean curvature is
+
+    K := g^{mu nu} K_{mu nu}.                                                  (E22)
+
+Theorem 1 (Gauss Equation). Let R^N_{ABCD} and R^M_{mu nu rho sigma} denote
+the Riemann tensors of (N, gamma) and (M_c, g) respectively. Then
+
+    R^M_{mu nu rho sigma} = R^N_{ABCD} e^A_mu e^B_nu e^C_rho e^D_sigma
+                          + K_{mu rho} K_{nu sigma} - K_{mu sigma} K_{nu rho}. (E23)
+
+Theorem 2 (Codazzi Equation). With nabla-bar the Levi-Civita connection of g,
+
+    nabla-bar_mu K_{nu rho} - nabla-bar_nu K_{mu rho}
+        = R^N_{ABCD} n^A e^B_mu e^C_nu e^D_rho.                              (E24)
+
+Theorem 3 (Contracted Gauss Equation).
+
+    R^N = R^M + K^2 - K^{mu nu} K_{mu nu} - 2 R^N_{AB} n^A n^B,               (E25)
+
+and equivalently with the Einstein tensor G^N_{AB} = R^N_{AB} - (1/2) gamma_{AB} R^N,
+
+    R^N_{AB} n^A n^B = -(1/2) G^N_{AB} n^A n^B
+                     - (1/2)(K^2 - K_{mu nu} K^{mu nu}).                      (E26)
+
+Lemma 3 (Nested Reduction). If n > 5, define a sequence of nested submanifolds
+
+    M^{(n)} := N,
+    M^{(k-1)} := { Phi_{k-1} = c_{k-1} } subset M^{(k)}  for k = n, n-1, ..., 5.  (E27)
+
+The final 4-dimensional submanifold is M := M^{(4)} with coordinates x^mu,
+mu in {0,1,2,3}, and induced metric g_{mu nu}. The extrinsic curvature of
+each step is denoted K^{(k)}_{mu nu} for the embedding M^{(k)} in M^{(k+1)}.
+The full n-dimensional curvature decomposes as
+
+    R^N = R^M + Sigma_{k=4}^{n-1} [ (K^{(k)})^2 - K^{(k)}_{mu nu} K^{(k) mu nu} ]
+        + cross terms from the nested normal frames.                           (E28)
+
+Lemma 4 (Projected Consistency). The projection of (E9) onto the tangent and
+normal directions of each intermediate submanifold yields:
+
+    n^A n^B E_{AB} = 0           (Hamiltonian constraint),                    (E29)
+    n^A e^B_mu E_{AB} = 0        (momentum constraint),                       (E30)
+    e^A_mu e^B_nu E_{AB} = 0     (dynamical equations).                       (E31)
+
+
+================================================================================
+SECTION 3: DIMENSIONAL REDUCTION AND THE FOUR STRUCTURES
+================================================================================
+
+Definition 8 (Fibration). The submanifold M is the base of a fibration
+pi : N -> M with compact fiber F = pi^{-1}(x), where dim(F) = d = n - 4.
+The exact sequence of tangent bundles is
+
+    0 -> VF -> TN -> pi^* TM -> 0,                                            (E32)
+
+where VF = ker(d pi) is the vertical subbundle. An Ehresmann connection HN
+complementary to VF gives TN = HN + VF. In adapted coordinates (x^mu, y^a)
+with mu in {0,1,2,3} and a in {1,...,d}, the metric decomposes as
+
+    gamma_{AB} =
+        [ g_{mu nu}(x) + h_{ab}(x,y) A^a_mu A^b_nu    h_{bc} A^b_mu       ]
+        [ h_{ac} A^c_nu                                h_{ab}(x,y)       ],  (E33)
+
+where g_{mu nu} is the metric on M, h_{ab} the metric on F, and A^a_mu are
+connection 1-forms. Equivalently, with theta^a = dy^a + A^a_mu dx^mu,
+
+    gamma = g_{mu nu} dx^mu tensor dx^nu + h_{ab} theta^a tensor theta^b.      (E34)
+
+Definition 9 (Fiber Laplacian). Let Delta_F = d_F d_F^* + d_F^* d_F denote the
+Laplace-de Rham operator on F, with {Upsilon_alpha^{(p)}} a complete
+orthonormal basis of eigen-p-forms:
+
+    Delta_F Upsilon_alpha^{(p)} = lambda_alpha^{(p)} Upsilon_alpha^{(p)},
+    lambda_alpha^{(p)} >= 0.                                                   (E35)
+
+The orthonormality condition is
+
+    integral_F Upsilon_alpha^{(p)} wedge star_F Upsilon_beta^{(p)}
+        = delta_{alpha beta}.                                                  (E36)
+
+Axiom A7 (Fiber Spectral Structure). The compact fiber F is geometrically
+distinguished such that the zero eigenspaces of Delta_F in degrees p = 0, 1, 2
+satisfy
+
+    dim ker Delta_F^{(0)} = 1,
+    dim ker Delta_F^{(1)} = 1,
+    dim ker Delta_F^{(2)} = 2.                                                 (E37)
+
+This yields exactly four lowest modes:
+
+    Psi^{(1)} = Y_0        (constant scalar, degree 0),
+    Psi^{(2)} = omega      (harmonic 1-form, degree 1),
+    Psi^{(3)} = eta_1      (harmonic 2-form, degree 2, first),
+    Psi^{(4)} = eta_2      (harmonic 2-form, degree 2, second).               (E38)
+
+Lemma 5 (Universality of Four Modes). For any n >= 6 (equivalently d >= 2),
+the fiber dimension d grows but the lowest harmonic modes of Delta_F remain
+exactly four, by Axiom A7. The higher modes correspond to strictly positive
+eigenvalues and decouple at the level of the zero-eigenspace sector.
+
+Definition 10 (Harmonic Decomposition). The fundamental field Phi decomposes as
+
+    Phi(x,y) = Sigma_{k=1}^4 Phi^{(k)}(x) wedge Psi^{(k)}(y) + (higher modes). (E39)
+
+The expansion coefficients Phi^{(k)}(x) are differential forms on M. Via exterior
+differentiation and Hodge duality on M, all four structures induce 2-tensors.
+
+Definition 11 (The Four Emergent Tensors). The four tensor structures on M are:
+
+    F^{(1)}_{mu nu} := D_mu phi_nu + D_nu phi_mu        (symmetric 2-tensor),  (E40)
+
+    F^{(2)}_{mu nu} := partial_mu A_nu - partial_nu A_mu
+                                                      (antisymmetric 2-tensor),  (E41)
+
+    F^{(k)}_{mu nu} := star_M (d B_k)_{mu nu rho} dx^rho
+                        = epsilon_{mu nu rho sigma} g^{sigma lambda}
+                          D_lambda B_k,                    k = 3, 4,           (E42)
+
+where D_mu is the Levi-Civita covariant derivative on (M, g), phi_mu is the
+1-form coefficient from the k=1 mode, A_mu from the k=2 mode, B_3 and B_4 are
+scalar coefficients from the k=3,4 modes, and epsilon_{mu nu rho sigma} is the
+volume form on M. Alternatively, for k = 3, 4,
+
+    F^{(k)}_{mu nu} = partial_mu C^{(k)}_nu - partial_nu C^{(k)}_mu,           (E43)
+
+where C^{(k)} are 1-forms on M emerging from the degree-2 harmonics on F via
+the holonomy reduction.
+
+Lemma 6 (Field Equations on N). The fundamental field Phi satisfies
+
+    d Phi = 0,          d star Phi = 0.                                         (E44)
+
+Definition 12 (Emergent Currents). Projecting (E44) onto the k-th harmonic
+mode by fiber integration against Psi^{(k)} yields the currents
+
+    J^{(k)}_mu := integral_F Psi^{(k)} wedge star_F (d Phi)_mu,                (E45)
+
+for k in {1, 2, 3, 4}, where the subscript mu denotes the horizontal component.
+Explicitly:
+
+    J^{(1)}_mu = D^nu F^{(1)}_{mu nu} - (1/2) D_mu F^{(1)},                    (E46)
+    J^{(2)}_mu = D^nu F^{(2)}_{mu nu},                                         (E47)
+    J^{(k)}_mu = D^nu F^{(k)}_{mu nu} + O_k(A, B),          k = 3, 4,          (E48)
+
+where F^{(1)} = g^{mu nu} F^{(1)}_{mu nu} is the trace and O_k denotes
+covariant coupling terms arising from the holonomy structure of F.
+
+Theorem 4 (Decoupled Field Equations on M). Integrating the master equations
+(E44) over the fiber and using orthonormality (E36) yields, for each k in
+{1, 2, 3, 4}:
+
+    D^nu F^{(k)}_{mu nu} = J^{(k)}_mu.                                         (E49)
+
+Additionally, for k = 3, 4, the holonomy constraint gives
+
+    epsilon^{mu nu rho sigma} D_nu F^{(k)}_{rho sigma}
+        = H^{(k)}(F^{(2)}, F^{(3)}, F^{(4)}),                                   (E50)
+
+where H^{(k)} encodes the topological coupling from the structure constants of
+the fiber holonomy algebra.
+
+Definition 13 (Coupling Constants). The kinetic term on N for Phi is
+
+    S_kin = integral_N Phi wedge star Phi.                                      (E51)
+
+Substituting the harmonic expansion (E39) and using orthonormality (E36), the
+cross terms vanish and the fiber integrals give normalization factors
+
+    N_k := integral_F Psi^{(k)} wedge star_F Psi^{(k)}.                        (E52)
+
+The coupling constants are defined by
+
+    g_k^{-2} := N_k = Vol(F) * lambda_k^{(d-2)/2},         d = n - 4,         (E53)
+
+where lambda_k is the eigenvalue corresponding to mode k, and for k = 1 the
+convention lambda_1 = 1 applies in the exponent (the constant mode has
+eigenvalue 0 and the normalization is purely volumetric).
+
+Lemma 7 (Fiber Integration of Quadratic Form). The master quadratic form
+decomposes as
+
+    integral_F Phi wedge star Phi
+        = Sigma_{k=1}^4 (integral_F Psi^{(k)} wedge star_F Psi^{(k)})
+          Phi^{(k)} wedge star_M Phi^{(k)}.                                     (E54)
+
+Identifying the emergent field strengths F^{(k)}_{mu nu} with the components of
+Phi^{(k)},
+
+    integral_{N/M} F wedge star F
+        = Sigma_{k=1}^4 g_k^{-2} F^{(k)}_{mu nu} F^{(k) mu nu},                (E55)
+
+with indices raised by g^{mu nu} on M.
+
+
+================================================================================
+SECTION 4: THE LOOKUP TABLE VERIFICATION SYSTEM
+================================================================================
+
+Definition 14 (State Space). The configuration manifold is Sigma = R^{36},
+coordinatized by the state vector
+
+    q = (r_1, ..., r_6, p_1, ..., p_6) in Sigma,                              (E56)
+
+where for each i in {1, ..., 6}:
+
+    r_i = (r_i^1, r_i^2, r_i^3) in R^3,
+    p_i = (p_i^1, p_i^2, p_i^3) in R^3.                                       (E57)
+
+The symplectic form on Sigma is
+
+    omega = Sigma_{i=1}^6 dp_i^a wedge dr_i^a,                                (E58)
+
+with standard symplectic matrix J in R^{36 x 36} satisfying J^2 = -I.
+
+Definition 15 (Separation Vector). For any pair (i, j) with i < j,
+
+    r_{ij} := r_i - r_j in R^3,                                               (E59)
+
+with Euclidean norm |r_{ij}| := sqrt{delta_{ab} r_{ij}^a r_{ij}^b}.
+
+Definition 16 (Hamiltonian). The Hamiltonian H : Sigma -> R is
+
+    H(q) = T(p) + U^{(2)}(r) + U^{(3)}(r) + U^{(>=4)}(r, p),                 (E60)
+
+where
+
+    T(p) = Sigma_{i=1}^6 (p_i . p_i) / (2 m_i),                               (E61)
+    U^{(2)}(r) = - Sigma_{1 <= i < j <= 6} G m_i m_j / |r_{ij}|,              (E62)
+    U^{(3)}(r) = Sigma_{1 <= i < j < k <= 6} Q_{ijk} / (|r_{ij}|^2 |r_{jk}|^2), (E63)
+    U^{(>=4)}(r, p) = Sigma_{l=4}^6 U_l(r, p).                                (E64)
+
+Here m_i > 0 are scalar parameters, G > 0 is a coupling constant, and Q_{ijk}
+are three-body coupling coefficients. Each U_l collects all l-point interactions
+and p-dependent contributions from the compact fiber.
+
+Definition 17 (Hamilton's Equations). The dynamics on Sigma are governed by
+
+    dr_i/dt = partial H / partial p_i,
+    dp_i/dt = -partial H / partial r_i,                for each i.             (E65)
+
+Definition 18 (Flow Map). The time-t flow map of the Hamiltonian vector field
+X_H = (dr/dt, dp/dt) is
+
+    Phi_H^t : Sigma -> Sigma,     Phi_H^t(q_0) = q(t),                         (E66)
+
+where q(t) is the unique solution to (E65) with initial condition q(0) = q_0.
+By construction, Phi_H^t preserves the symplectic form: (Phi_H^t)^* omega = omega.
+
+Definition 19 (Reference Trajectory). Let q_ref : [0, T] -> Sigma denote
+reference trajectory data, where for each t in [0, T],
+
+    q_ref(t) = (r_1^{ref}(t), ..., r_6^{ref}(t),
+                p_1^{ref}(t), ..., p_6^{ref}(t)).                              (E67)
+
+Definition 20 (Error Functional). The error functional E[Phi_H] is
+
+    E[Phi_H] = || Phi_H^t(q_0) - q_ref(t) ||_{L^2[0,T]}                       (E68)
+
+             = [ integral_0^T || Phi_H^t(q_0) - q_ref(t) ||^2_Sigma dt ]^{1/2}, (E69)
+
+where the norm on Sigma is
+
+    ||q||^2_Sigma = Sigma_{i=1}^6 ( m_i delta_{ab} r_i^a r_i^b
+                                  + delta_{ab} p_i^a p_i^b / m_i ).           (E70)
+
+Definition 21 (Stationarity Constraints). The flow map Phi_H minimizes the
+error functional if and only if the following stationarity conditions hold:
+
+    delta E / delta H = 0.                                                     (E71)
+
+Explicitly, let q(t) = Phi_H^t(q_0) and define the residual
+
+    eta(t) := q(t) - q_ref(t) in Sigma.                                        (E72)
+
+Then (E71) is equivalent to
+
+    integral_0^T < eta(t), delta X_H(q(t)) >_Sigma dt = 0                     (E73)
+
+for all admissible variations delta X_H, where <.,.>_Sigma is the inner product
+inducing (E70).
+
+The coupling parameters (m_i, G, Q_{ijk}, and higher-order coefficients) are
+constrained by
+
+    partial E[Phi_H] / partial G = 0,                                           (E74)
+    partial E[Phi_H] / partial Q_{ijk} = 0,        for all (i,j,k),           (E75)
+    partial E[Phi_H] / partial m_i = 0,            for all i.                  (E76)
+
+Together, (E74)-(E76) yield a closed nonlinear system for the parameters.
+
+Definition 22 (Verification). Let epsilon > 0 be a specified bound. The
+emergent geometric field verifies the lookup table Phi_H to accuracy epsilon
+if and only if
+
+    E[Phi_H] < epsilon.                                                        (E77)
+
+Equivalently,
+
+    sup_{t in [0,T]} ||Phi_H^t(q_0) - q_ref(t)||_Sigma < epsilon / sqrt{T}.    (E78)
+
+A sequence of Hamiltonians {H_n} converges to the reference lookup table if
+
+    lim_{n -> infinity} E[Phi_{H_n}] = 0.                                       (E79)
+
+
+================================================================================
+SECTION 5: SELF-CONSISTENCY AND CLOSURE
+================================================================================
+
+Lemma 8 (Contributions from the Four Structures). The four emergent structures
+indexed by k in {1, 2, 3, 4} contribute to the Hamiltonian as follows.
+
+    H_{k=1}: modifies the pairwise potential via a geometric correction factor:
+
+        U_{k=1}^{(2)}(r) = - Sigma_{i<j} (G m_i m_j / |r_{ij}|)
+                           * f_{k=1}(|r_{ij}| / L_1),                         (E80)
+
+    where L_1 is a length scale from the fiber geometry and f_{k=1} is a smooth
+dimensionless function with f_{k=1}(0) = 1.
+
+    H_{k=2}: introduces p-dependent interaction terms:
+
+        U_{k=2}(r, p) = Sigma_{i<j} (beta_1 / |r_{ij}|) (p_i . p_j)/(m_i m_j s^2)
+                      + Sigma_{i<j} (beta_2 / |r_{ij}|^2)
+                        [(r_{ij} . p_i)(r_{ij} . p_j)]/(m_i m_j s^2)
+                      + O(s^{-4}),                                             (E81)
+
+    where beta_1, beta_2 are dimensionless parameters from the k=2 fiber
+coupling, and s is a fundamental speed parameter from the compactified geometry.
+
+    H_{k=3}: contributes to the three-point interaction term:
+
+        U_{k=3}^{(3)}(r) = Sigma_{i<j<k} Q_{ijk}^{(k=3)} / (|r_{ij}|^2 |r_{jk}|^2), (E82)
+
+    where
+
+        Q_{ijk}^{(k=3)} = gamma_1 m_i m_j m_k
+                        + gamma_2 (m_i + m_j + m_k) + gamma_3,                (E83)
+
+    with gamma_1, gamma_2, gamma_3 encoding the k=3 fiber curvature contributions.
+
+    H_{k=4}: generates four-point and higher interactions:
+
+        U_{k=4}^{(>=4)}(r) = Sigma_{i<j<k<l}
+                             W_{ijkl} / (|r_{ij}|^2 |r_{jk}|^2 |r_{kl}|^2)
+                           + Sigma_{i<j<k<l<m}
+                             V_{ijklm} / (|r_{ij}|^2 |r_{jk}|^2 |r_{kl}|^2 |r_{lm}|^2)
+                           + O(6-point),                                      (E84)
+
+    where W_{ijkl} and V_{ijklm} are coupling tensors determined by the k=4
+fiber topology.
+
+The full Hamiltonian incorporating all four structures is
+
+    H_{full}(q) = Sigma_i p_i^2 / (2 m_i)
+                + U_{k=1}^{(2)}(r)
+                + U_{k=2}(r, p)
+                + [U_{k=3}^{(3)}(r) + U^{(3)}(r)]
+                + U_{k=4}^{(>=4)}(r)
+                + U_{fiber}(r, p),                                             (E85)
+
+where U_{fiber}(r, p) collects residual fiber-curvature effects.
+
+Definition 23 (Source Field). The scalar source field on R^3 induced by the
+state configurations is
+
+    rho(r, t) = Sigma_{i=1}^6 m_i delta^3(r - r_i(t)).                        (E86)
+
+Definition 24 (Effective Geometric Potential). The effective geometric potential
+Phi_eff : R^3 x [0,T] -> R satisfies
+
+    nabla^2 Phi_eff = 4 pi G rho + (1/s^2) partial_t^2 Phi_eff + Lambda_eff,   (E87)
+
+where nabla^2 = delta^{ab} partial_a partial_b is the spatial Laplacian on R^3,
+partial_t^2 = partial^2 / partial t^2, and Lambda_eff is the effective curvature
+term from the fiber.
+
+Lemma 9 (Decomposition of Lambda_eff). The effective curvature term decomposes
+over the four emergent structures as
+
+    Lambda_eff = Lambda_1 + Lambda_2 + Lambda_3 + Lambda_4,                    (E88)
+
+where
+
+    Lambda_1(r, t) = -(1/2) Sigma_{i<j} G m_i m_j
+                     f_{k=1}''(|r - r_{ij}^{bar}| / L_1) / L_1^2,             (E89)
+
+    Lambda_2(r, t) = (4 pi G / s^2) Sigma_i m_i |dr_i/dt|^2 delta^3(r - r_i(t)),
+                                                                               (E90)
+
+    Lambda_3(r, t) = Sigma_{i<j<k} Q_{ijk}^{(k=3)} K_3(r; r_i, r_j, r_k),     (E91)
+
+with kernel
+
+    K_3(r; r_i, r_j, r_k) = -4 nabla^2 [ 1/(|r_{ij}|^2 |r_{jk}|^2) ]
+                            * delta^3(r - r_{ijk}^{bar}),                     (E92)
+
+and r_{ijk}^{bar} = (r_i + r_j + r_k)/3,
+
+    Lambda_4(r, t) = Sigma_{n>=4} (-1)^n lambda_n
+                     R^{(n)}(r; {r_i}_{i=1}^6),                               (E93)
+
+where R^{(n)} denotes the n-th order Riemann curvature invariant of the emergent
+submanifold M evaluated at the configuration points, and lambda_n are
+normalization constants from dimensional reduction.
+
+Theorem 5 (Self-Consistency). Let Phi_eff be the solution to (E87) with the
+decomposition (E88)-(E93). Let H_{full} be the Hamiltonian (E85). Then
+
+    E[Phi_{H_{full}}] < epsilon                                               (E94)
+
+if and only if the following coupled system has a solution:
+
+    (i)   Hamilton's equations for H_{full} yield q(t) = Phi_{H_{full}}^t(q_0),
+    (ii)  Phi_eff satisfies (E87) with source rho from (E86),
+    (iii) The coupling parameters satisfy (E74)-(E76),
+    (iv)  The verification bound (E77) holds.
+
+Furthermore, the emergent field Phi_eff is the unique solution to the
+constrained variational problem on the lookup table: among all fields satisfying
+the stationarity constraints (E71) and the coupling equations (E74)-(E76), the
+field that achieves E[Phi_H] < epsilon is unique by the strict convexity of
+the error functional in the neighborhood of the minimum.
+
+
+================================================================================
+SECTION 6: CORE EQUATION SYSTEM
+================================================================================
+
+The complete mathematical system comprises six core equations:
+
+    +--------------------------------------------------------------------------------+
+    |  (C1)  E_{AB} = Z(Phi) G_{AB} + T_{AB} = 0          on N                    |
+    |                                                                                |
+    |  (C2)  O_n Phi = 0                                   on N                    |
+    |                                                                                |
+    |  (C3)  D^nu F^{(k)}_{mu nu} = J^{(k)}_mu            on M,  k=1,2,3,4        |
+    |                                                                                |
+    |  (C4)  g_k^{-2} = Vol(F) * lambda_k^{(d-2)/2}       d = n - 4               |
+    |                                                                                |
+    |  (C5)  nabla^2 Phi_eff = 4 pi G rho + s^{-2} partial_t^2 Phi_eff + Lambda_eff |
+    |                                                                                |
+    |  (C6)  E[Phi_{H_{full}}] < epsilon                                           |
+    +--------------------------------------------------------------------------------+
+
+Equation (C1) is the geometric tensor equation from the n-dimensional action
+variation. Equation (C2) is the fundamental operator eigenvalue equation on N.
+Equation (C3) gives the four decoupled field equations on M, one for each of
+the emergent tensor structures arising from the harmonic analysis on the fiber.
+Equation (C4) defines the four coupling constants from the fiber geometry.
+Equation (C5) is the effective geometric potential equation with fiber curvature
+source. Equation (C6) is the verification bound closing the system.
+
+The dimension n enters the system only through d = n - 4 in (C4). For any
+n >= 6, the same four structures emerge because the lowest harmonic modes of
+the fiber Laplacian remain four by Axiom A7: one scalar mode, one 1-form mode,
+and two 2-form modes. The fiber volume Vol(F) and the eigenvalues lambda_k
+depend on n, but the number of emergent structures is invariant.
+
+================================================================================
+END OF DERIVATION
+================================================================================

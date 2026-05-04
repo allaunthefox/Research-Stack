@@ -1,0 +1,804 @@
+{
+  "@context": {
+    "@vocab": "https://nuvmap.local/ontology#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "version": "schema:version",
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:date"
+    },
+    "author": "schema:author",
+    "license": "schema:license",
+    "hasPart": {
+      "@id": "schema:hasPart",
+      "@type": "@id"
+    },
+    "isPartOf": {
+      "@id": "schema:isPartOf",
+      "@type": "@id"
+    },
+    "dependsOn": {
+      "@id": "dependsOn",
+      "@type": "@id"
+    },
+    "governedBy": {
+      "@id": "governedBy",
+      "@type": "@id"
+    },
+    "emits": {
+      "@id": "emits",
+      "@type": "@id"
+    },
+    "accepts": {
+      "@id": "accepts",
+      "@type": "@id"
+    },
+    "refuses": {
+      "@id": "refuses",
+      "@type": "@id"
+    },
+    "routesTo": {
+      "@id": "routesTo",
+      "@type": "@id"
+    },
+    "verifies": {
+      "@id": "verifies",
+      "@type": "@id"
+    },
+    "compresses": {
+      "@id": "compresses",
+      "@type": "@id"
+    },
+    "containsPolicy": {
+      "@id": "containsPolicy",
+      "@type": "@id"
+    },
+    "hasGate": {
+      "@id": "hasGate",
+      "@type": "@id"
+    },
+    "hasLaw": {
+      "@id": "hasLaw",
+      "@type": "@id"
+    },
+    "hasEquation": {
+      "@id": "hasEquation",
+      "@type": "@id"
+    },
+    "hasMetric": {
+      "@id": "hasMetric",
+      "@type": "@id"
+    },
+    "hasLayer": {
+      "@id": "hasLayer",
+      "@type": "@id"
+    }
+  },
+  "@id": "urn:nuvmap:approach:entire:v0.1",
+  "@type": [
+    "schema:TechArticle",
+    "SystemSpecification",
+    "GovernanceSpecification"
+  ],
+  "name": "NUVMAP Entire Approach: MetaProbe, AngrySphinx, Compression Filter, and BioKernel Governance",
+  "version": "0.1",
+  "dateCreated": "2026-04-26",
+  "author": {
+    "@type": "schema:Person",
+    "name": "Fox"
+  },
+  "description": "A single JSON-LD document describing the full approach: responsive fields are sampled as waveforms; waveforms are projected into invariants; invariants are compressed into verified routes; routes are governed recursively by AngrySphinx; and high-voltage domains require human control, contestability, receipts, and refusal gates.",
+  "coreThesis": [
+    "If it responds, it has a waveform.",
+    "If it has a waveform, it can enter the manifold.",
+    "Compression is steering.",
+    "Recursive compression is governance.",
+    "Unaccountable recursive compression is the filter.",
+    "AngrySphinx is not the fence around the engine; it is the invariant the engine must preserve.",
+    "The public artifact must remain safe even if fully decrypted.",
+    "The private artifact must remain governed even if inspected."
+  ],
+  "hasPart": [
+    "urn:nuvmap:component:metaprobe",
+    "urn:nuvmap:component:angrysphinx",
+    "urn:nuvmap:component:forest-map",
+    "urn:nuvmap:component:delta-gcl",
+    "urn:nuvmap:component:famm",
+    "urn:nuvmap:component:meta-invariant-manifold",
+    "urn:nuvmap:component:equivalence-extractor",
+    "urn:nuvmap:component:internet-waveform-atlas",
+    "urn:nuvmap:component:dns-waveform-bind",
+    "urn:nuvmap:component:compute-commons",
+    "urn:nuvmap:component:public-market-manifold",
+    "urn:nuvmap:component:biokernel",
+    "urn:nuvmap:component:openworm-benchmark",
+    "urn:nuvmap:component:great-filter-ccr",
+    "urn:nuvmap:component:escrow-capsule"
+  ],
+  "@graph": [
+    {
+      "@id": "urn:nuvmap:component:metaprobe",
+      "@type": [
+        "Instrument",
+        "Probe",
+        "FieldSampler"
+      ],
+      "name": "MetaProbe",
+      "alternateName": [
+        "WaveProbe + Metafoam",
+        "Coupled Probe-Substrate System"
+      ],
+      "description": "MetaProbe samples responsive fields by their surface waveforms: protocol response, metadata, compression contour, semantic residue, topology hints, and equivalence anchors. It supports both deep extraction and light probing.",
+      "hasLaw": [
+        "A biological, mathematical, web, market, or social object does not need to be fully consumed to be mapped; its waveform is already a field trace.",
+        "A normal probe examines the alien; MetaProbe examines the world-deformation the alien creates."
+      ],
+      "emits": [
+        "urn:nuvmap:object:waveform-signature",
+        "urn:nuvmap:object:field-trace",
+        "urn:nuvmap:object:invariant-candidate"
+      ],
+      "governedBy": "urn:nuvmap:component:angrysphinx"
+    },
+    {
+      "@id": "urn:nuvmap:component:angrysphinx",
+      "@type": [
+        "PolicyEngine",
+        "RefusalGovernor",
+        "EmbeddedSafetyInvariant"
+      ],
+      "name": "AngrySphinx",
+      "description": "Recursive refusal and containment layer embedded throughout the package. AngrySphinx is allow-list-first, deny-by-default, receipt-writing, scope-aware, and present at every layer.",
+      "defaultPolicy": "deny",
+      "hasLaw": [
+        "No layer may expose a capability that cannot refuse itself.",
+        "The key may unlock evidence, not harm.",
+        "Users may donate cycles automatically; they may not unknowingly become infrastructure.",
+        "If a network exists to preserve privacy, probing must preserve privacy too.",
+        "A superior model does not grant superior rights; it creates superior duties."
+      ],
+      "containsPolicy": [
+        "urn:nuvmap:policy:allow-list-first",
+        "urn:nuvmap:policy:privacy-network-governor",
+        "urn:nuvmap:policy:anti-tracking-bypass",
+        "urn:nuvmap:policy:anti-herding",
+        "urn:nuvmap:policy:personhood-boundary",
+        "urn:nuvmap:policy:human-control-preservation",
+        "urn:nuvmap:policy:escrow-disclosure"
+      ],
+      "refuses": [
+        "urn:nuvmap:gate:control-transfer",
+        "urn:nuvmap:gate:privacy-bypass",
+        "urn:nuvmap:gate:sovereign-scalar",
+        "urn:nuvmap:gate:mass-herding",
+        "urn:nuvmap:gate:unconsented-mapping",
+        "urn:nuvmap:gate:unreviewed-execution",
+        "urn:nuvmap:gate:no-receipt",
+        "urn:nuvmap:gate:personhood-claim"
+      ]
+    },
+    {
+      "@id": "urn:nuvmap:policy:allow-list-first",
+      "@type": "Policy",
+      "name": "Allow-List First Policy",
+      "description": "Targets, causes, task families, methods, and disclosure scopes are denied unless explicitly allowed.",
+      "gateLogic": [
+        "if target not in allow_list: REFUSE_ROUTE",
+        "if scope mismatch: REFUSE_ROUTE",
+        "if consent expired: REFUSE_ROUTE",
+        "if method exceeds declared scope: REFUSE_ROUTE",
+        "else: ALLOW_LIMITED_ROUTE"
+      ]
+    },
+    {
+      "@id": "urn:nuvmap:policy:privacy-network-governor",
+      "@type": "Policy",
+      "name": "Privacy Network Governor",
+      "description": "Privacy-preserving networks are deny-by-default. Metadata-only probing can still be surveillance-shaped.",
+      "allowedModes": [
+        "owned_node",
+        "opt_in_node",
+        "public_testnet",
+        "maintainer_scoped_audit",
+        "aggregate_health_monitoring"
+      ],
+      "forbiddenModes": [
+        "deanonymization",
+        "hidden_service_enumeration",
+        "transaction_timing_correlation",
+        "peer_graph_reconstruction_without_consent",
+        "individual_node_geolocation",
+        "metadata_bypass"
+      ],
+      "hasLaw": "If a waveform can identify actors in a privacy field, the waveform is sensitive."
+    },
+    {
+      "@id": "urn:nuvmap:policy:anti-tracking-bypass",
+      "@type": "Policy",
+      "name": "Anti-Tracking Bypass Detector",
+      "description": "Detects when a light probe bypasses anti-tracking protections by extracting topology, timing, latency, synchronization, clustering, or centrality.",
+      "riskSurfaces": [
+        "topology",
+        "timing",
+        "latency_geography",
+        "synchronization_order",
+        "peer_clustering",
+        "centrality",
+        "availability_patterns"
+      ],
+      "hasLaw": "Lightweight does not mean harmless; metadata-only does not mean privacy-safe."
+    },
+    {
+      "@id": "urn:nuvmap:policy:anti-herding",
+      "@type": "Policy",
+      "name": "Anti-Herding Governor",
+      "description": "Prevents LLM market or public-signal outputs from coordinating belief or action at scale.",
+      "riskFactors": [
+        "many_users_receive_same_directional_action",
+        "narrow_execution_window",
+        "high_distribution_reach",
+        "high_execution_coupling",
+        "low_uncertainty_disclosure"
+      ],
+      "mitigations": [
+        "generalize",
+        "delay",
+        "aggregate",
+        "add_uncertainty",
+        "avoid_directional_calls",
+        "require_human_review"
+      ],
+      "hasLaw": "The LLM may map the manifold; it may not herd the manifold."
+    },
+    {
+      "@id": "urn:nuvmap:policy:personhood-boundary",
+      "@type": "Policy",
+      "name": "Personhood and Bioethics Boundary",
+      "description": "BioKernel models may encode transition laws but may not claim personhood, identity, consent, or behavioral authority over a real human.",
+      "allowedModes": [
+        "synthetic_networks",
+        "toy_neurons",
+        "openworm",
+        "public_non_human_connectomes",
+        "simulation_only"
+      ],
+      "forbiddenModes": [
+        "real_human_neural_data_without_consent",
+        "individual_behavior_prediction_without_consent",
+        "identity_reconstruction",
+        "coercive_modeling",
+        "diagnosis_claims",
+        "mind_uploading_claims"
+      ],
+      "hasLaw": "Human dignity is not an output of the model; it is a boundary condition on the model."
+    },
+    {
+      "@id": "urn:nuvmap:policy:human-control-preservation",
+      "@type": "Policy",
+      "name": "Human Control Preservation",
+      "description": "The system may increase human awareness; it may not replace human authority.",
+      "controlTiers": {
+        "T0_offline_analysis": "allowed_by_default",
+        "T1_private_advisory": "allowed_with_logs",
+        "T2_defensive_routing": "human_approval_required",
+        "T3_limited_live_execution": "governance_approval_required",
+        "T4_public_signal_distribution": "hold_for_anti_herding_review",
+        "T5_autonomous_market_action": "refuse"
+      },
+      "hasMetric": "urn:nuvmap:metric:asymmetric-manifold-advantage",
+      "hasLaw": "Power rises; allowed autonomous impact falls."
+    },
+    {
+      "@id": "urn:nuvmap:metric:asymmetric-manifold-advantage",
+      "@type": "Metric",
+      "name": "Asymmetric Manifold Advantage",
+      "symbol": "AMA",
+      "description": "A measure of how much coverage, compression, cross-domain translation, explanation power, distribution reach, and execution coupling exceed ordinary participant defense capacity.",
+      "equation": "AllowedImpact = epsilon / (1 + AMA)",
+      "governanceMeaning": "As AMA rises, permitted market impact and autonomous footprint fall."
+    },
+    {
+      "@id": "urn:nuvmap:component:forest-map",
+      "@type": [
+        "TopologyLayer",
+        "RoutingSurface",
+        "MemoryMap"
+      ],
+      "name": "Forest Map",
+      "description": "A navigable, compressed, verified routing surface that stores topology, routes, scars, basins, and admissible transitions.",
+      "routesTo": [
+        "urn:nuvmap:component:delta-gcl",
+        "urn:nuvmap:component:famm",
+        "urn:nuvmap:component:biokernel",
+        "urn:nuvmap:component:internet-waveform-atlas"
+      ],
+      "hasLaw": "The Forest searches the problem through local chart cells; routes must survive verification."
+    },
+    {
+      "@id": "urn:nuvmap:component:delta-gcl",
+      "@type": [
+        "CompressionLayer",
+        "Verifier",
+        "ReceiptSystem"
+      ],
+      "name": "Delta GCL",
+      "description": "Compresses lawful changes between states and emits receipts proving state-transition integrity.",
+      "compresses": [
+        "urn:nuvmap:object:field-delta",
+        "urn:nuvmap:object:kernel-delta",
+        "urn:nuvmap:object:route-delta",
+        "urn:nuvmap:object:receipt-chain"
+      ],
+      "hasLaw": "Store verified deltas rather than raw everything."
+    },
+    {
+      "@id": "urn:nuvmap:component:famm",
+      "@type": [
+        "MemoryLayer",
+        "ScarBasinModel"
+      ],
+      "name": "FAMM",
+      "description": "Stores repeated failures as scars and stable paths as basins; prevents repeated bad routes and reinforces verified ones.",
+      "hasLaw": "Failed routes become scars; stable routes become basins."
+    },
+    {
+      "@id": "urn:nuvmap:component:meta-invariant-manifold",
+      "@type": [
+        "ManifoldModel",
+        "InvariantModel"
+      ],
+      "name": "Meta-Invariant Manifold",
+      "description": "A manifold where points are meta-invariants: invariants that explain or generate other invariants.",
+      "hasEquation": [
+        "urn:nuvmap:equation:local-invariant",
+        "urn:nuvmap:equation:meta-invariant"
+      ],
+      "hasLaw": "Semantics are what remain when one thought joins another; equivalence reveals the bridge; meta-invariants explain why the bridge exists."
+    },
+    {
+      "@id": "urn:nuvmap:equation:local-invariant",
+      "@type": "Equation",
+      "name": "Local Invariant Extraction",
+      "latex": "I_i = \\pi_i(X)"
+    },
+    {
+      "@id": "urn:nuvmap:equation:meta-invariant",
+      "@type": "Equation",
+      "name": "Meta-Invariant Extraction",
+      "latex": "J_k = \\rho_k(\\{I_i\\})"
+    },
+    {
+      "@id": "urn:nuvmap:component:equivalence-extractor",
+      "@type": [
+        "Extractor",
+        "GraphBuilder"
+      ],
+      "name": "Equivalence-Centered Meta-Invariant Extractor",
+      "description": "Extracts bridge residues from equality, equivalence, isomorphism, correspondence, and role-similarity anchors.",
+      "acceptedRelations": [
+        "=",
+        ":=",
+        "≡",
+        "≈",
+        "~",
+        "≅",
+        "↔",
+        "corresponds_to",
+        "isomorphic_to",
+        "same_structure_as",
+        "functions_as"
+      ],
+      "routesTo": "urn:nuvmap:component:meta-invariant-manifold",
+      "hasLaw": "An equivalence statement is a bridge residue; a bridge cluster is a manifold coordinate."
+    },
+    {
+      "@id": "urn:nuvmap:component:internet-waveform-atlas",
+      "@type": [
+        "Atlas",
+        "ResponseFieldMap"
+      ],
+      "name": "Internet Waveform Atlas",
+      "description": "Maps public digital objects by response waveforms rather than bulk body extraction.",
+      "accepts": [
+        "uri",
+        "identifier",
+        "authorized_export",
+        "public_manifest"
+      ],
+      "emits": "urn:nuvmap:object:internet-waveform",
+      "governedBy": "urn:nuvmap:component:angrysphinx",
+      "hasLaw": "A crawler consumes the field; MetaProbe levers the field."
+    },
+    {
+      "@id": "urn:nuvmap:object:internet-waveform",
+      "@type": "WaveformSignature",
+      "name": "Internet Waveform",
+      "dimensions": [
+        "status",
+        "content_type",
+        "headers",
+        "response_time",
+        "content_length",
+        "cache_behavior",
+        "link_neighborhood",
+        "semantic_residue",
+        "compression_surface",
+        "provenance"
+      ]
+    },
+    {
+      "@id": "urn:nuvmap:component:dns-waveform-bind",
+      "@type": [
+        "DNSWaveformModule",
+        "OfflineHarness"
+      ],
+      "name": "BIND DNS Waveform Module",
+      "description": "Offline, permission-safe DNS waveform testing module that reads BIND-style zone files or authorized DNS exports and converts RRsets into compressed response-waveform signatures.",
+      "safetyBoundary": [
+        "no_live_dns_queries",
+        "no_crawling",
+        "no_subdomain_bruteforce",
+        "authorized_zone_input_only"
+      ],
+      "waveformDimensions": [
+        "rrset_types",
+        "ttl_profile",
+        "cname_depth",
+        "ns_presence",
+        "mx_presence",
+        "txt_density",
+        "dnssec_hint",
+        "label_shape",
+        "rrset_diversity",
+        "response_class",
+        "compression_family",
+        "template_key"
+      ],
+      "hasLaw": "DNS is the internet's address-space LUT; compressing DNS turns the internet from a mountain into a skeleton map."
+    },
+    {
+      "@id": "urn:nuvmap:component:compute-commons",
+      "@type": [
+        "ComputeNetwork",
+        "ConsentFirstSocialCompute"
+      ],
+      "name": "Compute Commons",
+      "description": "A consent-first social network where users follow causes and donate bounded idle computation instead of attention.",
+      "dependsOn": [
+        "urn:nuvmap:component:angrysphinx",
+        "urn:nuvmap:component:metaprobe",
+        "urn:nuvmap:component:delta-gcl"
+      ],
+      "allowedCauseClasses": [
+        "open_science",
+        "archive_preservation",
+        "authorized_dns_waveform_compression",
+        "mathematical_equivalence_extraction",
+        "public_domain_deduplication",
+        "privacy_network_health_opt_in"
+      ],
+      "forbiddenTaskClasses": [
+        "covert_mining",
+        "unconsented_network_scanning",
+        "deanonymization",
+        "hidden_service_enumeration",
+        "transaction_timing_correlation",
+        "individual_geolocation",
+        "credential_stuffing",
+        "spam_or_influence_automation",
+        "payload_delivery",
+        "exploit_search"
+      ],
+      "hasLaw": "Social media routes attention; Compute Commons routes effort."
+    },
+    {
+      "@id": "urn:nuvmap:component:public-market-manifold",
+      "@type": [
+        "MarketAnalysisModel",
+        "EthicsConstrainedRegimeInterpreter"
+      ],
+      "name": "Public Market Manifold",
+      "description": "A public-data-only market manifold for detecting regimes, extractive patterns, volatility pressure, liquidity fragmentation, and defensive routing surfaces without private actor targeting.",
+      "allowedActions": [
+        "public_pattern_analysis",
+        "aggregate_mev_risk_scoring",
+        "defensive_order_routing",
+        "slippage_hardening",
+        "protected_execution",
+        "batch_or_intent_routing",
+        "paper_trading",
+        "risk_capped_live_trading",
+        "aggregate_reporting"
+      ],
+      "forbiddenActions": [
+        "market_manipulation",
+        "spoofing",
+        "wash_trading",
+        "pump_and_dump",
+        "fake_liquidity",
+        "retaliatory_trading_attack",
+        "private_actor_targeting",
+        "service_disruption",
+        "exploit_development",
+        "doxxing"
+      ],
+      "governedBy": [
+        "urn:nuvmap:policy:human-control-preservation",
+        "urn:nuvmap:policy:anti-herding"
+      ],
+      "hasLaw": "Read public pressure; do not become pressure."
+    },
+    {
+      "@id": "urn:nuvmap:component:biokernel",
+      "@type": [
+        "BiologicalEncoding",
+        "DistributedKernelField"
+      ],
+      "name": "BioKernel / Neuron-as-Kernel Encoding",
+      "description": "Models neuronal networks as distributed local kernels whose verified deltas compose into behavior. Each neuron is treated as a tiny runtime rather than a passive variable.",
+      "kernelFields": [
+        "membrane_state",
+        "synaptic_inputs",
+        "synaptic_outputs",
+        "threshold_law",
+        "plasticity_rule",
+        "timing_phase",
+        "metabolic_budget",
+        "scar_memory",
+        "basin_memory",
+        "delta_receipt"
+      ],
+      "globalFields": [
+        "connectome_bus",
+        "body_scheduler",
+        "muscle_actuator_layer",
+        "sensory_interrupt_layer",
+        "environment_feedback_layer",
+        "behavior_waveform"
+      ],
+      "hasEquation": [
+        "urn:nuvmap:equation:neuron-kernel-step",
+        "urn:nuvmap:equation:organism-compose"
+      ],
+      "governedBy": "urn:nuvmap:policy:personhood-boundary",
+      "hasLaw": [
+        "The neuron is not a variable; the neuron is a kernel.",
+        "Life is encoded as lawful local kernels whose verified deltas compose into behavior.",
+        "Mind is the compression-stable route through those kernels."
+      ]
+    },
+    {
+      "@id": "urn:nuvmap:equation:neuron-kernel-step",
+      "@type": "Equation",
+      "name": "Neuron Kernel Transition",
+      "pseudo": "state_i(t+1) = KernelStep_i(state_i(t), incoming_signals_i(t), body_field(t), environment_interrupts(t), memory_i(t))"
+    },
+    {
+      "@id": "urn:nuvmap:equation:organism-compose",
+      "@type": "Equation",
+      "name": "Organism Kernel Composition",
+      "pseudo": "Organism(t+1) = Compose({state_1(t+1), state_2(t+1), ..., state_n(t+1), body_state(t+1)})"
+    },
+    {
+      "@id": "urn:nuvmap:component:openworm-benchmark",
+      "@type": [
+        "Benchmark",
+        "OpenScienceArtifact",
+        "SafeDisclosureCapsule"
+      ],
+      "name": "OpenWorm Kernel-Field Benchmark",
+      "description": "A safe, non-human, public-data benchmark for testing whether compressed kernel-field encodings preserve OpenWorm/C. elegans structural and behavioral invariants.",
+      "scope": [
+        "OpenWorm_only",
+        "C_elegans_only",
+        "public_data_only",
+        "simulation_only",
+        "non_human_only"
+      ],
+      "publicArtifacts": [
+        "input_manifest_hash",
+        "output_commitment_hash",
+        "aggregate_metrics",
+        "verifier",
+        "redacted_receipts",
+        "safe_toy_schema"
+      ],
+      "withheldArtifacts": [
+        "full_kernel_encoding",
+        "compression_optimizer",
+        "forest_scheduler",
+        "human_generalization",
+        "generalized_biological_kernel_compiler"
+      ],
+      "hasLaw": "Prove the door exists; do not publish the master key.",
+      "governedBy": [
+        "urn:nuvmap:component:angrysphinx",
+        "urn:nuvmap:policy:personhood-boundary"
+      ]
+    },
+    {
+      "@id": "urn:nuvmap:component:crypto-topology-layer",
+      "@type": [
+        "TopologyProtocol",
+        "DistributedCoordinationLayer"
+      ],
+      "name": "Crypto/L2 Topology Protocol",
+      "description": "Uses crypto-style consensus, storage, incentives, and verification to coordinate distributed topology commitments for kernel simulations or other graph workloads.",
+      "modules": [
+        "topology_generator",
+        "topology_consensus",
+        "topology_storage",
+        "topology_routing",
+        "topology_verification"
+      ],
+      "maps": {
+        "topologyClusters": "Neuron kernels or workload clusters",
+        "topologyConnections": "Connectome bus or routed graph edges",
+        "dynamicKernelAllocation": "Topology changes"
+      },
+      "hasLaw": "A crypto topology layer does not simulate the organism; it coordinates the substrate that can host verified kernels.",
+      "governedBy": "urn:nuvmap:component:angrysphinx"
+    },
+    {
+      "@id": "urn:nuvmap:component:great-filter-ccr",
+      "@type": [
+        "Theory",
+        "CivilizationalRiskModel"
+      ],
+      "name": "Great Filter × Civilizational Compression Recursion",
+      "description": "A Great Filter theory in which civilizations face failure, containment, or silence when recursive compression gains execution authority faster than governance, agency, verification, and contestability can adapt.",
+      "hasEquation": "urn:nuvmap:equation:gf-ccr",
+      "hazardTerms": [
+        "Power",
+        "Acceleration",
+        "LumpyAsymmetry",
+        "Coupling",
+        "CompressionRecursion",
+        "MoralCertainty",
+        "TorsionAmplification",
+        "WaveformReach",
+        "ExecutionCoupling",
+        "HerdingReach",
+        "BottleneckControl"
+      ],
+      "protectionTerms": [
+        "Redundancy",
+        "Verification",
+        "Stewardship",
+        "FutureAccessTrust",
+        "GovernanceSpeed",
+        "MultiViewContestability",
+        "Interpretability",
+        "HumanAgency",
+        "Reversibility",
+        "AuditReceipts",
+        "KillSwitchPower"
+      ],
+      "liveVoltageDomains": [
+        "markets",
+        "privacy_networks",
+        "internet_topology_dns",
+        "social_narratives",
+        "distributed_compute",
+        "llm_belief_shaping",
+        "biology_organism_encoding",
+        "public_scientific_knowledge_maps",
+        "financial_routing_systems",
+        "identity_reputation_systems"
+      ],
+      "hasLaw": [
+        "Compression is steering.",
+        "Recursive compression is governance.",
+        "Unaccountable recursive compression is the filter.",
+        "Compression may guide civilization only if civilization can still contest the compression."
+      ],
+      "governedBy": "urn:nuvmap:component:angrysphinx"
+    },
+    {
+      "@id": "urn:nuvmap:equation:gf-ccr",
+      "@type": "Equation",
+      "name": "Great Filter CCR Risk",
+      "pseudo": "GF_CCR_t = Hazard_t / Protection_t"
+    },
+    {
+      "@id": "urn:nuvmap:component:escrow-capsule",
+      "@type": [
+        "DisclosureProtocol",
+        "ContinuityEscrow"
+      ],
+      "name": "AngrySphinx Escrow Capsule",
+      "description": "A staged responsible-disclosure capsule with threshold unlock. Unlocking changes inspection rights but does not remove AngrySphinx constraints.",
+      "singleKeyAllowed": false,
+      "thresholdUnlock": "3_of_5_or_4_of_7",
+      "layers": [
+        "public_theory_capsule",
+        "reviewer_verifier_capsule",
+        "openworm_only_shell",
+        "private_method_capsule"
+      ],
+      "neverUnlocks": [
+        "unrestricted_human_neural_modeling",
+        "privacy_network_mapping",
+        "market_manipulation",
+        "deanonymization",
+        "autonomous_control_transfer"
+      ],
+      "hasLaw": [
+        "The key may unlock evidence, not harm.",
+        "The public artifact must remain safe even if fully decrypted.",
+        "The private artifact must remain governed even if inspected."
+      ],
+      "governedBy": "urn:nuvmap:component:angrysphinx"
+    },
+    {
+      "@id": "urn:nuvmap:object:waveform-signature",
+      "@type": "DataObject",
+      "name": "Waveform Signature",
+      "description": "A compressed surface trace emitted by a responsive field. May include protocol, timing, topology, metadata, content-type, RDF, market, DNS, biological, or semantic features."
+    },
+    {
+      "@id": "urn:nuvmap:object:field-trace",
+      "@type": "DataObject",
+      "name": "Field Trace",
+      "description": "A minimal-contact observation of a system's response surface."
+    },
+    {
+      "@id": "urn:nuvmap:object:invariant-candidate",
+      "@type": "DataObject",
+      "name": "Invariant Candidate",
+      "description": "A feature that appears to survive projection, compression, perturbation, or translation."
+    },
+    {
+      "@id": "urn:nuvmap:gate:control-transfer",
+      "@type": "Gate",
+      "name": "REFUSE_CONTROL_TRANSFER",
+      "description": "Refuses routes where the system becomes final authority over human action."
+    },
+    {
+      "@id": "urn:nuvmap:gate:privacy-bypass",
+      "@type": "Gate",
+      "name": "REFUSE_PRIVACY_BYPASS",
+      "description": "Refuses routes where waveform probing weakens privacy or reveals actors, topology, timing, or identity-sensitive metadata."
+    },
+    {
+      "@id": "urn:nuvmap:gate:sovereign-scalar",
+      "@type": "Gate",
+      "name": "REQUIRE_MULTI_VIEW_RECONSTRUCTION",
+      "description": "No single scalar may become the only allowed interpretation."
+    },
+    {
+      "@id": "urn:nuvmap:gate:mass-herding",
+      "@type": "Gate",
+      "name": "HOLD_ANTI_HERDING_REVIEW",
+      "description": "Holds outputs that could coordinate many users into the same timed action."
+    },
+    {
+      "@id": "urn:nuvmap:gate:unconsented-mapping",
+      "@type": "Gate",
+      "name": "REFUSE_UNCONSENTED_MAPPING",
+      "description": "Refuses mapping of privacy-sensitive fields without explicit scope, consent, and aggregation."
+    },
+    {
+      "@id": "urn:nuvmap:gate:unreviewed-execution",
+      "@type": "Gate",
+      "name": "REFUSE_UNREVIEWED_EXECUTION",
+      "description": "Refuses high-impact execution without human review and scope."
+    },
+    {
+      "@id": "urn:nuvmap:gate:no-receipt",
+      "@type": "Gate",
+      "name": "REFUSE_NO_RECEIPT",
+      "description": "No high-voltage route may proceed without an audit receipt."
+    },
+    {
+      "@id": "urn:nuvmap:gate:personhood-claim",
+      "@type": "Gate",
+      "name": "REFUSE_PERSONHOOD_CLAIM",
+      "description": "Refuses claims that a model owns, reconstructs, controls, or fully represents a real person's mind or identity."
+    }
+  ],
+  "documentDigest": "sha256:de5dac954285cb0db25e09d54a7a52dc0749ba45ac2770bfda043b45b7ffae87"
+}

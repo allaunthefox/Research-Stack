@@ -1,0 +1,1134 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cross-Domain Mathematical Structures: An Equivalence-Centered Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tiempos+Headline:wght@400;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #374151;
+            --accent: #dc2626;
+            --muted: #6b7280;
+            --background: #fafafa;
+            --surface: #ffffff;
+            --border: #e5e7eb;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--secondary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .font-display {
+            font-family: 'Tiempos Headline', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .toc-fixed {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            width: 280px;
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+            z-index: 50;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-content {
+            margin-left: 320px;
+            max-width: 900px;
+        }
+        
+        .citation-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted var(--accent);
+        }
+        
+        .citation-link:hover {
+            background-color: rgba(220, 38, 38, 0.1);
+            border-bottom-style: solid;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .equation-box {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 0.5rem;
+            font-family: 'Courier New', monospace;
+        }
+        
+        @media (max-width: 1280px) {
+            .toc-fixed {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0;
+                max-width: none;
+            }
+        }
+        
+        .mermaid-container {
+            display: flex;
+            justify-content: center;
+            min-height: 300px;
+            max-height: 800px;
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mermaid-container .mermaid {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            cursor: grab;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .mermaid-container .mermaid svg {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mermaid-container .mermaid:active {
+            cursor: grabbing;
+        }
+
+        .mermaid-container.zoomed .mermaid {
+            height: 100%;
+            width: 100%;
+            cursor: grab;
+        }
+
+        .mermaid-controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mermaid-control-btn {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #374151;
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mermaid-control-btn:hover {
+            background: #f8fafc;
+            border-color: #3b82f6;
+            color: #3b82f6;
+            transform: translateY(-1px);
+        }
+
+        .mermaid-control-btn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 1024px) {
+            .mermaid-control-btn:not(.reset-zoom) {
+                display: none;
+            }
+            .mermaid-controls {
+                top: auto;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+  <base target="_blank">
+</head>
+
+  <body>
+    <!-- Fixed Table of Contents -->
+    <nav class="toc-fixed">
+      <div class="p-6">
+        <h3 class="font-display text-lg font-bold text-gray-900 mb-4">Contents</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="#introduction" class="block py-1 px-2 rounded hover:bg-gray-100 text-gray-700 hover:text-blue-600 transition-colors">Introduction</a>
+          </li>
+          <li>
+            <a href="#foundational-principle" class="block py-1 px-2 rounded hover:bg-gray-100 text-gray-700 hover:text-blue-600 transition-colors">Foundational Principle</a>
+          </li>
+          <li>
+            <a href="#cross-domain-bridges" class="block py-1 px-2 rounded hover:bg-gray-100 text-gray-700 hover:text-blue-600 transition-colors">Core Cross-Domain Bridges</a>
+          </li>
+          <li>
+            <a href="#unification-frameworks" class="block py-1 px-2 rounded hover:bg-gray-100 text-gray-700 hover:text-blue-600 transition-colors">Unification Frameworks</a>
+          </li>
+          <li>
+            <a href="#convergent-discovery" class="block py-1 px-2 rounded hover:bg-gray-100 text-gray-700 hover:text-blue-600 transition-colors">Convergent Discovery</a>
+          </li>
+          <li>
+            <a href="#paramathematical" class="block py-1 px-2 rounded hover:bg-gray-100 text-gray-700 hover:text-blue-600 transition-colors">Paramathematical Mathematics</a>
+          </li>
+          <li>
+            <a href="#database-resources" class="block py-1 px-2 rounded hover:bg-gray-100 text-gray-700 hover:text-blue-600 transition-colors">Database Resources</a>
+          </li>
+          <li>
+            <a href="#methodology" class="block py-1 px-2 rounded hover:bg-gray-100 text-gray-700 hover:text-blue-600 transition-colors">Methodology</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-gradient text-white relative mb-12">
+        <div class="relative z-10 px-8 py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+              <h1 class="font-display text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                Cross-Domain Mathematical Structures for Statistical Analysis
+              </h1>
+              <p class="text-xl lg:text-2xl font-light mb-8 opacity-90">
+                An Equivalence-Centered Framework
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">Number Theory</span>
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">Quantum Physics</span>
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">Statistical Mechanics</span>
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">Information Theory</span>
+              </div>
+            </div>
+            <div class="lg:col-span-1">
+              <img src="https://kimi-web-img.moonshot.cn/img/learningmole.com/1a8adcb1f488bc33b480b06dc7711f75b86f3748.webp" alt="Abstract visualization of interconnected mathematical concepts" class="rounded-lg shadow-2xl opacity-90" size="medium" aspect="wide" color="blue" query="abstract mathematical concepts visualization" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Introduction -->
+      <section id="introduction" class="mb-16 px-8">
+        <div class="highlight-box p-6 rounded-lg mb-8">
+          <p class="text-lg font-medium">
+            <strong>TL;DR:</strong> You need a statistical framework that treats the equals sign (=) as the universal anchor of mathematical meaning, with all other notation derived from it, while acknowledging that domain boundaries are observer-dependent and shift with each new equivalence discovery.
+          </p>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+          <p class="text-xl leading-relaxed mb-6">
+            The search for cross-domain mathematical similarities reveals a profound truth about the nature of mathematical knowledge: the equals sign (=) functions as the universal anchor of meaning, with all other notational conventions deriving their significance from this fundamental relation. Introduced by <a href="https://betterexplained.com/articles/math-as-language-understanding-the-equals-sign/" class="citation-link">Robert Recorde in 1557</a> to avoid &#34;the tedious repetition of these woordes: is equalle to,&#34; the symbol&#39;s parallel lines were chosen because <a href="https://www.wired.com/2014/10/invention-equals-sign/" class="citation-link">&#34;noe 2 thynges, can be moare equalle.&#34;</a>
+          </p>
+
+          <p class="mb-6">
+            This historical origin reveals a crucial insight: equality emerged not as an abstract logical construct but as a practical tool for asserting identity between quantities, concepts, or relationships. Its concise character enabled what Joseph Mazur describes as <a href="https://www.wired.com/2014/10/invention-equals-sign/" class="citation-link">&#34;an unadorned picture in the brain that could facilitate comprehension.&#34;</a>
+          </p>
+
+          <p class="mb-8">
+            The centrality of equality manifests across multiple epistemological layers essential for cross-domain statistical analysis. In pure mathematics, equality serves as the backbone of algebra, calculus, logic, and proofs. In physics, the equals sign frequently embeds contextual meaning about measurement processes, approximation levels, and theoretical frameworks. This polysemy presents both challenge and opportunity for analyzing cross-domain similarities.
+          </p>
+        </div>
+      </section>
+
+      <!-- Foundational Principle -->
+      <section id="foundational-principle" class="mb-16 px-8">
+        <h2 class="font-display text-3xl font-bold text-gray-900 mb-8">Foundational Principle: The Relativistic Center of &#39;=&#39;</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h3 class="font-display text-xl font-semibold mb-4">Conceptual Weight of Equality</h3>
+            <p class="mb-4">
+              The equals sign constitutes the most foundational relational anchor in mathematical notation, serving as the fixed point from which all other symbolic conventions derive their meaning. This fixed-point property emerges most clearly when examining how notational systems bootstrap themselves into existence.
+            </p>
+            <p class="mb-4">
+              Consider the foundational equation of set theory: the axiom of extensionality states that two sets are equal if and only if they contain the same elements. From this single equivalence relation, all of set-theoretic mathematics unfolds.
+            </p>
+          </div>
+          <div>
+            <img src="https://kimi-web-img.moonshot.cn/img/www.fruitmachinedesign.com/3d30c2e269b61f193ebaa2a106bb2b550573b9ad.jpg" alt="Abstract geometric representation of equality" class="rounded-lg shadow-lg" size="medium" aspect="wide" color="blue" style="clipart" query="abstract geometric equality concept" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+          </div>
+        </div>
+
+        <div class="equation-box p-6 mb-8">
+          <h4 class="font-semibold mb-4">The Derivation Hierarchy from Equality</h4>
+          <div class="space-y-4">
+            <div class="font-mono text-center">Arithmetic: a + b = c</div>
+            <div class="text-center text-gray-500">↓</div>
+            <div class="font-mono text-center">Calculus: lim_{h→0} [f(x+h) - f(x)]/h = f&#39;(x)</div>
+            <div class="text-center text-gray-500">↓</div>
+            <div class="font-mono text-center">Integration: ∫_a^b f&#39;(x)dx = f(b) - f(a)</div>
+            <div class="text-center text-gray-500">↓</div>
+            <div class="font-mono text-center">Theta Functions: θ(q)^k = Σ_n r_k(n) q^n</div>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
+          <h4 class="font-semibold text-blue-900 mb-2">The Observer-Dependence of Mathematical &#34;Near Shores&#34;</h4>
+          <p class="text-blue-800">
+            The user&#39;s observation that <em>&#34;there is no way to represent the near shore since the shore will always be a relativistic center in relation to what you are looking at&#34;</em> introduces a profound epistemological constraint. What constitutes &#34;elementary&#34; versus &#34;advanced&#34; mathematics varies dramatically across historical periods and cultural contexts. The solution of cubic equations, once the frontier of mathematical research, is now standard undergraduate material.
+          </p>
+        </div>
+
+        <h3 class="font-display text-xl font-semibold mb-4">Paramathematical Validity Under Physical Law Constraints</h3>
+        <p class="mb-6">
+          The user&#39;s specification that mathematical structures should be considered <strong>&#34;no matter how strange, &#39;wrong,&#39; or paramathematical, as long as it obeys the laws of physics&#34;</strong> establishes a crucial boundary condition. This constraint does not require that all mathematics be physically instantiated but excludes formal systems demonstrably inconsistent with physical law.
+        </p>
+
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full border-collapse border border-gray-300">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="border border-gray-300 px-4 py-2 text-left">Subtype</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Description</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Heuristic mathematics</td>
+                <td class="border border-gray-300 px-4 py-2">Procedures yielding correct results without rigorous justification</td>
+                <td class="border border-gray-300 px-4 py-2">Euler&#39;s manipulation of divergent series</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Pre-rigorous mathematics</td>
+                <td class="border border-gray-300 px-4 py-2">Arguments capturing correct intuition before formal frameworks</td>
+                <td class="border border-gray-300 px-4 py-2">Ramanujan&#39;s notebooks</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Superseded theoretical frameworks</td>
+                <td class="border border-gray-300 px-4 py-2">Mathematical structures embedded in empirically invalidated theories</td>
+                <td class="border border-gray-300 px-4 py-2">Phlogiston&#39;s caloric transfer models</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Alternative notational systems</td>
+                <td class="border border-gray-300 px-4 py-2">Representations diverging from standard conventions</td>
+                <td class="border border-gray-300 px-4 py-2">Multiple equality symbols (:=, ≡, ≈, ~, ≅)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Core Cross-Domain Bridges -->
+      <section id="cross-domain-bridges" class="mb-16 px-8">
+        <h2 class="font-display text-3xl font-bold text-gray-900 mb-8">Core Cross-Domain Bridges in Number Theory</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="font-display text-xl font-semibold mb-4 text-blue-900">Random Matrix Theory ↔ Riemann Zeta Function</h3>
+            <p class="mb-4">
+              The connection between random matrix theory (RMT) and the Riemann zeta function represents one of the most striking cross-domain bridges. This connection emerged from a <a href="https://empslocal.ex.ac.uk/people/staff/mrwatkin/zeta/surprising.htm" class="citation-link">chance meeting in 1972 at Princeton</a> between number theorist Hugh Montgomery and physicist Freeman Dyson.
+            </p>
+            <div class="equation-box p-4 mb-4">
+              <div class="font-mono text-center">R₂(x) = 1 − (sin(πx)/(πx))²</div>
+              <div class="text-center text-sm text-gray-600 mt-2">Pair correlation of Riemann zeta zeros</div>
+            </div>
+            <p class="text-sm text-gray-700">
+              The Montgomery-Odlyzko law establishes the empirical correspondence between Riemann zeta zero spacings and GUE eigenvalue spacings with remarkable precision, verified by <a href="https://empslocal.ex.ac.uk/people/staff/mrwatkin/zeta/surprising.htm" class="citation-link">Odlyzko&#39;s computations to billions of zeta zeros</a>.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="font-display text-xl font-semibold mb-4 text-blue-900">Statistical Mechanics ↔ Analytic Number Theory</h3>
+            <p class="mb-4">
+              The interpretation of the Riemann zeta function as a partition function establishes a direct bridge between analytic number theory and equilibrium statistical mechanics. The <a href="https://empslocal.ex.ac.uk/people/staff/mrwatkin/zeta/Marcolli-NTphysics.pdf" class="citation-link">Bost-Connes model</a> provides a sophisticated realization of this correspondence.
+            </p>
+            <div class="equation-box p-4 mb-4">
+              <div class="font-mono text-center">ζ(s) = Σ_{n=1}^∞ n^{-s} ↔ Z(β) = Σ_n e^{-βE_n}</div>
+              <div class="text-center text-sm text-gray-600 mt-2">Zeta function as partition function</div>
+            </div>
+            <p class="text-sm text-gray-700">
+              The system&#39;s phase transition at β = 1, with spontaneous symmetry breaking and parameterization of extremal equilibrium states, mirrors the pole of the zeta function at s = 1.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <h3 class="font-display text-xl font-semibold mb-4 text-blue-900">Semiclassical Physics ↔ Additive Number Theory</h3>
+          <p class="mb-4">
+            The Gutzwiller trace formula provides the technical bridge between classical periodic orbits and quantum spectral properties, with direct application to number-theoretic counting problems. For a quantum system with chaotic classical limit, the density of states can be expressed as a sum over classical periodic orbits.
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div>
+              <div class="equation-box p-4 mb-4">
+                <div class="font-mono text-sm text-center">d(E) = d̄(E) + (1/πℏ) Σ_p Σ_{r=1}^∞ (A_{p,r}/√|det(M_p^r − I)|) cos(rS_p(E)/ℏ − rμπ_p/2)</div>
+                <div class="text-center text-xs text-gray-600 mt-2">Gutzwiller trace formula</div>
+              </div>
+            </div>
+            <div>
+              <div class="equation-box p-4 mb-4">
+                <div class="font-mono text-sm text-center">ψ(x) = x − Σ_ρ x^ρ/ρ − log(2π) − 1/2 log(1−x^{−2})</div>
+                <div class="text-center text-xs text-gray-600 mt-2">Explicit formula of prime number theory</div>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700">
+            The structural parallel between these formulas—one from quantum chaos, one from number theory—motivates the <a href="https://empslocal.ex.ac.uk/people/staff/mrwatkin/zeta/surprising.htm" class="citation-link">Hilbert-Pólya conjecture</a> and has driven extensive research at their intersection.
+          </p>
+        </div>
+      </section>
+
+      <!-- Unification Frameworks -->
+      <section id="unification-frameworks" class="mb-16 px-8">
+        <h2 class="font-display text-3xl font-bold text-gray-900 mb-8">Unification Frameworks and &#34;Strange&#34; Mathematics</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+          <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-3 text-purple-900">Information-Theoretic Approaches</h3>
+            <p class="text-sm mb-3">
+              <a href="https://quantumgravityresearch.org/portfolio/toward-a-unification-of-physics-and-number-theory/" class="citation-link">Klee Irwin&#39;s proposal</a> that &#34;the unifying idea between number theory and physics is code theory&#34; represents a paramathematical framework that explicitly addresses the user&#39;s interest in &#34;strange&#34; unifications.
+            </p>
+            <div class="equation-box p-3">
+              <div class="font-mono text-xs text-center">3-simplex integers → aperiodic patterns → space-time emergence</div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-3 text-green-900">P-Adic Number Systems</h3>
+            <p class="text-sm mb-3">
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0003491624001544" class="citation-link">P-adic numbers</a> provide a mathematically &#34;strange&#34; but physically motivated framework for cross-domain analysis, with applications to sub-Planckian physics and adelic formulations.
+            </p>
+            <div class="equation-box p-3">
+              <div class="font-mono text-xs text-center">|x + y|_p ≤ max(|x|_p, |y|_p)</div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-3 text-orange-900">Topos-Theoretic Unification</h3>
+            <p class="text-sm mb-3">
+              <a href="https://www.oliviacaramello.com/Unification/GeneralIntroduction.html" class="citation-link">Olivia Caramello&#39;s work</a> on topos-theoretic &#34;bridges&#34; provides a sophisticated framework for cross-domain unification using Grothendieck toposes as bridge objects.
+            </p>
+            <div class="equation-box p-3">
+              <div class="font-mono text-xs text-center">Topos equivalence → Knowledge transfer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="font-display text-xl font-semibold mb-4">Physical Realism Constraints on Formal Systems</h3>
+          <p class="mb-4">
+            The code-theoretic framework explicitly addresses physical realism constraints through its &#34;emergence theory&#34; approach. The claim that <a href="https://quantumgravityresearch.org/portfolio/toward-a-unification-of-physics-and-number-theory/" class="citation-link">&#34;3-simplex integers form physically realistic aperiodic dynamic patterns&#34;</a> implies a filtering criterion: not all formal systems generate physically realistic patterns, and those that do are privileged.
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold mb-2">Code Theory Framework</h4>
+              <ul class="text-sm space-y-1 text-gray-700">
+                <li>• Simplex-integer based quasicrystal formalism</li>
+                <li>• Emergence of space-time from code evolution</li>
+                <li>• Principle of efficient language</li>
+                <li>• Geometric first-principles approach</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">P-Adic Adelic Framework</h4>
+              <ul class="text-sm space-y-1 text-gray-700">
+                <li>• Non-Archimedean metrics for Planck-scale physics</li>
+                <li>• <a href="https://www.sciencedirect.com/science/article/abs/pii/S0003491624001544" class="citation-link">Adelic product formulas</a> bridging real and p-adic</li>
+                <li>• Fractal geometry from p-adic topology</li>
+                <li>• Galois representations and symmetry breaking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Convergent Discovery -->
+      <section id="convergent-discovery" class="mb-16 px-8">
+        <h2 class="font-display text-3xl font-bold text-gray-900 mb-8">Convergent Discovery Phenomena Across Disciplines</h2>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg mb-8">
+          <h3 class="font-display text-xl font-semibold mb-4 text-yellow-900">The Mathematics of Critical Phenomena</h3>
+          <p class="text-yellow-800 mb-4">
+            The mathematics of critical phenomena exhibits remarkable cross-domain convergence, with identical mathematical structures appearing in physically unrelated systems. The <a href="https://arxiv.org/pdf/2601.22389" class="citation-link">correlation length ξ in physics, DFA scaling exponent α in cardiology, Hurst exponent H in finance, and spectral radius χ in machine learning</a> were all independently derived across six to nine distinct domains while remaining largely unaware of each other&#39;s work.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full border-collapse border border-gray-300">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="border border-gray-300 px-4 py-2 text-left">Classification</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Definition</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Example</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Mathematical Structure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Independent derivation</td>
+                <td class="border border-gray-300 px-4 py-2">Framework developed from first principles without awareness of equivalent prior work</td>
+                <td class="border border-gray-300 px-4 py-2">Bak-Tang-Wiesenfeld self-organized criticality (1987)</td>
+                <td class="border border-gray-300 px-4 py-2">Power-law avalanche size distribution P(s) ~ s^{-τ}</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Qualified independent derivation</td>
+                <td class="border border-gray-300 px-4 py-2">Existing awareness of related field, but different mathematical foundations</td>
+                <td class="border border-gray-300 px-4 py-2">Kauffman&#39;s edge of chaos in Boolean networks (1993)</td>
+                <td class="border border-gray-300 px-4 py-2">Connectivity K ≈ 2 for maximal computational capability</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Domain transfer</td>
+                <td class="border border-gray-300 px-4 py-2">Existing technique recognized as applicable to new domain</td>
+                <td class="border border-gray-300 px-4 py-2">Peters&#39; Hurst analysis in finance (1994)</td>
+                <td class="border border-gray-300 px-4 py-2">Rescaled range R(n)/S(n) ~ n^H</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Intra-field extension</td>
+                <td class="border border-gray-300 px-4 py-2">New phenomena identified using existing tools within same discipline</td>
+                <td class="border border-gray-300 px-4 py-2">Peng et al.&#39;s DFA in cardiology (1994)</td>
+                <td class="border border-gray-300 px-4 py-2">Fluctuation function F(n) ~ n^α</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Empirical precursor</td>
+                <td class="border border-gray-300 px-4 py-2">Observation predating formal framework</td>
+                <td class="border border-gray-300 px-4 py-2">Greenshields&#39; traffic flow data (1935)</td>
+                <td class="border border-gray-300 px-4 py-2">Linear speed-density relation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-4">OEIS as Empirical Record</h3>
+            <p class="text-sm mb-4">
+              The <a href="https://ojs.aaai.org/index.php/AAAI/article/view/25930/25702" class="citation-link">On-Line Encyclopedia of Integer Sequences (OEIS)</a> serves as a critical empirical resource for documenting convergent mathematical structures across domains, containing 351,663 entries as of March 2022.
+            </p>
+            <div class="text-xs text-gray-600">
+              <p><strong>Example:</strong> <a href="https://oeis.org/A131758" class="citation-link">Sequence A131758</a> connects combinatorics, polylogarithms, and quantum statistical mechanics through explicit equalities involving Bose-Einstein and Fermi-Dirac distributions.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-4">Modular Forms in String Theory</h3>
+            <p class="text-sm mb-4">
+              The elliptic genus equals the partition function of a supersymmetric sigma model and also equals a modular form, creating a <a href="https://oeis.org/A001334" class="citation-link">three-way equality: topological = physical = number-theoretic</a>.
+            </p>
+            <div class="text-xs text-gray-600">
+              <p><strong>Example:</strong> Monstrous moonshine connects the Monster sporadic group to modular functions, now understood through vertex operator algebras and string theory.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Paramathematical Mathematics -->
+      <section id="paramathematical" class="mb-16 px-8">
+        <h2 class="font-display text-3xl font-bold text-gray-900 mb-8">Paramathematical and Historically &#34;Wrong&#34; Mathematics</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-4 text-red-900">Heuristic and Pre-Rigorous Methods</h3>
+            <p class="text-sm mb-4">
+              <a href="https://www.wired.com/2014/10/invention-equals-sign/" class="citation-link">Leonhard Euler&#39;s manipulation of divergent series</a>, now justified through analytic continuation, exemplifies paramathematics. His derivation of ζ(-1) = -1/12 through formal manipulation of 1 + 2 + 3 + 4 + ... has been validated through string theory and Casimir effect calculations.
+            </p>
+            <div class="equation-box p-3">
+              <div class="font-mono text-xs text-center">1 + 2 + 3 + 4 + ... = -1/12</div>
+              <div class="text-center text-xs text-gray-600 mt-1">Euler&#39;s heuristic result (physically validated)</div>
+            </div>
+          </div>
+
+          <div class="bg-orange-50 border border-orange-200 rounded-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-4 text-orange-900">Alternative Notational Systems</h3>
+            <p class="text-sm mb-4">
+              Different scientific domains have developed distinct conventions for equality symbols. <a href="https://math.stackexchange.com/questions/1269958/the-meaning-of-various-equality-symbols" class="citation-link">Physics frequently uses &#34;=&#34; operationally</a> (F = ma as definition) while mathematics uses it relationally.
+            </p>
+            <div class="equation-box p-3">
+              <div class="font-mono text-xs text-center">V := x (definition) vs. V ≡ x (congruence)</div>
+              <div class="text-center text-xs text-gray-600 mt-1">Domain-specific equality conventions</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <h3 class="font-display text-xl font-semibold mb-4">Extracting Formal Skeletons from Superseded Theories</h3>
+          <p class="mb-4">
+            The user&#39;s inclusion of &#34;wrong&#34; mathematics that obeys physical laws suggests a methodology for extracting formal structures from superseded theories. The caloric theory of heat, though physically incorrect, generated valid mathematical structures for heat conduction that retain formal interest.
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div class="text-center">
+              <h4 class="font-semibold mb-2">Caloric Theory</h4>
+              <div class="equation-box p-3">
+                <div class="font-mono text-xs">∂T/∂t = α ∇²T</div>
+                <div class="text-xs text-gray-600 mt-1">Heat equation (still valid)</div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="font-semibold mb-2">Luminiferous Ether</h4>
+              <div class="equation-box p-3">
+                <div class="font-mono text-xs">∇²E - (1/c²)∂²E/∂t² = 0</div>
+                <div class="text-xs text-gray-600 mt-1">Wave equation (still valid)</div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="font-semibold mb-2">Phlogiston Theory</h4>
+              <div class="equation-box p-3">
+                <div class="font-mono text-xs">ΔH = ΣΔH_products - ΣΔH_reactants</div>
+                <div class="text-xs text-gray-600 mt-1">Conservation principles (still valid)</div>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700 mt-4">
+            The equality between mathematical structure and physical application may fail when the physics is superseded, but the internal equalities within the mathematical structure persist. This preservation pattern suggests that <strong>cross-domain equalities are more robust than domain-specific interpretations</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Database Resources -->
+      <section id="database-resources" class="mb-16 px-8">
+        <h2 class="font-display text-3xl font-bold text-gray-900 mb-8">Database and Computational Resources</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-3 text-blue-900">OEIS</h3>
+            <p class="text-sm mb-3">
+              The <a href="https://ojs.aaai.org/index.php/AAAI/article/view/25930/25702" class="citation-link">On-Line Encyclopedia of Integer Sequences</a> contains 351,663 entries with keyword tagging for cross-domain retrieval.
+            </p>
+            <div class="text-xs text-gray-600">
+              <p><strong>Keywords:</strong> phys, numtheory, prime, core, nice, hard</p>
+            </div>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-3 text-green-900">LMFDB</h3>
+            <p class="text-sm mb-3">
+              The <a href="https://gowers.wordpress.com/2016/05/10/the-l-functions-and-modular-forms-database/" class="citation-link">L-Functions and Modular Forms Database</a> provides structured organization of elliptic curves, modular forms, and Galois representations.
+            </p>
+            <div class="text-xs text-gray-600">
+              <p><strong>Features:</strong> Euler products, Hecke eigenvalues, Satake parameters</p>
+            </div>
+          </div>
+
+          <div class="bg-purple-50 rounded-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-3 text-purple-900">arXiv</h3>
+            <p class="text-sm mb-3">
+              The <a href="https://arxiv.org/list/math.MP/recent" class="citation-link">math-ph and math.NT categories</a> provide preprint corpora for automated extraction of equivalence statements.
+            </p>
+            <div class="text-xs text-gray-600">
+              <p><strong>Cross-listings:</strong> hep-th, cond-mat, quant-ph, math.AG</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <h3 class="font-display text-xl font-semibold mb-4">Automated Extraction of Equivalence Statements</h3>
+          <p class="mb-4">
+            The user&#39;s equality-centered framework suggests a specific methodology for automated analysis of mathematical corpora: extract and analyze equivalence statements. In arXiv papers, equivalence statements appear in multiple forms: explicit equalities (A = B), definitional equalities (A := B), conditional equalities (A = B when C), asymptotic equalities (A ~ B), and isomorphisms (A ≅ B).
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold mb-2">Extraction Challenges</h4>
+              <ul class="text-sm space-y-1 text-gray-700">
+                <li>• <a href="https://arxiv.org/html/2604.07626v1" class="citation-link">Domain-safe rewriting can be strictly one-way</a>
+                </li>
+                <li>• Notational variance across disciplines (ξ vs. H vs. χ)</li>
+                <li>• Context-dependent equality meanings</li>
+                <li>• Physical law compliance verification</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Computational Approaches</h4>
+              <ul class="text-sm space-y-1 text-gray-700">
+                <li>• <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32162/34317" class="citation-link">Neural machine translation for sequence-formula mapping</a>
+                </li>
+                <li>• Symbol co-occurrence network analysis</li>
+                <li>• Formal verification with Lean/mathlib</li>
+                <li>• Citation network analysis for cross-domain flows</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h3 class="font-display text-lg font-semibold mb-4">Author Trajectory Analysis</h3>
+          <p class="mb-4">
+            Individual author trajectories in the OEIS provide microcosmic views of cross-domain mathematical derivation. <a href="https://oeis.org/A131758" class="citation-link">Tom Copeland&#39;s contributions</a>, spanning from 2008 to 2017, demonstrate sustained engagement with polylogarithm-Laguerre-Bernoulli-zeta connections.
+          </p>
+          <div class="bg-white rounded p-4">
+            <div class="text-sm font-mono">
+              <div class="flex items-center mb-2">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs mr-2">2008</span>
+                <span>Initial entry: Polylogarithm-Bose-Einstein connections</span>
+              </div>
+              <div class="flex items-center mb-2">
+                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-2">2014</span>
+                <span>Function correction: Deformed Todd operator</span>
+              </div>
+              <div class="flex items-center">
+                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs mr-2">2017</span>
+                <span>Cross-references: Ehrhart polynomials, algebraic geometry</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700 mt-4">
+            The user&#39;s analysis can model these trajectories as paths through the cross-domain similarity space, with equality relations serving as fixed points enabling navigation between domains.
+          </p>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section id="methodology" class="mb-16 px-8">
+        <h2 class="font-display text-3xl font-bold text-gray-900 mb-8">Methodological Considerations</h2>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
+          <h3 class="font-display text-xl font-semibold mb-4 text-blue-900">Defining Cross-Domain Similarity Metrics</h3>
+          <p class="text-blue-800 mb-4">
+            The <a href="https://arxiv.org/pdf/2601.22389" class="citation-link">&#34;Convergent Discovery&#34; paper&#39;s distinction</a> between &#34;functional correspondence&#34; and formal equivalence provides essential terminology. Functional correspondence means parameters identify the same system states as critical, while formal equivalence requires mathematical interconvertibility.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full border-collapse border border-gray-300">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="border border-gray-300 px-4 py-2 text-left">Similarity Level</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Mathematical Criterion</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Statistical Implementation</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Level 0: Notational Identity</td>
+                <td class="border border-gray-300 px-4 py-2">Same symbol, same definition</td>
+                <td class="border border-gray-300 px-4 py-2">String matching with semantic verification</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">0.2</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Level 1: Structural Isomorphism</td>
+                <td class="border border-gray-300 px-4 py-2">Same formal structure, different notation</td>
+                <td class="border border-gray-300 px-4 py-2">Graph isomorphism on expression trees</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">0.4</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Level 2: Functional Correspondence</td>
+                <td class="border border-gray-300 px-4 py-2">Same diagnostic purpose, different mathematical form</td>
+                <td class="border border-gray-300 px-4 py-2">Correlation of outcomes on common test cases</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">0.6</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Level 3: Rigorous Equivalence</td>
+                <td class="border border-gray-300 px-4 py-2">Mathematically exact identity</td>
+                <td class="border border-gray-300 px-4 py-2">Formal proof or algorithmic verification</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">0.8</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2 font-medium">Level 4: Derivational Convergence</td>
+                <td class="border border-gray-300 px-4 py-2">Same result from independent derivation paths</td>
+                <td class="border border-gray-300 px-4 py-2">Citation network analysis and historical tracing</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">1.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-4">Human Derivation Patterns</h3>
+            <p class="text-sm mb-4">
+              Human mathematical derivation frequently proceeds through <strong>analogical transfer</strong>, recognizing structural similarities between familiar and unfamiliar domains. <a href="https://link.springer.com/article/10.1007/s11858-026-01787-3" class="citation-link">Cognitive science research</a> reveals that working memory is the strongest predictor of mathematical learning, with visuospatial components supporting spatial reasoning.
+            </p>
+            <div class="equation-box p-3">
+              <div class="font-mono text-xs text-center">Surface Similarity → Structural Similarity → Goal Relevance → Analogical Transfer</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="font-display text-lg font-semibold mb-4">Handling the &#34;Relativistic Shore&#34; Problem</h3>
+            <p class="text-sm mb-4">
+              The &#34;relativistic shore&#34; problem—the observer-dependence of domain boundaries—requires explicit methodological handling. <a href="https://www.oliviacaramello.com/Unification/GeneralIntroduction.html" class="citation-link">The distinction between static and dynamic unification</a> provides a framework for modeling boundary construction.
+            </p>
+            <div class="equation-box p-3">
+              <div class="font-mono text-xs text-center">Multiple Clustering → Historical Tracking → Sensitivity Analysis</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-gray-900 to-blue-900 text-white rounded-lg p-8">
+          <h3 class="font-display text-xl font-semibold mb-4">Conclusion: A Dynamic Framework for Mathematical Discovery</h3>
+          <p class="mb-4">
+            The user&#39;s &#39;=&#39;-centered framework provides the stability needed for dynamic analysis of cross-domain mathematics. While domain boundaries shift and notational conventions evolve, the equality relation remains the fixed point. Every cross-domain claim, whether conventional or paramathematical, must ultimately be expressed as an equality statement.
+          </p>
+          <p class="text-sm opacity-90">
+            This universal requirement provides the common ground on which statistical analysis operates, enabling comparison across all domains and all degrees of formalization, constrained only by the physical law compliance that ensures meaningful connection to empirical reality. The mathematical frontier is non-terminating, but the equals sign remains our constant guide through its ever-shifting landscape.
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="border-t border-gray-200 pt-8 pb-16 px-8">
+        <div class="text-center text-gray-600">
+          <p class="mb-2">Cross-Domain Mathematical Structures for Statistical Analysis</p>
+          <p class="text-sm">An Equivalence-Centered Framework</p>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#1e3a8a',
+                primaryTextColor: '#1f2937',
+                primaryBorderColor: '#374151',
+                lineColor: '#6b7280',
+                secondaryColor: '#f3f4f6',
+                tertiaryColor: '#ffffff',
+                background: '#ffffff',
+                mainBkg: '#ffffff',
+                secondaryBkg: '#f8fafc',
+                tertiaryBkg: '#f1f5f9'
+            },
+            flowchart: {
+                htmlLabels: true,
+                curve: 'basis'
+            },
+            sequence: {
+                diagramMarginX: 50,
+                diagramMarginY: 10
+            }
+        });
+
+        // Initialize Mermaid Controls for zoom and pan
+        function initializeMermaidControls() {
+            const containers = document.querySelectorAll('.mermaid-container');
+
+            containers.forEach(container => {
+            const mermaidElement = container.querySelector('.mermaid');
+            let scale = 1;
+            let isDragging = false;
+            let startX, startY, translateX = 0, translateY = 0;
+
+            // 触摸相关状态
+            let isTouch = false;
+            let touchStartTime = 0;
+            let initialDistance = 0;
+            let initialScale = 1;
+            let isPinching = false;
+
+            // Zoom controls
+            const zoomInBtn = container.querySelector('.zoom-in');
+            const zoomOutBtn = container.querySelector('.zoom-out');
+            const resetBtn = container.querySelector('.reset-zoom');
+            const fullscreenBtn = container.querySelector('.fullscreen');
+
+            function updateTransform() {
+                mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+                if (scale > 1) {
+                container.classList.add('zoomed');
+                } else {
+                container.classList.remove('zoomed');
+                }
+
+                mermaidElement.style.cursor = isDragging ? 'grabbing' : 'grab';
+            }
+
+            if (zoomInBtn) {
+                zoomInBtn.addEventListener('click', () => {
+                scale = Math.min(scale * 1.25, 4);
+                updateTransform();
+                });
+            }
+
+            if (zoomOutBtn) {
+                zoomOutBtn.addEventListener('click', () => {
+                scale = Math.max(scale / 1.25, 0.3);
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform();
+                });
+            }
+
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                scale = 1;
+                translateX = 0;
+                translateY = 0;
+                updateTransform();
+                });
+            }
+
+            if (fullscreenBtn) {
+                fullscreenBtn.addEventListener('click', () => {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.webkitRequestFullscreen) {
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) {
+                    container.msRequestFullscreen();
+                }
+                });
+            }
+
+            // Mouse Events
+            mermaidElement.addEventListener('mousedown', (e) => {
+                if (isTouch) return; // 如果是触摸设备，忽略鼠标事件
+
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                mermaidElement.style.cursor = 'grabbing';
+                updateTransform();
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging && !isTouch) {
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseleave', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            // 获取两点之间的距离
+            function getTouchDistance(touch1, touch2) {
+                return Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+                );
+            }
+
+            // Touch Events - 触摸事件处理
+            mermaidElement.addEventListener('touchstart', (e) => {
+                isTouch = true;
+                touchStartTime = Date.now();
+
+                if (e.touches.length === 1) {
+                // 单指拖动
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+
+                } else if (e.touches.length === 2) {
+                // 双指缩放
+                isPinching = true;
+                isDragging = false;
+
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                initialDistance = getTouchDistance(touch1, touch2);
+                initialScale = scale;
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && isDragging && !isPinching) {
+                // 单指拖动
+                const touch = e.touches[0];
+                translateX = touch.clientX - startX;
+                translateY = touch.clientY - startY;
+                updateTransform();
+
+                } else if (e.touches.length === 2 && isPinching) {
+                // 双指缩放
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                const currentDistance = getTouchDistance(touch1, touch2);
+
+                if (initialDistance > 0) {
+                    const newScale = Math.min(Math.max(
+                    initialScale * (currentDistance / initialDistance),
+                    0.3
+                    ), 4);
+                    scale = newScale;
+                    updateTransform();
+                }
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchend', (e) => {
+                // 重置状态
+                if (e.touches.length === 0) {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                // 延迟重置isTouch，避免鼠标事件立即触发
+                setTimeout(() => {
+                    isTouch = false;
+                }, 100);
+                } else if (e.touches.length === 1 && isPinching) {
+                // 从双指变为单指，切换为拖动模式
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+                }
+
+                updateTransform();
+            });
+
+            mermaidElement.addEventListener('touchcancel', (e) => {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                setTimeout(() => {
+                isTouch = false;
+                }, 100);
+
+                updateTransform();
+            });
+
+            // Enhanced wheel zoom with better center point handling
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const rect = container.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
+
+                // Adjust translation to zoom towards center
+                if (newScale !== scale) {
+                const scaleDiff = newScale / scale;
+                translateX = translateX * scaleDiff;
+                translateY = translateY * scaleDiff;
+                scale = newScale;
+
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+
+                updateTransform();
+                }
+            });
+
+            // Initialize display
+            updateTransform();
+            });
+        }
+
+        // Initialize Mermaid Controls
+        initializeMermaidControls();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight active section in TOC
+        const sections = document.querySelectorAll('section[id]');
+        const tocLinks = document.querySelectorAll('.toc-fixed a[href^="#"]');
+
+        function highlightActiveSection() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('bg-blue-100', 'text-blue-700', 'font-medium');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('bg-blue-100', 'text-blue-700', 'font-medium');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightActiveSection);
+        highlightActiveSection(); // Initial call
+    </script>
+  
+
+</body></html>

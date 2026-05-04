@@ -1,0 +1,184 @@
+%% GeoCognition Equation Types + Domain Map
+%% Purpose: map equation families, domains, proof maturity, and routing into the GeoCognition stack.
+%% Legend classes:
+%%   keep        = structurally useful / core layer
+%%   theorem     = reduced branch with proof path or theorem kernel
+%%   proposal    = proposal/search heuristic, needs audit
+%%   narrow      = good idea but should be renamed/narrowed
+%%   quarantine  = powerful but unsafe/overbroad unless externally verified
+%%   audit       = validation/safety layer
+
+flowchart TD
+
+    ROOT["GeoCognition<br/>Equation Atlas"]
+
+    %% =========================
+    %% LEGEND
+    %% =========================
+    subgraph LEGEND["Legend / Maturity Tags"]
+        LG1["KEEP<br/>core primitive"]:::keep
+        LG2["THEOREM<br/>proof kernel / reduced branch"]:::theorem
+        LG3["PROPOSAL<br/>search heuristic / candidate generator"]:::proposal
+        LG4["NARROW<br/>rename or scope before public use"]:::narrow
+        LG5["QUARANTINE<br/>do not promote without audit"]:::quarantine
+        LG6["AUDIT<br/>external validation / confidence cap"]:::audit
+    end
+
+    %% =========================
+    %% FOUNDATION / LOAD
+    %% =========================
+    ROOT --> FOUNDATION
+    subgraph FOUNDATION["Domain: Foundation / Load / Cognitive Routing"]
+        ULE["Equation Type: Additive Load<br/>Unified Load Equation<br/>L_total = L_I + L_E + L_G + L_R + L_M<br/>Use: total semantic/processing burden"]:::keep
+        CLB["Equation Type: Stability Inequality<br/>Cognitive Load Bound<br/>T + S <= beta<br/>Use: receiver bandwidth / translation capacity"]:::keep
+        PTFC["Equation Type: Horizon-Collapse Scalar<br/>Psychotemporal Forced Compression<br/>H = H0 / (1 + stress terms)<br/>Use: future horizon collapse under panic/scar pressure"]:::keep
+        FASF["Equation Type: Signed Field Balance<br/>Future-Access Scar Field<br/>Omega = protective terms - collapse terms<br/>Use: stewardship vs domination branch"]:::keep
+    end
+
+    %% =========================
+    %% FIELD / PDE / GEOMETRY
+    %% =========================
+    ROOT --> DYNAMICS
+    subgraph DYNAMICS["Domain: Field / PDE / Geometric Dynamics"]
+        HF["Equation Type: Variational Field System<br/>HyperFabric / Foldback-Lock Flow<br/>energy -> chemical potential -> dynamics<br/>Use: anisotropic torsional gradient flow"]:::narrow
+        ENERGY["Equation Type: Energy Functional<br/>F[phi,X;g,T] = integral density<br/>Use: define admissible evolution and dissipation targets"]:::keep
+        PDE["Equation Type: PDE / Gradient Flow<br/>partial_t phi = div(M grad mu) - lock force<br/>Use: cooling, locking, phase evolution"]:::proposal
+        WALL["Equation Type: Infinite-Gradient Exclusion<br/>finite wall energy => zero density on wall<br/>Use: collision/admissibility theorem shape"]:::keep
+        SOFA["Equation Type: Flow-Support Geometry<br/>object = stable support of constrained flow<br/>Use: moving sofa / couch branch"]:::keep
+        QUAT["Equation Type: Quaternion / Torsion Alignment<br/>q in S^3, local orientation field<br/>Use: rotation without singular coordinate chart"]:::proposal
+    end
+
+    %% =========================
+    %% DISCRETE THEOREM BRANCH
+    %% =========================
+    ROOT --> FORMAL
+    subgraph FORMAL["Domain: Formal / Lean / Reduced Proof Branches"]
+        TOY["Equation Type: Zero-System Baseline<br/>zero state, zero dynamics, equilibrium<br/>Use: regression-test theorem baseline"]:::theorem
+        QUAD["Equation Type: Quadratic Energy<br/>e = a phi^2 + b(X-X0)^2 + c lock^2<br/>Use: nonnegativity and coercivity branch"]:::theorem
+        DISC["Equation Type: Discrete Contraction<br/>s_{k+1} = contraction(s_k)<br/>Use: pointwise energy nonincrease"]:::theorem
+        GRID["Equation Type: Finite-Grid Sum<br/>E_grid = sum_i e(s,x_i)<br/>Use: global monotonicity from pointwise decay"]:::theorem
+        THESIS["Equation Type: Thesis Obligation Layer<br/>targets, assumptions, theorem manifests<br/>Use: reproducible model development path"]:::keep
+    end
+
+    %% =========================
+    %% MEMORY / SEARCH
+    %% =========================
+    ROOT --> MEMORY
+    subgraph MEMORY["Domain: Memory / Search / Route Discovery"]
+        FAMM["Equation Type: Scar/Basin Update<br/>M_{t+1} = FAMM_Update(M_t, route, outcome)<br/>Use: failure becomes routing memory"]:::keep
+        PIST["Equation Type: Stochastic Manifold Update<br/>failure -> coarse-graining -> decay -> LUT<br/>Use: perfectly-imperfect search engine"]:::keep
+        LUT["Equation Type: n-Space Key-Value Store<br/>key = rounded coordinate / value = reward + type + scar<br/>Use: avoid repeated unproductive search"]:::keep
+        MIRROR["Equation Type: Symmetry/Mirror Pruning<br/>fail(x) => downweight mirror orbit of x<br/>Use: prevent repeated symmetric failures"]:::keep
+        PRED["Equation Type: Prediction Cache<br/>P(success | partial config, LUT history)<br/>Use: prefetch productive search regions"]:::proposal
+        MOIM["Equation Type: Behavioral Manifold Router<br/>object -> behavioral fingerprint -> route/adaptor search<br/>Use: math behavior-space routing"]:::narrow
+        GENOME18["Equation Type: Compact Addressing<br/>18-bit behavioral address / hardware slot<br/>Use: FPGA-friendly search coordinate"]:::keep
+    end
+
+    %% =========================
+    %% COMPRESSION / INFORMATION
+    %% =========================
+    ROOT --> COMPRESSION
+    subgraph COMPRESSION["Domain: Compression / Information / Description Length"]
+        HUTTER["Equation Type: Description-Length Objective<br/>structure should reduce compressed length<br/>Use: Hutter Prize / compression benchmark axis"]:::keep
+        COHCOMP["Equation Type: Coherence-Compression Law<br/>Phi(W) up => expected code length down<br/>Use: multiscale coherence predicts compressibility"]:::keep
+        GENOMIC["Equation Type: Genomic Compressibility Functional<br/>Phi_genomic(W) = normalized multichannel coherence - noise<br/>Use: sequence/regulation/structure/conservation compression"]:::narrow
+        OAMMR["Equation Type: Projection Memory Merge<br/>node = hash + Q/R orthogonal summary<br/>Use: integrity + retained subspace structure"]:::proposal
+        DSP["Equation Type: Spectral Relaxation<br/>low autocorrelation at forbidden lag<br/>Use: coloring/signal candidate generator"]:::proposal
+    end
+
+    %% =========================
+    %% BIO / SOCIAL / ADAPTERS
+    %% =========================
+    ROOT --> BIOSOCIAL
+    subgraph BIOSOCIAL["Domain: Bio / Social / Emotional Adapter"]
+        EMO["Equation Type: Emotion State Vector<br/>E = (valence, arousal, dominance, certainty, threat, urgency)<br/>Use: measurable affective adapter index"]:::keep
+        ICP["Equation Type: Biological Rejection / ICP<br/>R_bio = Hill-style threshold response<br/>Use: cringe/rejection as containment signal"]:::narrow
+        ADAPT["Equation Type: Adapter Optimization<br/>A* = argmin(load + distance-to-calm + rejection-risk)<br/>Use: keep receiver in calm-logic zone"]:::keep
+        META["Equation Type: Meta-Autotyping Pressure<br/>T = scale * authority * recursion * coupling / contestability<br/>Use: automated type assignment risk"]:::keep
+        STEW["Equation Type: Stewardship-Domination Branch<br/>Delta = stewardship - domination<br/>Use: scar memory becomes protection or capture"]:::keep
+    end
+
+    %% =========================
+    %% HARDWARE / EXECUTION
+    %% =========================
+    ROOT --> HARDWARE
+    subgraph HARDWARE["Domain: Hardware / Execution / Toolchain"]
+        Q16["Equation Type: Fixed-Point Arithmetic<br/>Q16.16 scalars / saturating operations<br/>Use: deterministic pipeline convention"]:::keep
+        BLIT["Equation Type: Bit-Blit Update<br/>M_{k+1} = Quant(Jump(M_k XOR sample))<br/>Use: O(1) discrete Picard shortcut"]:::proposal
+        OISC["Equation Type: One-Instruction Logic<br/>4-gate / CMYK scalar update<br/>Use: minimal executable control layer"]:::proposal
+        FPGA["Equation Type: LUT/BRAM Search Substrate<br/>BRAM = route memory, LUT = local transition law<br/>Use: hardware search engine"]:::keep
+        TOOLLAW["Equation Type: Toolchain Law<br/>Lean owns logic; Rust owns boundary; Python relays<br/>Use: prevent hidden logic at system boundary"]:::keep
+        RUST["Equation Type: Rust Gimbal<br/>libftdi / hardware I/O bridge<br/>Use: permanent fix over kernel roulette"]:::keep
+        VERILOG["Equation Type: Bitstream Boundary<br/>Verilog/bitstream must be generated/proven/audited<br/>Use: suspect until linked to Lean source of truth"]:::audit
+    end
+
+    %% =========================
+    %% AUDIT / SAFETY
+    %% =========================
+    ROOT --> AUDIT
+    subgraph AUDIT["Domain: Audit / Epistemic Safety / Claim Hygiene"]
+        SNR["Equation Type: Signal-to-Noise Detector<br/>SNR ranks structure over noise<br/>Use: candidate promotion, not belief promotion"]:::audit
+        SCALE["Equation Type: Scale-Coherence Check<br/>cross-scale consistency / self-similarity<br/>Use: reject one-scale artifacts"]:::audit
+        CAP["Equation Type: Confidence Cap<br/>PublicClaim = min(raw confidence, validation cap)<br/>Use: cap machine confidence until external validation"]:::audit
+        LANG["Equation Type: Epistemic Language Sanitizer<br/>replace 'proved/lawful/true' with 'detected/suggests/candidate'<br/>Use: machine is telescope, not oracle"]:::audit
+        EXT["Equation Type: External Validation Gate<br/>domain check / empirical validation / proof check<br/>Use: allow stronger claims only after audit"]:::audit
+        QUAR["Equation Type: Quarantine Bin<br/>overbroad or unsafe claims held out of core<br/>Use: anti-delusion layer"]:::quarantine
+    end
+
+    %% =========================
+    %% ROUTING EDGES
+    %% =========================
+    ULE --> CLB --> PTFC --> FASF
+    ULE --> EMO
+    CLB --> PBACS_PLACEHOLDER["PBACS / Stress Routing<br/>Action -> Monitor -> Verify -> Prune"]:::keep
+    PBACS_PLACEHOLDER --> FAMM
+
+    ENERGY --> PDE
+    PDE --> HF
+    HF --> DISC
+    DISC --> GRID
+    WALL --> EXT
+    SOFA --> WALL
+    QUAT --> HF
+
+    FAMM --> PIST
+    FAMM --> OAMMR
+    PIST --> LUT --> MIRROR --> PRED
+    LUT --> GENOME18 --> FPGA
+    MOIM --> FAMM
+
+    HUTTER --> COHCOMP
+    COHCOMP --> GENOMIC
+    COHCOMP --> OAMMR
+    DSP --> SNR
+
+    EMO --> ADAPT
+    ICP --> ADAPT
+    META --> SNR
+    META --> QUAR
+    STEW --> FASF
+
+    Q16 --> BLIT --> OISC --> FPGA
+    TOOLLAW --> RUST --> FPGA
+    TOOLLAW --> VERILOG
+    VERILOG --> QUAR
+
+    SNR --> SCALE --> CAP --> LANG --> EXT
+    EXT -->|pass| THESIS
+    EXT -->|fail| QUAR
+    QUAR --> FAMM
+
+    GRID --> EXT
+    QUAD --> GRID
+    TOY --> QUAD
+    THESIS --> EXT
+
+    %% =========================
+    %% CLASS DEFINITIONS
+    %% =========================
+    classDef keep fill:#d7f5df,stroke:#248a45,stroke-width:1px,color:#102a19;
+    classDef theorem fill:#dbeafe,stroke:#2563eb,stroke-width:1px,color:#0f172a;
+    classDef proposal fill:#fff7cc,stroke:#d4a017,stroke-width:1px,color:#3a2a00;
+    classDef narrow fill:#eadcff,stroke:#7c3aed,stroke-width:1px,color:#211536;
+    classDef quarantine fill:#ffd8d8,stroke:#dc2626,stroke-width:2px,color:#3b0a0a;
+    classDef audit fill:#e6f0ff,stroke:#0f766e,stroke-width:1px,color:#0b2825;

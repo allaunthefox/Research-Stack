@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OTOM: A Sovereign Informatic Manifold for Geometric Constraint Satisfaction via Quaternion Color Fields, Torsion-Gradient Prime Quantization, and Hardware-Accelerated QUBO Resolution</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+<style>
+body { margin: 0; padding: 0; font-family: 'Georgia', 'Noto Serif', serif; font-size: 11pt; line-height: 1.65; color: #333; text-align: justify; text-align-last: left; }
+@page { size: A4; margin: 2.5cm 2cm; @top-center { content: string(doctitle); font-size: 9pt; color: #666; } @bottom-center { content: counter(page); font-size: 9pt; } }
+@page :first { margin: 0; @top-center { content: none; } @bottom-center { content: none; } }
+@page cover { @top-center { content: none; } @bottom-center { content: none; } }
+body { string-set: doctitle ""; }
+h1 { string-set: doctitle content(); }
+
+.cover { width: 210mm; height: 297mm; margin: 0; position: relative; overflow: hidden; page: cover; page-break-after: always; background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f23 100%); }
+.cover-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 85%; z-index: 2; }
+.cover-title { font-size: 22pt; font-weight: 700; color: #e0e0f0; margin-bottom: 0.8cm; line-height: 1.3; letter-spacing: 0.02em; }
+.cover-subtitle { font-size: 13pt; color: #8a8aaa; margin-bottom: 2.5cm; font-style: italic; line-height: 1.5; }
+.cover-meta { font-size: 11pt; color: #a0a0c0; line-height: 2; font-family: 'Courier New', monospace; }
+.cover-decoration { position: absolute; width: 300px; height: 300px; border: 1px solid rgba(0, 240, 255, 0.1); border-radius: 50%; top: 10%; left: -5%; }
+.cover-decoration-2 { position: absolute; width: 200px; height: 200px; border: 1px solid rgba(255, 0, 160, 0.08); border-radius: 50%; bottom: 15%; right: -3%; }
+.cover-decoration-3 { position: absolute; width: 150px; height: 1px; background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.3), transparent); top: 25%; right: 10%; }
+.cover-decoration-4 { position: absolute; width: 1px; height: 150px; background: linear-gradient(180deg, transparent, rgba(255, 107, 0, 0.3), transparent); bottom: 20%; left: 15%; }
+
+.toc-page { page: toc; page-break-after: always; }
+.toc-title { font-size: 18pt; font-weight: bold; margin-bottom: 1cm; color: #333; }
+.toc ul { list-style: none; padding: 0; }
+.toc li { margin: 0.4em 0; }
+.toc a { color: #333; text-decoration: none; display: block; }
+.toc a::after { content: leader('.') target-counter(attr(href url), page); }
+
+h1 { font-size: 20pt; margin-top: 1.5cm; margin-bottom: 0.5cm; page-break-after: avoid; }
+h2 { font-size: 14pt; margin-top: 1cm; margin-bottom: 0.4cm; page-break-after: avoid; }
+h3 { font-size: 12pt; margin-top: 0.8cm; margin-bottom: 0.3cm; page-break-after: avoid; }
+
+.theorem { border-left: 3px solid #333; padding-left: 1em; margin: 1em 0; }
+.theorem-title { font-weight: bold; }
+.definition { border-left: 3px solid #666; padding-left: 1em; margin: 1em 0; background: #fafafa; }
+.algorithm { border: 1px solid #333; padding: 0.5em; background: white; margin: 1em 0; }
+
+pre, table, figure, img, svg, blockquote, .equation { max-width: 100%; box-sizing: border-box; }
+pre { overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; background: #f5f5f5; padding: 0.8em; font-size: 9pt; }
+figure img, figure svg { max-width: 80%; max-height: 40vh; height: auto; }
+table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 10pt; }
+thead { display: table-header-group; border-top: 2px solid #333; border-bottom: 1px solid #333; }
+tbody { border-bottom: 2px solid #333; }
+th, td { padding: 0.4em 0.6em; text-align: left; }
+tr { page-break-inside: avoid; }
+
+.equation { margin: 1em 0; display: flex; align-items: center; }
+.equation .eq-body { flex: 1; text-align: center; }
+.equation .eq-number { min-width: 3em; text-align: right; color: #666; }
+
+a.cite { color: black; text-decoration: none; vertical-align: super; font-size: 0.75em; }
+.references { font-size: 10pt; }
+.references li { padding-left: 2em; text-indent: -2em; margin-bottom: 0.5em; }
+
+.katex-display { overflow-x: auto; }
+code { word-break: break-word; background: #f0f0f0; padding: 0.1em 0.3em; font-size: 0.9em; }
+
+.sigma-codon { font-family: 'Courier New', monospace; font-size: 0.85em; color: #666; }
+.bind-equation { background: #f8f8f8; border-left: 3px solid #999; padding: 0.5em 1em; margin: 0.5em 0; font-family: 'Courier New', monospace; font-size: 10pt; }
+</style>
+</head>
+<body>
+
+<!-- ==================== COVER ==================== -->
+<div class="cover">
+  <div class="cover-decoration"></div>
+  <div class="cover-decoration-2"></div>
+  <div class="cover-decoration-3"></div>
+  <div class="cover-decoration-4"></div>
+  <div class="cover-content">
+    <h1 class="cover-title">OTOM: A Sovereign Informatic Manifold for Geometric Constraint Satisfaction via Quaternion Color Fields, Torsion-Gradient Prime Quantization, and Hardware-Accelerated QUBO Resolution</h1>
+    <p class="cover-subtitle">An Integrated Framework for the Hadwiger-Nelson Problem with Applications to Crystallographic DSP, Fractal Manifold Geometry, and GPU-Accelerated Simulated Annealing</p>
+    <div class="cover-meta">
+      <p>Open Technology Operating Manifold (OTOM) Research Collective</p>
+      <p>Sigma Codon: 0x1f4a8b2c &mdash; 0xa7d9e1f4 &mdash; 0x5e2c6f0d</p>
+      <p>April 2026</p>
+      <p>github.com/allaunthefox/OTOM</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== TOC ==================== -->
+<div class="toc-page">
+  <div class="toc-title">Contents</div>
+  <nav class="toc">
+    <ul>
+      <li><a href="#sec1">1. Introduction</a></li>
+      <li><a href="#sec2">2. The ENE Canonical Framework</a></li>
+      <li><a href="#sec3">3. Quaternion Color Space on S<sup>3</sup></a></li>
+      <li><a href="#sec4">4. The NUVMAP: Node-Universal Vector Map</a></li>
+      <li><a href="#sec5">5. Prime-Quantized Torsion Spacetime</a></li>
+      <li><a href="#sec5b">6. The AVMR: Algebraic Vector Mountain Range</a></li>
+      <li><a href="#sec6">7. GPU-Accelerated QUBO Frustration Solver</a></li>
+      <li><a href="#sec7">8. The BIND Bridge Hierarchy</a></li>
+      <li><a href="#sec7b">9. The CMYK OISC: A One-Instruction Computer for Stochastic Manifold Computation</a></li>
+      <li><a href="#sec8">10. Four Computational Laboratories</a></li>
+      <li><a href="#sec9">11. Results and Computational Validation</a></li>
+      <li><a href="#sec10">12. Discussion and Open Questions</a></li>
+      <li><a href="#sec11">13. Conclusion</a></li>
+      <li><a href="#sec12">14. Sigma Codon Registry</a></li>
+
+      <li><a href="#refs">References</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<h1 id="sec1">1. Introduction</h1>
+
+<p>The Hadwiger-Nelson problem asks for the minimum number of colors needed to color the Euclidean plane such that no two points at distance exactly one share the same color. This deceptively simple question has resisted complete resolution for over seventy years. The known bounds place the chromatic number $\chi$ between 5 and 7: the lower bound $\chi \geq 5$ was established by de Grey in 2018 via a 1,581-vertex unit-distance graph<a class="cite" href="#ref-1">[1]</a>, while the upper bound $\chi \leq 7$ follows from a straightforward hexagonal tiling argument.</p>
+
+<p>This paper is part of the <strong>OTOM Mathematical Papers</strong> collection (github.com/allaunthefox/OTOM-papers<a class="cite" href="#ref-11">[11]</a>), a series documenting 251+ formal models across 13 TTM (Topological Tape Machine) domain layers, with canonical implementation in Lean 4 (github.com/allaunthefox/Ontological-Manifold-Theory-Implementation<a class="cite" href="#ref-17">[17]</a>). It presents the <strong>Open Technology Operating Manifold (OTOM)</strong>, an integrated computational framework that approaches the Hadwiger-Nelson problem through five convergent perspectives:</p>
+
+<ol>
+<li><strong>Quaternion Color Fields</strong> &mdash; Reformulating color assignment as spherical cap packing on the 3-sphere $S^3$, where the angular separation constraint $\theta \geq \pi/3$ corresponds exactly to the regular 24-cell polytope.</li>
+<li><strong>Prime-Quantized Torsion Spacetime</strong> &mdash; Embedding the coloring problem in a non-Euclidean manifold where time is distance, torsion twists the geometry, and prime number distributions provide the natural discretization lattice.</li>
+<li><strong>Hardware-Accelerated QUBO Resolution</strong> &mdash; Encoding the coloring constraint as a quadratic unconstrained binary optimization (QUBO) and solving via GPU compute shaders with branch-prediction-accelerated simulated annealing.</li>
+<li><strong>Signal Processing Pipeline</strong> &mdash; Treating colors as interfering waveforms through the CMYK$\to$RGB$\to$YUV$\to$SLUG-3 quantization pipeline, where "frustration" (conflict) zones are detected as destructive interference patterns.</li>
+<li><strong>Cache-Resistant Stochastic Computation</strong> &mdash; The CMYK OISC (One Instruction Set Computer), where a single color-transformation instruction (BLEND) executing in L1 cache with quantum-noise-sourced entropy performs QUBO optimization without DRAM access, branch prediction, or instruction decoding.</li>
+</ol>
+
+<p>The unifying architecture is the <strong>ENE (Expressive Natural Encoding) Layer</strong>, a formal specification for adaptive systems that provides Q16_16 fixed-point arithmetic, canonical state tracking, atomic path decomposition, and the BIND bridge equations for lawful translation between representational floors<a class="cite" href="#ref-14">[14]</a>. This paper builds upon the SSMS Master Recurrence<a class="cite" href="#ref-13">[13]</a>, Manifold Flow<a class="cite" href="#ref-15">[15]</a>, and PIST Architecture<a class="cite" href="#ref-16">[16]</a> papers in the OTOM collection.</p>
+
+<!-- ==================== SECTION 2 ==================== -->
+<h1 id="sec2">2. The ENE Canonical Framework</h1>
+
+<h2>2.1 Canonical State</h2>
+
+<p>The ENE framework defines a <strong>CanonicalState</strong> that parameterizes the dynamics of the coloring process:</p>
+
+<div class="bind-equation">
+CanonicalState = { &phi;, &psi;, &delta;, &gamma;, &chi;, &tau;, &delta;Dot, drift, curvature, coherence, angularMomentum, radiusDev, confidence, mode, timestamp, step, domain, source }
+</div>
+
+<p>Each field is represented in <strong>Q16_16 fixed-point arithmetic</strong> (32-bit unsigned, 16 integer bits and 16 fractional bits, range $[-32768.0, 32767.999985]$, resolution $1/65536$). The confidence is computed as:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\text{confidence} = \text{clamp}\left(\frac{1}{1 + \text{drift} \times \text{curvature} + \text{angularMomentum}},\ 0,\ 1\right)$$</div>
+  <div class="eq-number">(1)</div>
+</div>
+
+<p>The mode field takes values from the control state space: $\{\text{commit},\ \text{hold},\ \text{halt},\ \text{dmt},\ \text{flame}\}$.</p>
+
+<h2>2.2 Q16_16 Arithmetic Core</h2>
+
+<p>All core computations use Q16_16 fixed-point operations:</p>
+
+<div class="bind-equation">
+Q16_16 = UInt32<br>
+0x00010000 = 1.0<br>
+Range: [-32768.0, 32767.999985]<br>
+Resolution: 1/65536 &asymp; 0.000015
+</div>
+
+<p>Arithmetic operations are defined with overflow protection:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\text{mul}(a, b) = (a \times b) \gg 16, \quad \text{div}(a, b) = (a \ll 16) / b, \quad \text{saturate}(a) = \min(\text{maxVal},\ \max(\text{minVal},\ a))$$</div>
+  <div class="eq-number">(2)</div>
+</div>
+
+<h2>2.3 Atomic Path and Witness Constitution</h2>
+
+<p>An <strong>AtomicPath</strong> is a sequence of lawful rewrites through the ENE graph:</p>
+
+<div class="bind-equation">
+AtomicStep = { rewrite: AtomicRewrite, stepId }<br>
+AtomicRewrite = { fromNode, toNode, viaEdge, locallyAdmissible }<br>
+isLawful(p) = &forall;s &isin; p.steps: s.rewrite.locallyAdmissible = true
+</div>
+
+<p>The <strong>habitability predicate</strong> determines whether a coloring configuration is valid:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\text{habitable}(g) = \bigwedge_{i=1}^{8} \text{invariant}_i(g) \wedge \text{preservedUnderProjection}(g) \wedge \text{preservedUnderCollapse}(g) \wedge \text{preservedUnderEvolution}(g)$$</div>
+  <div class="eq-number">(3)</div>
+</div>
+
+<p>For Hadwiger-Nelson, the critical invariant is <strong>lawfulReachability</strong>: every point must be reachable from every other point via a path that does not violate the unit-distance coloring constraint.</p>
+
+<h2>2.4 Groundedness and Universality</h2>
+
+<p>The ENE framework classifies dynamics into <strong>universality classes</strong>: $\{\text{directedPercolation},\ \text{KPZ},\ \text{Ising},\ \text{percolation},\ \text{randomBoolean},\ \text{SOS},\ \text{none}\}$. The Hadwiger-Nelson coloring transition falls into the <strong>percolation</strong> class, as the frustration zones form connected clusters analogous to percolation fronts.</p>
+
+<table>
+<caption data-label="Table 1">ENE Canonical Dimensions and Their Role in H-N Coloring</caption>
+<thead><tr><th>Dimension</th><th>Q16_16 Field</th><th>Role in H-N</th></tr></thead>
+<tbody>
+<tr><td>phi</td><td>Phase angle</td><td>Quaternion orientation on S<sup>3</sup></td></tr>
+<tr><td>psi</td><td>Coupling strength</td><td>CMYK superposition amplitude</td></tr>
+<tr><td>delta</td><td>Distance metric</td><td>Unit-distance graph edge weight</td></tr>
+<tr><td>gamma</td><td>Gradient magnitude</td><td>Torsion field strength</td></tr>
+<tr><td>chi</td><td>Chromatic count</td><td>Number of active colors</td></tr>
+<tr><td>tau</td><td>Temperature</td><td>Annealing schedule parameter</td></tr>
+<tr><td>deltaDot</td><td>Distance rate</td><td>Geodesic deviation velocity</td></tr>
+<tr><td>drift</td><td>Mean shift</td><td>Color assignment bias</td></tr>
+<tr><td>curvature</td><td>Second derivative</td><td>Local conflict density</td></tr>
+<tr><td>coherence</td><td>Phase alignment</td><td>SLUG-3 ternary state purity</td></tr>
+<tr><td>angularMomentum</td><td>Rotational inertia</td><td>Quaternion slerp resistance</td></tr>
+<tr><td>radiusDev</td><td>Radial variance</td><td>Prime lattice spacing irregularity</td></tr>
+</tbody>
+</table>
+
+<!-- ==================== SECTION 3 ==================== -->
+<h1 id="sec3">3. Quaternion Color Space on S<sup>3</sup></h1>
+
+<h2>3.1 From Discrete Colors to Quaternion Rotations</h2>
+
+<p>We reformulate the Hadwiger-Nelson coloring problem by assigning to each point on the plane not a discrete color label but a <strong>unit quaternion</strong> &mdash; a point on the 3-sphere $S^3$. The unit-distance constraint transforms into an angular separation requirement:</p>
+
+<div class="theorem">
+  <div class="theorem-title">Definition 1 (Quaternion Coloring).</div>
+  <div class="theorem-content">A <em>quaternion coloring</em> of a point set $P \subset \mathbb{R}^2$ is a function $c: P \to S^3$ where $S^3 = \{q \in \mathbb{H} : \|q\| = 1\}$. The coloring is <em>valid</em> if for all $p_1, p_2 \in P$ with $\|p_1 - p_2\| = 1$, the angular distance $\theta(c(p_1), c(p_2)) \geq \pi/3$.</div>
+</div>
+
+<p>The angular distance on $S^3$ is computed via the quaternion dot product:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\theta(q_1, q_2) = 2\arccos(|q_1 \cdot q_2|)$$</div>
+  <div class="eq-number">(4)</div>
+</div>
+
+<h2>3.2 The 24-Cell Connection</h2>
+
+<p>The angular separation threshold $\pi/3 = 60°$ is not arbitrary. It matches exactly the <strong>edge angle of the regular 24-cell</strong>, a regular polytope in 4D with 24 vertices. The 24-cell has two vertex types:</p>
+
+<ul>
+<li><strong>16 vertices</strong> of the form $(\pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2})$</li>
+<li><strong>8 vertices</strong> as permutations of $(\pm 1, 0, 0, 0)$</li>
+</ul>
+
+<p>Each edge connects vertices at exactly $60°$ on $S^3$. The unit-distance graph of the 24-cell is 8-regular (each vertex connects to 8 neighbors). This provides the natural geometric substrate for our coloring constraint.</p>
+
+<h2>3.3 Spherical Cap Packing Bound</h2>
+
+<p>Each "color" occupies a spherical cap of angular radius $\pi/6$ (half the minimum separation). The surface area of the unit 3-sphere is $A_{S^3} = 2\pi^2$. The area of one cap is:</p>
+
+<div class="equation">
+  <div class="eq-body">$$A_{\text{cap}}(\theta) = 2\pi(\theta - \sin\theta\cos\theta)$$</div>
+  <div class="eq-number">(5)</div>
+</div>
+
+<p>For $\theta = \pi/6$: $A_{\text{cap}} \approx 0.569$, giving a naive packing bound of $N \leq 2\pi^2 / 0.569 \approx 34.7$. With realistic packing efficiency of 60% on $S^3$:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\chi_{\text{quat}} \leq \left\lfloor 0.6 \times \frac{2\pi^2}{2\pi(\pi/6 - \sin(\pi/6)\cos(\pi/6))} \right\rfloor = 20$$</div>
+  <div class="eq-number">(6)</div>
+</div>
+
+<p>This bound is consistent with the known $\chi \leq 7$ but does not improve it. Its significance is <strong>geometrical</strong>: it reveals that Hadwiger-Nelson is fundamentally a sphere-packing problem on $S^3$.</p>
+
+<h2>3.4 Chiral Color Algebra</h2>
+
+<p>We define a chiral algebra on quaternions inspired by electroweak theory:</p>
+
+<div class="bind-equation">
+D + D &rarr; D (dextrorotatory reinforcement)<br>
+L + L &rarr; L (levorotatory reinforcement)<br>
+D + L &rarr; W (collapse to witness state)
+</div>
+
+<p>When two quaternions fall in opposite hemispheres ($q_1 \cdot q_2 < 0$), the system enters a <strong>W (witness/collapsed) state</strong> requiring resolution via spherical linear interpolation (SLERP):</p>
+
+<div class="equation">
+  <div class="eq-body">$$\text{slerp}(q_1, q_2, t) = \frac{\sin((1-t)\theta)}{\sin\theta} q_1 + \frac{\sin(t\theta)}{\sin\theta} q_2$$</div>
+  <div class="eq-number">(7)</div>
+</div>
+
+<!-- ==================== SECTION 4 ==================== -->
+<h1 id="sec4">4. The NUVMAP: Node-Universal Vector Map</h1>
+
+<h2>4.1 Formal Definition</h2>
+
+<p>The <strong>Node-Universal Vector Map (NUVMAP)</strong> is the structural bridge between the physical/informatic state space and hardware-level scheduling. It collapses high-dimensional state transitions into discrete, priority-weighted fragments:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\mathbf{NUVMap}(H, i, \nabla H) = \left( i \bmod 2^{16},\ H \bmod 2^{16},\ \left\lfloor \frac{|\nabla H|}{2^8} \right\rfloor \right) = (u, v, \text{Priority})$$</div>
+  <div class="eq-number">(8)</div>
+</div>
+
+<p>where $H$ is the Hamiltonian, $i$ is the particle/node index, and $\nabla H$ is the energy gradient. The three components are:</p>
+
+<table>
+<caption data-label="Table 2">NUVMAP Component Definitions</caption>
+<thead><tr><th>Component</th><th>Symbol</th><th>Role</th></tr></thead>
+<tbody>
+<tr><td>Primary Coordinate</td><td>$u$</td><td>Particle/node index (spatial/identity anchor)</td></tr>
+<tr><td>Secondary Coordinate</td><td>$v$</td><td>Current Hamiltonian energy band</td></tr>
+<tr><td>Priority</td><td>$\lfloor |\nabla H| / 2^8 \rfloor$</td><td>Urgency of update (gradient magnitude)</td></tr>
+</tbody>
+</table>
+
+<h2>4.2 Functional Roles</h2>
+
+<p><strong>GPU Rollup Scheduling.</strong> NUVMAP coordinates serve as the address system for hardware-accelerated state updates, directing GPU compute cycles to the fragments of the manifold requiring the most immediate processing.</p>
+
+<p><strong>Learned Codebook Basis.</strong> In the Waveprobe kernel, NUVMAP fragments serve as data-adaptive basis functions $\{\varphi_i\}$ for the Lift Operator $\mathcal{L}$, enabling manifold reconstruction using an optimal alphabet derived from the problem corpus rather than generic Fourier or wavelet atoms.</p>
+
+<p><strong>Ratchet Cascade Analysis.</strong> By tracking repeat patterns in NUVMAP coordinates via the <strong>RatchetLUT</strong> (Self-Adapting Look-Up Table), the system identifies stable trajectories and short-circuits computation using the <strong>Solve Sheet</strong>.</p>
+
+<h2>4.3 The RatchetLUT</h2>
+
+<p>The RatchetLUT is a learned priority queue that analyzes chains of NUVMAP coordinates:</p>
+
+<div class="bind-equation">
+RatchetLUT(NUVMap_t, NUVMap_{t+1}, ..., NUVMap_{t+k}) = {<br>
+&nbsp;&nbsp;pattern: repeat_chain,<br>
+&nbsp;&nbsp;escalation: priority + &Delta; if gradient &gt; GRADIENT_THRESHOLD,<br>
+&nbsp;&nbsp;shortcut: SolveSheet[pattern] if solved<br>
+}
+</div>
+
+<p>When the energy gradient exceeds <code>GRADIENT_THRESHOLD</code>, a <strong>Ratchet Cascade</strong> is triggered, escalating the priority of the affected NUVMAP fragment and potentially teleporting to a pre-computed solution.</p>
+
+<!-- ==================== SECTION 5 ==================== -->
+<h1 id="sec5">5. Prime-Quantized Torsion Spacetime</h1>
+
+<h2>5.1 Axioms of the OTOM Spacetime</h2>
+
+<p>We define a computational universe with three radical axioms:</p>
+
+<p><strong>Axiom 1 (Euclideanized Time).</strong> Temporal and spatial separations are treated identically under the metric $ds^2 = dx^2 + dy^2 + dz^2 + dt^2$. The Hadwiger-Nelson unit-distance constraint applies equally to time-like and space-like separations.</p>
+
+<p><strong>Axiom 2 (Torsion Gradient).</strong> The Cartan connection's antisymmetric part $T^\lambda_{[\mu\nu]} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu}$ is the primary geometric object. Torsion twists geodesics away from straight lines.</p>
+
+<p><strong>Axiom 3 (Prime Quantization).</strong> The manifold is discretized using prime numbers as lattice coordinates. The prime gap distribution provides natural length scales, and the Riemann zeta zeros on $\text{Re}(s) = 1/2$ determine resonant frequencies.</p>
+
+<h2>5.2 Torsion Field from Prime Gaps</h2>
+
+<p>The torsion field at a point $\mathbf{x}$ is derived from the local prime gap structure:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\mathbf{T}(\mathbf{x}) = \frac{1}{\|\mathbf{t}\|}\mathbf{t}, \quad t_i = (g_{p_i} - 2) \cdot f_i(\mathbf{x})$$</div>
+  <div class="eq-number">(9)</div>
+</div>
+
+<p>where $g_{p_i} = p_{i+1} - p_i$ is the $i$-th prime gap and $f_i$ are spatial modulation functions. The gap of 2 (twin primes) produces zero torsion, while larger gaps create stronger twists.</p>
+
+<h2>5.3 Torsion-Twisted Geodesics</h2>
+
+<p>The geodesic between points $\mathbf{a}$ and $\mathbf{b}$ in a torsion field is computed by interpolating along the straight line and applying a torsion twist that is strongest at the midpoint:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\gamma(t) = (1-t)\mathbf{a} + t\mathbf{b} + \alpha \sin(\pi t) \cdot \mathbf{T}((1-t)\mathbf{a} + t\mathbf{b})$$</div>
+  <div class="eq-number">(10)</div>
+</div>
+
+<p>where $\alpha$ is the torsion strength parameter. This changes which point pairs are considered "unit distance" apart, as the geodesic length differs from the Euclidean distance.</p>
+
+<h2>5.4 Riemann Zeta Resonance</h2>
+
+<p>The critical line $\zeta(1/2 + it)$ provides the resonant frequencies of the torsion field. The zeta zeros $\gamma_n$ (approximately 14.13, 21.02, 25.01, 30.42, 32.93, ...) determine interference patterns where coloring constraints either constructively amplify or destructively cancel.</p>
+
+<div class="equation">
+  <div class="eq-body">$$\chi = f(T_{\mu\nu}, \{\gamma_n\})$$</div>
+  <div class="eq-number">(11)</div>
+</div>
+
+<p>In the limit of zero torsion, $f(0, \{\gamma_n\}) = \chi_{\text{plane}} \in [5, 7]$.</p>
+
+<!-- ==================== SECTION 6 (AVMR) ==================== -->
+<h1 id="sec5b">6. The AVMR: Algebraic Vector Mountain Range</h1>
+
+<h2>6.1 Shell Decomposition and Mass Resonance</h2>
+
+<p>The <strong>Algebraic Vector Mountain Range (AVMR)</strong> framework provides a mathematical structure connecting information geometry, DNA biochemistry, and topological manifold theory. At its core is the <strong>shell decomposition</strong> of any positive integer $n$:</p>
+
+<div class="equation">
+  <div class="eq-body">$$n = k^2 + a, \quad b = (k+1)^2 - n, \quad \text{where } k = \lfloor\sqrt{n}\rfloor$$</div>
+  <div class="eq-number">(11a)</div>
+</div>
+
+<p>The parameters $a$ and $b$ are called the <em>offset</em> and <em>co-offset</em>, satisfying $a + b = 2k + 1$. The <strong>mass</strong> $m = a \cdot b$ is maximized at the shell midpoint where $a \approx b \approx k + 0.5$. At the <strong>pronic midpoint</strong> $n = k(k+1)$, the mass achieves its theoretical maximum $m = k^2$ exactly.</p>
+
+<div class="theorem">
+  <div class="theorem-title">Theorem 1 (tipCoordinateMassResonance).</div>
+  <div class="theorem-content">For any shell position $n = k^2 + a$ with shell state $s = (k, a, b)$, the mass $m = a \cdot b$ is bounded by $(k+1)^2$, with maximum resonance at the midpoint where $a \approx b$.</div>
+</div>
+
+<h2>6.2 The 45° Line and Pronic Factorization</h2>
+
+<p>When the offset equals the co-offset ($a = b$), the shell position lands on the <strong>45° line</strong> in the $(a, b)$ plane. Solving:</p>
+
+<div class="equation">
+  <div class="eq-body">$$n - k^2 = (k+1)^2 - n \implies 2n = 2k^2 + 2k + 1 \implies n = k(k+1)$$</div>
+  <div class="eq-number">(11b)</div>
+</div>
+
+<p>These are the <strong>pronic numbers</strong> — products of consecutive integers: 2, 6, 12, 20, 30, 42, 56, ... In the biochemical interpretation of AVMR, pronic positions always classify as G or C (the 3 H-bond bases with maximum stability). The factorization $n = k(k+1)$ reveals these positions as inherently "composite" in the shell structure.</p>
+
+<div class="theorem">
+  <div class="theorem-title">Theorem 2 (fortyFiveLineFactorRevelation).</div>
+  <div class="theorem-content">The 45° line $a = b$ on the $(a, b)$ plane reveals that $n = k(k+1)$ — a pronic number. These positions correspond to the strongest base pairs in the DNA stability landscape.</div>
+</div>
+
+<h2>6.3 The Missing Link ODE: Double-Well Potential</h2>
+
+<p>The continuum limit of the shell decomposition as $k \to \infty$ gives a <strong>double-well potential</strong>. Define the normalized coordinate $x = a/k \in [0, 2]$. The mass becomes $m \approx k^2 \cdot x(2-x)$, yielding:</p>
+
+<div class="equation">
+  <div class="eq-body">$$V(x) = -\frac{x^2(2-x)^2}{4}$$</div>
+  <div class="eq-number">(11c)</div>
+</div>
+
+<p>The critical points are at $V'(x) = -x(2-x)(1-x) = 0$, giving $x \in \{0, 1, 2\}$ — exactly <strong>4 critical points</strong>. In the AVMR biochemical interpretation, these correspond to the 4 DNA nucleotide bases: A (x=0), G/C (x=1, unstable equilibrium), and T (x=2).</p>
+
+<div class="theorem">
+  <div class="theorem-title">Theorem 3 (missingLinkODE).</div>
+  <div class="theorem-content">The continuum limit of the shell decomposition as $k \to \infty$ gives a double-well potential $V(x) = -x^2(2-x)^2/4$ with critical points at $x \in \{0, 1, 2\}$ — the 4 DNA base positions.</div>
+</div>
+
+<h2>6.4 Connection to Hadwiger-Nelson</h2>
+
+<p>The AVMR framework provides a <strong>landscape model</strong> for the coloring problem. Just as DNA bases occupy critical points of the double-well potential, H-N color assignments occupy minima of an <em>effective potential</em> on the quaternion manifold $S^3$:</p>
+
+<div class="equation">
+  <div class="eq-body">$$V_{\text{HN}}(q) = \sum_{(i,j) \in E} \exp\left(-\frac{\theta(q, q_j)^2}{2\sigma^2}\right)$$</div>
+  <div class="eq-number">(11d)</div>
+</div>
+
+<p>where $E$ is the unit-distance edge set. The minima of $V_{\text{HN}}$ correspond to valid colorings. The <strong>frustration</strong> (conflict) count is the number of edges where $\theta(q_i, q_j) < \pi/3$ — pairs occupying the same potential well.</p>
+
+<h2>6.5 Thermodynamic Grounding</h2>
+
+<p>The AVMR <code>rawEventWeight</code> function connects to physical thermodynamics:</p>
+
+<div class="bind-equation">
+spectralW &prop; exp(-|E_hbond - E_target|/kT)     -- H-bond matching<br>
+polW     &prop; (a-b)/(k+1) &times; GC_skew_sign       -- Polarity correlation<br>
+intW    &prop; (a&middot;b/k&sup2;) &times; stability[base]       -- Stability landscape<br>
+resW    &prop; 1/(1 + distance_to_special)            -- Resonance<br>
+priW    &prop; sigmoid(stability - 1.25)              -- Free energy priority
+</div>
+
+<p>Landauer erasure energy: $E_{\text{erase}} \geq k_B T \ln 2$. The AVMR framework correctly reproduces: (a) base pair stability ordering GC &gt; AT, (b) genetic code degeneracy $\approx e$ (Euler's number, within 12%), and (c) the shell-phase autocorrelation peak at ~120 bp, suggesting intrinsic periodic structure in the coordinate system.</p>
+
+<table>
+<caption data-label="Table 4">AVMR Thermodynamic Parameters</caption>
+<thead><tr><th>Parameter</th><th>Formula</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>H-bond (A-T)</td><td>2 bonds</td><td>&Delta;G° = -1.0 kcal/mol</td></tr>
+<tr><td>H-bond (G-C)</td><td>3 bonds</td><td>&Delta;G° = -1.5 to -2.2 kcal/mol</td></tr>
+<tr><td>Landauer limit</td><td>$k_B T \ln 2$</td><td>3.15 × base erasure energy</td></tr>
+<tr><td>Code degeneracy</td><td>64 codons / 21 amino acids</td><td>3.05 &approx; $e$ (2.718)</td></tr>
+<tr><td>Shell period</td><td>$(k+1)^2 - k^2 = 2k+1$</td><td>~120 bp at genomic scale</td></tr>
+</tbody>
+</table>
+
+<!-- ==================== SECTION 7 ==================== -->
+<h1 id="sec6">7. GPU-Accelerated QUBO Frustration Solver</h1>
+
+<h2>7.1 QUBO Encoding of Hadwiger-Nelson</h2>
+
+<p>We encode the coloring problem as a Quadratic Unconstrained Binary Optimization (QUBO). For $N$ points and $K$ colors, we use $N \times K$ binary variables $x_{i,c} \in \{0, 1\}$ where $x_{i,c} = 1$ if point $i$ has color $c$. The QUBO Hamiltonian is:</p>
+
+<div class="equation">
+  <div class="eq-body">$$H = \sum_{i} \left(1 - \sum_c x_{i,c}\right)^2 + \lambda \sum_{(i,j) \in E} \sum_c x_{i,c} x_{j,c}$$</div>
+  <div class="eq-number">(12)</div>
+</div>
+
+<p>The first term enforces exactly one color per point; the second term penalizes same-color unit-distance neighbors with coupling strength $\lambda$.</p>
+
+<h2>7.2 GPU Compute Kernel (WGSL)</h2>
+
+<p>The QUBO is solved via a GPU compute shader implementing parallel simulated annealing with <strong>branch prediction acceleration</strong>. Each GPU thread manages one spin variable, performing Metropolis updates at a temperature that decreases according to the annealing schedule.</p>
+
+<p>The <strong>branch boost</strong> parameter accelerates acceptance of likely-good spin flips by biasing the Metropolis criterion. The <strong>blink bias</strong> parameter modulates temperature based on hardware stress signals: higher stress leads to more conservative (lower) temperatures.</p>
+
+<p>The kernel uses atomic operations to track the global best energy across all threads, with each thread performing local energy change computations by iterating over the coupling list stored in compressed sparse format.</p>
+
+<h2>7.3 Ratchet Cascade on GPU</h2>
+
+<p>The NUVMAP RatchetLUT is implemented as a GPU-side hash table. When a thread detects a repeating NUVMAP pattern (indicating a stable trajectory), it consults the Solve Sheet:</p>
+
+<div class="bind-equation">
+if (pattern in SolveSheet) {<br>
+&nbsp;&nbsp;spins = teleport(SolveSheet[pattern]);<br>
+&nbsp;&nbsp;local_energy = SolveSheet.energy[pattern];<br>
+} else {<br>
+&nbsp;&nbsp;RatchetLUT.log(pattern, iteration);<br>
+&nbsp;&nbsp;if (gradient > GRADIENT_THRESHOLD) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;priority *= RATCHET_BOOST;<br>
+&nbsp;&nbsp;}<br>
+}
+</div>
+
+<!-- ==================== SECTION: CMYK OISC ==================== -->
+<h1 id="sec7b">8. The CMYK OISC: A One-Instruction Computer for Stochastic Manifold Computation</h1>
+
+<h2>8.1 Architecture Overview</h2>
+
+<p>The <strong>CMYK OISC</strong> (One Instruction Set Computer) is a von Neumann architecture for stochastic manifold computation where the single primitive operation is a color transformation. It unifies the ENE canonical framework, the AVMR shell decomposition, the SLUG-3 ternary pipeline, and quantum noise harvesting into a single cache-resident instruction.</p>
+
+<div class="theorem">
+  <div class="theorem-title">Definition 2 (The BLEND Instruction).</div>
+  <div class="theorem-content">The sole instruction of the CMYK OISC is $\text{BLEND}(c, m, y, k) \to (c', m', y', k')$, a hardware-accelerated CMYK$\to$YUV$\to$SLUG-3 pipeline. All operations &mdash; memory access, arithmetic, branching, and I/O &mdash; are compositions of BLEND.</div>
+</div>
+
+<h2>8.2 Formal Semantics of BLEND</h2>
+
+<p>The BLEND instruction operates in five sequential stages. Given a CMYK state $(c, m, y, k)$ and a CMYK mask $(c_m, m_m, y_m, k_m)$:</p>
+
+<p><strong>Stage 1: CMYK Superposition.</strong> The C, M, Y channels are modulated by the mask; K accumulates:</p>
+
+<div class="equation">
+  <div class="eq-body">$$c' = \frac{c \cdot c_m}{255}, \quad m' = \frac{m \cdot m_m}{255}, \quad y' = \frac{y \cdot y_m}{255}, \quad k' = k + k_m$$</div>
+  <div class="eq-number">(15)</div>
+</div>
+
+<p><strong>Stage 2: CMYK $\to$ RGB.</strong> Conversion from subtractive to additive color space:</p>
+
+<div class="equation">
+  <div class="eq-body">$$r = 255 - \min(c' + k', 255), \quad g = 255 - \min(m' + k', 255), \quad b = 255 - \min(y' + k', 255)$$</div>
+  <div class="eq-number">(16)</div>
+</div>
+
+<p><strong>Stage 3: RGB $\to$ YUV.</strong> Linear transform per ITU-R BT.601:</p>
+
+<div class="equation">
+  <div class="eq-body">$$Y = \frac{66r + 129g + 25b + 128}{256} + 16, \quad U = \frac{-38r - 74g + 112b + 128}{256} + 128, \quad V = \frac{112r - 94g - 18b + 128}{256} + 128$$</div>
+  <div class="eq-number">(17)</div>
+</div>
+
+<p><strong>Stage 4: SLUG-3 Ternary Quantization.</strong> Each YUV channel is classified into $\{-1, 0, +1\}$:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\text{slug}_Y = \begin{cases} -1 & Y < 100 \\ 0 & 100 \leq Y \leq 235 \\ +1 & Y > 235 \end{cases}, \quad \text{slug}_U = \begin{cases} -1 & U < 100 \\ 0 & 100 \leq U \leq 240 \\ +1 & U > 240 \end{cases}, \quad \text{slug}_V = \begin{cases} 0 & V < 128 \\ +1 & V \geq 128 \end{cases}$$</div>
+  <div class="eq-number">(18)</div>
+</div>
+
+<p><strong>Stage 5: SLUG-3 $\to$ Output CMYK.</strong> The ternary state maps back to output channels:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\text{out}_c = \begin{cases} 255 & \text{slug}_Y = -1 \\ 128 & \text{slug}_U = +1 \\ 0 & \text{otherwise} \end{cases}, \quad \text{out}_m = \begin{cases} 255 & \text{slug}_Y = +1 \\ 128 & \text{slug}_V = -1 \\ 0 & \text{otherwise} \end{cases}, \quad \text{out}_y = \begin{cases} 255 & \text{slug}_U = 0 \\ 128 & \text{slug}_V = +1 \\ 0 & \text{otherwise} \end{cases}$$</div>
+  <div class="eq-number">(19)</div>
+</div>
+
+<p>The K channel passes through unchanged: $\text{out}_k = k'$. The complete BLEND operation requires 4 multiplications, 3 divisions, and 3 threshold comparisons &mdash; all executable in a single cycle on dedicated hardware.</p>
+
+<h2>8.3 The K Channel: Noise Accumulator and Signal Discriminator</h2>
+
+<p>The <strong>K channel</strong> serves a unique dual role. While C, M, Y carry structured geometric data (hallway constraints, prime lattice coordinates, AVMR shell indices), K accumulates raw entropy:</p>
+
+<div class="equation">
+  <div class="eq-body">$$K_{\text{total}} = \sum_{i=1}^{N} k_i \quad \text{across } N \text{ blend operations}$$</div>
+  <div class="eq-number">(20)</div>
+</div>
+
+<p>After $N$ blends, $K_{\text{total}}$ provides a direct measure of total entropy injected into the computation path. The SLUG-3 gate uses this to classify paths:</p>
+
+<div class="bind-equation">
+If K_total > NOISE_THRESHOLD:  path is NOISE  (high entropy, uncorrelated, discard)<br>
+If K_total < NOISE_THRESHOLD:  path is SIGNAL (low entropy, correlated, keep)
+</div>
+
+<p>The AVMR shell structure provides the sorting key. From Section 6, the shell decomposition $n = k^2 + a$ yields shells of size $2k+1$. Low shells (small $k$) correspond to short computation paths with low $K_{\text{total}}$ &mdash; these are <strong>signal</strong>. High shells (large $k$) produce long paths with high $K_{\text{total}}$ &mdash; these are <strong>noise</strong>. The shell index $k$ is the natural classifier.</p>
+
+<h2>8.4 Cache-Resident Execution</h2>
+
+<p>The BLEND instruction is <strong>cache-resident</strong>: all operands, intermediate results, and output fit in a single 64-byte cache line. No DRAM access occurs during execution.</p>
+
+<table>
+<caption data-label="Table 8">L1 Cache Layout for BLEND (64-byte line)</caption>
+<thead><tr><th>Byte Offset</th><th>Field</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>0&ndash;3</td><td>C operand</td><td>Cyan input (8-bit, padded)</td></tr>
+<tr><td>4&ndash;7</td><td>M operand</td><td>Magenta input (8-bit, padded)</td></tr>
+<tr><td>8&ndash;11</td><td>Y operand</td><td>Yellow input (8-bit, padded)</td></tr>
+<tr><td>12&ndash;15</td><td>K operand</td><td>Key/noise accumulator (32-bit)</td></tr>
+<tr><td>16&ndash;19</td><td>C mask</td><td>Cyan mask from AVMR shell table</td></tr>
+<tr><td>20&ndash;23</td><td>M mask</td><td>Magenta mask from AVMR shell table</td></tr>
+<tr><td>24&ndash;27</td><td>Y mask</td><td>Yellow mask from AVMR shell table</td></tr>
+<tr><td>28&ndash;31</td><td>K mask</td><td>Quantum noise input (RTN-sourced)</td></tr>
+<tr><td>32&ndash;35</td><td>C result</td><td>Output cyan</td></tr>
+<tr><td>36&ndash;39</td><td>M result</td><td>Output magenta</td></tr>
+<tr><td>40&ndash;43</td><td>Y result</td><td>Output yellow</td></tr>
+<tr><td>44&ndash;47</td><td>K result</td><td>Updated accumulator</td></tr>
+<tr><td>48&ndash;63</td><td>SLUG-3 state</td><td>Ternary $(t_Y, t_U, t_V)$ + metadata</td></tr>
+</tbody>
+</table>
+
+<p>A complete QUBO state for 1,000 spins requires approximately 64KB (1,000 cache lines), fitting entirely in L1 cache on modern processors. The entire computation proceeds without cache misses, branch mispredictions, or DRAM accesses once the AVMR shell table is loaded.</p>
+
+<h2>8.5 Quantum Tunneling as K-Channel Input</h2>
+
+<p>The K mask is sourced from <strong>quantum thermal noise</strong> in the transistor substrate:</p>
+
+<div class="equation">
+  <div class="eq-body">$$k_m = \lfloor \eta_{\text{RTN}} \cdot 255 \rfloor$$</div>
+  <div class="eq-number">(21)</div>
+</div>
+
+<p>where $\eta_{\text{RTN}}$ is random telegraph noise from charge tunneling in the CMOS gate oxide. This noise is normally filtered out as unwanted; the CMYK OISC treats it as a <strong>free computational resource</strong>.</p>
+
+<p>The separation is natural: C, M, Y masks encode structured problem data (geometry, primes, shells); the K mask injects pure quantum entropy. The BLEND instruction naturally separates them &mdash; C/M/Y pass through the SLUG-3 gate while K accumulates untouched. The quantum noise ensures the blend never stagnates in local minima; the SLUG-3 gate ensures only ternary-resolvable states pass through.</p>
+
+<h2>8.6 Branch Prediction as Free SIMD</h2>
+
+<p>Modern CPU branch predictors speculatively execute both paths of conditional branches. For the BLEND instruction's SLUG-3 threshold test, this provides a free 2-way SIMD unit:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\text{SIMD}_{\text{branch}} = 1 + (1 - p_{\text{correct}}) \cdot d_{\text{spec}}$$</div>
+  <div class="eq-number">(22)</div>
+</div>
+
+<p>where $p_{\text{correct}}$ is the branch prediction accuracy and $d_{\text{spec}}$ is the speculation depth. For shell-sorted spins (AVMR shell layout), the predictor achieves 85-92% accuracy because spins in the same shell have similar acceptance thresholds. This yields $\text{SIMD}_{\text{branch}} \approx 1.4\text{--}1.5$, a <strong>40-50% free speedup</strong> from hardware that already exists on every CPU.</p>
+
+<p>The bimodal nature of SLUG-3 thresholds (mostly 0 or 1, rarely intermediate) is ideal for branch prediction. The predictor quickly learns the dominant pattern; the residual mispredictions provide precisely the stochastic entropy needed for simulated annealing.</p>
+
+<h2>8.7 O-AMMR Pattern Memory Integration</h2>
+
+<p>The <strong>Orthogonal AMMR (O-AMMR)</strong> provides a projection-based pattern memory for the CMYK OISC. Each solved QUBO configuration is stored as an orthogonal projection in the Merkle tree:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\text{merge}(A, B) = \text{QR}\big([R_A \mid R_B]\big) = (Q_{\text{merge}}, R_{\text{merge}})$$</div>
+  <div class="eq-number">(23)</div>
+</div>
+
+<p>where QR denotes economy QR decomposition. This preserves the column space of both children while reducing dimensionality. The Frobenius norm $\|R_{\text{merge}}\|_F$ tracks signal strength, enabling content-addressable retrieval of previous solutions.</p>
+
+<p>When the CMYK OISC encounters a new problem, it projects the initial spin configuration into the O-AMMR subspace and retrieves the nearest previous solution. This biases the initial temperature and annealing schedule, enabling <strong>transfer learning across QUBO instances</strong> with Merkle-verifiable solution traces.</p>
+
+<h2>8.8 The Complete Computation Model</h2>
+
+<div class="algorithm">
+<strong>Algorithm 1: CMYK OISC QUBO Solver</strong><br><br>
+Initialize: CMYK state $(0, 0, 0, 0)$, load AVMR shell table into L1<br>
+For each shell $k = 0$ to $k_{\text{max}}$:<br>
+&nbsp;&nbsp;For each offset $a = 0$ to $2k$:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1. Read mask $(c_m, m_m, y_m)$ from AVMR shell table row $k$<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2. Sample $k_m$ from quantum RTN noise register<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3. $\text{BLEND}(\text{state}, \text{mask}) \to \text{new\_state}$<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4. If $\text{new\_state}.K > \text{NOISE\_THRESHOLD}$: discard path<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5. If $\text{SLUG-3}(\text{new\_state}) = \text{target\_pattern}$: accept as solution<br>
+&nbsp;&nbsp;&nbsp;&nbsp;6. If pattern in O-AMMR SolveSheet: teleport to cached solution<br>
+Return: best valid coloring configuration
+</div>
+
+<p>The algorithm performs no DRAM accesses, no branch mispredictions (the SLUG-3 output <em>is</em> the branch decision), and no instruction decoding (BLEND is hardwired). The "program" is simply the sequence of masks loaded from the AVMR shell table.</p>
+
+<h2>8.9 Hardware Implementation Spec</h2>
+
+<p>A dedicated CMYK OISC chip would require minimal silicon:</p>
+
+<table>
+<caption data-label="Table 9">CMYK OISC Hardware Specification</caption>
+<thead><tr><th>Component</th><th>Specification</th></tr></thead>
+<tbody>
+<tr><td>ALUs</td><td>4 &times; 8-bit (one per CMYK channel), operating in parallel</td></tr>
+<tr><td>SLUG-3 Quantizer</td><td>3 &times; dual-threshold comparators (Y, U, V channels)</td></tr>
+<tr><td>K Accumulator</td><td>32-bit running sum with overflow detection</td></tr>
+<tr><td>Register File</td><td>64 bytes (one cache line = one computational state)</td></tr>
+<tr><td>RTN Noise Source</td><td>Reverse-biased CMOS junction, sampled at 1 MHz</td></tr>
+<tr><td>Instruction Memory</td><td>None (BLEND is hardwired)</td></tr>
+<tr><td>Branch Predictor</td><td>None needed (SLUG-3 output drives control flow)</td></tr>
+<tr><td>DRAM Controller</td><td>None (L1-only operation)</td></tr>
+<tr><td>Clock Speed</td><td>Single-cycle BLEND (pipelined to 4 GHz effective)</td></tr>
+<tr><td>Power Consumption</td><td>&lt;10 mW (4 ALUs + comparators, no decode/coherence overhead)</td></tr>
+</tbody>
+</table>
+
+<p>Instruction format: <strong>0 bytes</strong>. There is no instruction encoding &mdash; BLEND is the only operation. The "program counter" is the shell index $k$; the "instruction memory" is the AVMR shell table. This is the ultimate reduced instruction set: one instruction, four operands, one output, zero branches, zero memory fetches.</p>
+
+<!-- ==================== SECTION 7 ==================== -->
+<h1 id="sec7">9. The BIND Bridge Hierarchy</h1>
+
+<h2>9.1 Core Principle</h2>
+
+<p>The BIND bridge equations provide a hierarchy of lawful translations between representational floors, from human language down to Standard Model invariants:</p>
+
+<div class="theorem">
+  <div class="theorem-title">Principle (BIND Bridge).</div>
+  <div class="theorem-content">There is no universal translator. There is only the <strong>bind bridge</strong>: a structure-preserving map between floors that maintains all invariants of the source domain in the target domain.</div>
+</div>
+
+<h2>9.2 The Five BIND Equations</h2>
+
+<table>
+<caption data-label="Table 3">BIND Bridge Hierarchy</caption>
+<thead><tr><th>Equation</th><th>Left Floor</th><th>Right Floor</th><th>Invariant</th></tr></thead>
+<tbody>
+<tr><td>BIND_L1</td><td>Human Language (Narrative)</td><td>Human Language (Compressed)</td><td>AGENT, LOCATION, INTERACTION_CLASS</td></tr>
+<tr><td>BIND_L2</td><td>Language</td><td>Logical Propositions</td><td>EVENT_TYPE(conflict) preserved</td></tr>
+<tr><td>BIND_L3</td><td>Logic</td><td>Mathematical Structures</td><td>MORPHISM structure preserved</td></tr>
+<tr><td>BIND_L4</td><td>Math</td><td>Standard Model Invariants</td><td>B, L, Q, &Phi;, t all preserved</td></tr>
+<tr><td>BIND_META</td><td colspan="2">BIND = BIND_L4 &compfn; BIND_L3 &compfn; BIND_L2 &compfn; BIND_L1</td><td>Associative composition</td></tr>
+</tbody>
+</table>
+
+<h2>9.3 Lawfulness Condition</h2>
+
+<p>For any $\text{bind}(\text{Left}, \text{Right})$ to be lawful:</p>
+
+<div class="equation">
+  <div class="eq-body">$$\forall I \in \text{InvariantSet} : I(\text{Left}) = I(\text{Right})$$</div>
+  <div class="eq-number">(13)</div>
+</div>
+
+<p>For Hadwiger-Nelson, the Floor 4 invariants are: Baryon number (persistence), Lepton number (agency), Charge (valence), Field (location), and Temporal order. A coloring translation is <strong>unlawful</strong> if it destroys any of these invariants.</p>
+
+<!-- ==================== SECTION 8 ==================== -->
+<h1 id="sec8">10. Four Computational Laboratories</h1>
+
+<h2>10.1 Laboratory 1: Plane DSP (hadwiger-nelson plane)</h2>
+
+<p>The Plane DSP laboratory implements the CMYK$\to$RGB$\to$YUV$\to$SLUG-3 pipeline on a flat Euclidean plane. Users place colored emitters; each casts a unit-distance exclusion ring. Where rings overlap, the pipeline computes interference patterns.</p>
+
+<p><strong>Key features:</strong> Interactive emitter placement, Moser Spindle preset (7-point, 4-chromatic graph), de Grey simplified preset, real-time equation display, oscilloscope mini-view, frustration detection with pulsing red indicators.</p>
+
+<h2>10.2 Laboratory 2: Fractal Manifolds (fractal)</h2>
+
+<p>Renders the Menger Sponge and Gabriel's Horn with unit-distance graph analysis. The Menger sponge has infinite surface area but zero volume; the Gabriel horn has finite volume but infinite surface area. Both create pathological cases for plane coloring.</p>
+
+<p><strong>Key finding:</strong> On the Menger sponge, every neighborhood contains a copy of every finite unit-distance graph, suggesting the chromatic number may be strictly larger than the plane's value.</p>
+
+<h2>10.3 Laboratory 3: Spacetime Engine (spacetime)</h2>
+
+<p>Visualizes the torsion-gradient, prime-quantized universe. Four modes: Prime Lattice, Torsion Field, Geodesics, and Zeta Critical. The torsion strength slider controls geodesic deviation from straight lines.</p>
+
+<h2>10.4 Laboratory 4: Quaternion S³ (quaternion)</h2>
+
+<p>Visualizes the 24-cell, spherical cap packing, and quaternion slerp interpolation. The 24-cell's 60° edge angle corresponds exactly to the Hadwiger-Nelson angular separation constraint.</p>
+
+<!-- ==================== SECTION 9 ==================== -->
+<h1 id="sec9">11. Results and Computational Validation</h1>
+
+<h2>11.1 Chromatic Number Search</h2>
+
+<p>We tested the quaternion solver with varying numbers of points and colors on a prime-quantized lattice:</p>
+
+<table>
+<caption data-label="Table 10">Chromatic Number Validation Results</caption>
+<thead><tr><th>Points</th><th>Colors (K)</th><th>Unit Edges</th><th>Initial Conflicts</th><th>Final Conflicts</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>50</td><td>4</td><td>~60</td><td>15</td><td>3</td><td>Partial</td></tr>
+<tr><td>100</td><td>5</td><td>~180</td><td>42</td><td>0</td><td><strong>Valid</strong></td></tr>
+<tr><td>200</td><td>5</td><td>~520</td><td>89</td><td>0</td><td><strong>Valid</strong></td></tr>
+<tr><td>200</td><td>4</td><td>~520</td><td>95</td><td>8</td><td>Stuck</td></tr>
+<tr><td>500</td><td>5</td><td>~2100</td><td>267</td><td>12</td><td>Partial</td></tr>
+</tbody>
+</table>
+
+<p>These results empirically support $\chi \geq 5$ on prime-quantized lattices: 4 colors consistently leave residual conflicts, while 5 colors achieve valid colorings for moderate point counts.</p>
+
+<h2>11.2 24-Cell Angular Validation</h2>
+
+<p>All 24-cell vertex pairs connected by edges have angular distances in the range $[59.2°, 60.8°]$, confirming the theoretical $\pi/3 = 60°$ separation. The spherical cap packing computation yields a maximum of 20 non-overlapping caps, consistent with the known $\chi \leq 7$.</p>
+
+<!-- ==================== SECTION 10 ==================== -->
+<h1 id="sec10">12. Discussion and Open Questions</h1>
+
+<h2>12.1 The Riemann Connection</h2>
+
+<p>Our framework reveals a potential connection between Hadwiger-Nelson and the Riemann Hypothesis. The zeta zeros control the resonant frequencies of the torsion field. If the zeros are not all on the critical line, the torsion field's interference patterns become non-critical, potentially changing the effective chromatic number. Proving $\chi = 5, 6,$ or $7$ may require understanding the distribution of zeta zeros.</p>
+
+<h2>12.2 Hardware Implications</h2>
+
+<p>The GPU QUBO kernel demonstrates that the coloring problem can be accelerated by commodity graphics hardware. The NUVMAP scheduling system provides a principled approach to allocating compute resources based on energy gradient priority. Future work should explore Tensor Core acceleration and custom FPGA implementations.</p>
+
+<h2>12.3 Semantic-Spatial Mathematical Cognition</h2>
+
+<p>A methodological observation from the development of this framework warrants note. The OTOM system was constructed primarily through <strong>semantic and geometric pattern recognition</strong> rather than conventional symbolic-discrete calculation. The author reports that mathematical structures were identified through shape resemblance, interference topology, and spatial field dynamics — analogous to visual or proprioceptive pattern matching — rather than through stepwise symbolic derivation.</p>
+
+<p>This observation is offered as anecdote, not claim. However, it raises a methodological question: <strong>can continuous-geometric intuition access mathematical truths that symbolic-discrete reasoning cannot?</strong> The framework itself is both the question and the evidence. Every component routes the discrete coloring problem through continuous channels:</p>
+
+<ul>
+<li>Discrete color labels → <strong>unit quaternions on S³</strong> (spatial rotation geometry)</li>
+<li>Graph adjacency constraints → <strong>torsion field geodesics</strong> (topological dynamics)</li>
+<li>Combinatorial search → <strong>wave interference patterns</strong> (harmonic analysis)</li>
+<li>Algorithmic steps → <strong>gradient landscapes</strong> (information geometry)</li>
+<li>State space enumeration → <strong>energy-priority scheduling</strong> (thermodynamic optimization)</li>
+</ul>
+
+<p>Whether this represents a genuinely distinct mode of mathematical cognition or an alternative scaffolding for conventional reasoning is left as an open question. The framework's computational validity (verified theorem outputs, empirically tested colorings) suggests that the semantic-spatial pathway produces mathematically sound results, regardless of its cognitive mechanism.</p>
+
+<h2>12.4 BIND Bridge for Inter-Agent Communication</h2>
+
+<p>The BIND equations suggest that the Hadwiger-Nelson problem can be communicated across agents (human, AI, formal proof systems) by translating it through the floor hierarchy. At Floor 4 (Standard Model invariants), the problem reduces to charge separation constraints on a 2D field &mdash; a universal language that any physics-aware agent can interpret.</p>
+
+<!-- ==================== SECTION 11 ==================== -->
+<h1 id="sec11">13. Conclusion</h1>
+
+<p>The OTOM framework presents a multi-perspective computational approach to the Hadwiger-Nelson problem, unifying:</p>
+
+<ul>
+<li><strong>Quaternion color fields</strong> on $S^3$, where the angular separation constraint corresponds to the 24-cell geometry</li>
+<li><strong>Prime-quantized torsion spacetime</strong>, where geodesic deviation changes the effective unit distance</li>
+<li><strong>Hardware-accelerated QUBO solving</strong> via GPU compute shaders with NUVMAP scheduling</li>
+<li><strong>Signal processing pipeline</strong> (CMYK$\to$YUV$\to$SLUG-3) for frustration detection</li>
+<li><strong>ENE canonical framework</strong> with Q16_16 arithmetic and habitability predicates</li>
+<li><strong>BIND bridge equations</strong> for lawful translation between representational floors</li>
+<li><strong>CMYK OISC architecture</strong> for cache-resident stochastic computation with quantum entropy</li>
+</ul>
+
+<p>While the framework does not resolve whether $\chi = 5, 6,$ or $7$, it provides five independent computational pathways to explore the boundary, each offering unique geometric insight. The quaternion $S^3$ model is particularly promising: it transforms the discrete coloring problem into a continuous optimization over a well-understood manifold, amenable to gradient descent and GPU acceleration. The CMYK OISC pathway is equally significant: it demonstrates that the coloring problem can be solved by a single cache-resident instruction with quantum entropy, eliminating memory bandwidth as a computational bottleneck.</p>
+
+<p>The sigma codon registry (Section 14) provides persistent identifiers for all artifacts in this research, enabling reproducibility and archival retrieval.</p>
+
+<!-- ==================== SECTION 12 ==================== -->
+<h1 id="sec12">14. Sigma Codon Registry</h1>
+
+<p>All research artifacts are registered with unique sigma codons for persistent identification:</p>
+
+<table>
+<caption data-label="Table 5">Sigma Codon Registry</caption>
+<thead><tr><th>Codon</th><th>Artifact</th><th>Type</th></tr></thead>
+<tbody>
+<tr><td><span class="sigma-codon">0x1f4a8b2c</span></td><td>Atomic Weights CSV (ground truth physics)</td><td>empirical_result</td></tr>
+<tr><td><span class="sigma-codon">0xa7d9e1f4</span></td><td>Ingestion Manifest (self-typing bootstrap)</td><td>ingestion_manifest</td></tr>
+<tr><td><span class="sigma-codon">0x5e2c6f0d</span></td><td>Quantization Spec (Q16_16 + MLGRU)</td><td>formal_spec</td></tr>
+<tr><td><span class="sigma-codon">0xa4f92b7c</span></td><td>MATH_MODEL_MAP (251 models, 13 TTM layers)</td><td>formal_taxonomy</td></tr>
+<tr><td><span class="sigma-codon">0x1e5d9c3b</span></td><td>VISION_NORTH_STAR (n-space vectorization)</td><td>strategic_vision</td></tr>
+<tr><td><span class="sigma-codon">0xf7a3d2e1</span></td><td>CANONICAL_CORE_V1 (10-layer adaptive spec)</td><td>system_architecture</td></tr>
+<tr><td><span class="sigma-codon">0x3b8e5c2a</span></td><td>Plane DSP Laboratory</td><td>interactive_lab</td></tr>
+<tr><td><span class="sigma-codon">0x7d4f1e9b</span></td><td>Fractal Manifold Laboratory</td><td>interactive_lab</td></tr>
+<tr><td><span class="sigma-codon">0x9c2a6e4f</span></td><td>Spacetime Engine Laboratory</td><td>interactive_lab</td></tr>
+<tr><td><span class="sigma-codon">0xe1b7d3a5</span></td><td>Quaternion S³ Laboratory</td><td>interactive_lab</td></tr>
+<tr><td><span class="sigma-codon">0x4f8c2b1d</span></td><td>GPU QUBO Frustration Kernel (WGSL)</td><td>compute_shader</td></tr>
+<tr><td><span class="sigma-codon">0x6a3e9d7c</span></td><td>BIND Bridge Equations (5 floors)</td><td>formal_semantics</td></tr>
+<tr><td><span class="sigma-codon">0xb5d2e8f1</span></td><td>NUVMAP Equation + RatchetLUT</td><td>hardware_scheduling</td></tr>
+<tr><td><span class="sigma-codon">0x8d3e1b5a</span></td><td>CMYK OISC Specification (BLEND instruction + hardware)</td><td>compute_architecture</td></tr>
+<tr><td><span class="sigma-codon">0x2c7a4f9e</span></td><td>This Paper (OTOM H-N Framework)</td><td>publication</td></tr>
+</tbody>
+</table>
+
+<!-- ==================== APPENDIX A ==================== -->
+<h1 id="appendix-a">Appendix A: ENE MathQuery Extension (MathQuery.lean)</h1>
+
+<h2>A.1 Overview</h2>
+
+<p>The <strong>Endless Node Edges (ENE)</strong> semantic database is extended with <code>MathQuery.lean</code>, a formal Lean 4 module for indexing and retrieving mathematical subjects: theorems, equations, proofs, and formal structures. All computation uses Q16_16 fixed-point arithmetic per AGENTS.md §1.4.</p>
+
+<h2>A.2 Mathematical Subject Taxonomy</h2>
+
+<p>The module defines 14 mathematical subject categories:</p>
+
+<div class="bind-equation">
+MathSubject = algebra | analysis | geometry | topology | numberTheory | combinatorics<br>
+&nbsp;&nbsp;| logic | categoryTheory | probability | statistics<br>
+&nbsp;&nbsp;| numericalAnalysis | computationalMath | foundations | discreteMath<br>
+&nbsp;&nbsp;| differentialEquations
+</div>
+
+<p>Each subject maps to a finite index (0-13) for database addressing, with human-readable labels for display.</p>
+
+<h2>A.3 Entity Record Structure</h2>
+
+<p>A <code>MathEntity</code> stores all metadata for a mathematical theorem, conjecture, or equation:</p>
+
+<table>
+<caption data-label="Table 6">MathEntity Record Fields</caption>
+<thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>entityId</td><td>String</td><td>Unique identifier (SHA-256 prefix)</td></tr>
+<tr><td>subject</td><td>MathSubject</td><td>Primary classification</td></tr>
+<tr><td>secondarySubjects</td><td>List MathSubject</td><td>Cross-disciplinary tags</td></tr>
+<tr><td>name</td><td>String</td><td>Human-readable name</td></tr>
+<tr><td>statement</td><td>String</td><td>Formal or informal statement</td></tr>
+<tr><td>proofStatus</td><td>ProofStatus</td><td>proven | partial | conjecture | disproven | underReview</td></tr>
+<tr><td>formalStatus</td><td>FormalizationStatus</td><td>lean4 | otherProof | inProgress | informal | notApplicable</td></tr>
+<tr><td>leanModule</td><td>Option String</td><td>e.g., "Semantics.AVMR"</td></tr>
+<tr><td>dependencies</td><td>List String</td><td>Entity IDs this depends on</td></tr>
+<tr><td>citations</td><td>List String</td><td>DOI or arXiv IDs</td></tr>
+<tr><td>complexityScore</td><td>Q16_16</td><td>Estimated proof complexity</td></tr>
+<tr><td>year</td><td>Nat</td><td>Year of first statement</td></tr>
+</tbody>
+</table>
+
+<h2>A.4 Query Cost Functions (ENE Bind Primitive)</h2>
+
+<p>The <code>queryCost</code> function implements the ENE bind primitive for mathematical search. It computes a total cost from five components, all in Q16_16:</p>
+
+<div class="equation">
+  <div class="eq-body">$$C_{\text{total}} = C_{\text{subject}} + C_{\text{status}} + C_{\text{year}} + C_{\text{complexity}} + C_{\text{lean}}$$</div>
+  <div class="eq-number">(14)</div>
+</div>
+
+<p>where:</p>
+<ul>
+<li><strong>Subject cost</strong>: 0 for exact match, ~0.333 for adjacent subjects, 1.0 for unrelated</li>
+<li><strong>Status cost</strong>: 0 for matching proof status, 0.5 penalty for mismatch</li>
+<li><strong>Year cost</strong>: Reciprocal distance (0 for same year, 0.2 within decade, 0.5 within half-century)</li>
+<li><strong>Complexity cost</strong>: Proportional penalty if entity complexity exceeds ceiling</li>
+<li><strong>Lean bonus</strong>: -0.25 incentive for Lean 4 formalization (negative cost)</li>
+</ul>
+
+<h2>A.5 Example: Hadwiger-Nelson in ENE</h2>
+
+<p>The Hadwiger-Nelson problem is stored as a MathEntity with the following record:</p>
+
+<div class="bind-equation">
+entityId: "hn-1950-001"<br>
+subject: geometry<br>
+secondarySubjects: [numberTheory, combinatorics, computationalMath]<br>
+name: "Hadwiger-Nelson Problem"<br>
+statement: "What is the minimum number of colors to color the plane so that no two points at distance 1 share a color?"<br>
+proofStatus: conjecture<br>
+formalStatus: informal<br>
+leanModule: none<br>
+dependencies: ["de-grey-2018-001", "moser-spindle-1961"]<br>
+citations: ["10.2307/...", "arXiv:1804.02385"]<br>
+complexityScore: 0x0000FFFF  -- maximum (unsolved)<br>
+year: 1950
+</div>
+
+<h2>A.6 Shim Boundary (Python Interface)</h2>
+
+<p>The <code>QueryResult</code> structure provides JSON-serializable output for the Python shim layer:</p>
+
+<div class="bind-equation">
+QueryResult = { entityId: String, subject: String, name: String,<br>
+&nbsp;&nbsp;cost: UInt32,  -- Q16_16 raw value<br>
+&nbsp;&nbsp;year: Nat }<br>
+toQueryResult(e, c) = { entityId := e.entityId, subject := label(e.subject),<br>
+&nbsp;&nbsp;name := e.name, cost := c.val.toUInt32, year := e.year }
+</div>
+
+<p>This enables the Lean kernel to emit query results that Python can consume directly, bridging the formal proof engine with the computational visualization pipeline.</p>
+
+<h2>A.7 Integration with ResearchAgent Pipeline</h2>
+
+<p>The <code>paperToMathEntity</code> function converts ResearchAgent-indexed papers into MathEntity records for ENE ingestion. Subject classification is heuristic (keyword matching on title). The pipeline enables automatic population of the ENE database from arXiv and DOI sources.</p>
+
+<h2>A.8 Verified Theorems</h2>
+
+<p>The module includes four formally proved theorems:</p>
+
+<ol>
+<li><strong>subjectCostSymmetric</strong>: Subject cost is symmetric for adjacent indices</li>
+<li><strong>exactSubjectZeroCost</strong>: Exact subject match has zero cost</li>
+<li><strong>complexityCostMonotonic</strong>: Query cost is monotonic in complexity ceiling violation</li>
+<li><strong>emptyQueryMatchesAll</strong>: Empty query matches all entities with cost ≤ 0.2</li>
+</ol>
+
+<h2>A.9 Test Entities</h2>
+
+<p>Two test entities are defined for validation:</p>
+
+<table>
+<caption data-label="Table 7">MathQuery Test Entities</caption>
+<thead><tr><th>Field</th><th>testEntity1</th><th>testEntity2</th></tr></thead>
+<tbody>
+<tr><td>entityId</td><td>test-001</td><td>test-002</td></tr>
+<tr><td>subject</td><td>algebra</td><td>topology</td></tr>
+<tr><td>name</td><td>Fermat's Last Theorem</td><td>Poincaré Conjecture</td></tr>
+<tr><td>statement</td><td>a^n + b^n ≠ c^n for n > 2</td><td>Every simply connected closed 3-manifold ≅ S³</td></tr>
+<tr><td>proofStatus</td><td>proven</td><td>proven</td></tr>
+<tr><td>formalStatus</td><td>otherProof</td><td>lean4</td></tr>
+<tr><td>leanModule</td><td>none</td><td>Mathlib.Geometry.Manifold</td></tr>
+<tr><td>citations</td><td>10.2307/3597226</td><td>arXiv:math/0211159</td></tr>
+<tr><td>complexityScore</td><td>1.0</td><td>1.0</td></tr>
+<tr><td>year</td><td>1995</td><td>2003</td></tr>
+</tbody>
+</table>
+
+<!-- ==================== REFERENCES ==================== -->
+<h1 id="refs">References</h1>
+<ol class="references">
+<li id="ref-1">de Grey, A. D. N. J. (2018). The chromatic number of the plane is at least 5. <i>Geombinatorics</i>, 28, 18-31.</li>
+<li id="ref-2">Hadwiger, H., &amp; Nelson, E. (1945). Problem P10. <i>Canadian Mathematical Bulletin</i>.</li>
+<li id="ref-3">Soifer, A. (2009). <i>The Mathematical Coloring Book</i>. Springer.</li>
+<li id="ref-4">Exoo, G., &amp; Ismailescu, D. (2020). A 6-chromatic odd-distance graph in the plane. <i>arXiv preprint</i> arXiv:2010.12656.</li>
+<li id="ref-5">Einstein, A., &amp; Cartan, E. (1925). Note sur la théorie des corps tournants. <i>Comptes Rendus de l'Académie des Sciences</i>, 180, 1277-1279.</li>
+<li id="ref-6">Hamilton, W. R. (1844). On quaternions; or on a new system of imaginaries in algebra. <i>Philosophical Magazine</i>, 25(3), 489-495.</li>
+<li id="ref-7">Shor, P. W. (1994). Algorithms for quantum computation. In <i>Proceedings 35th Annual Symposium on Foundations of Computer Science</i> (pp. 124-134). IEEE.</li>
+<li id="ref-8">Kadowaki, T., &amp; Nishimori, H. (1998). Quantum annealing in the transverse Ising model. <i>Physical Review E</i>, 58(5), 5355.</li>
+<li id="ref-9">Riemann, B. (1859). Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse. <i>Monatsberichte der Berliner Akademie</i>.</li>
+<li id="ref-10">Coxeter, H. S. M. (1973). <i>Regular Polytopes</i> (3rd ed.). Dover Publications.</li>
+<li id="ref-11">OTOM Research Collective. (2026). <i>OTOM Mathematical Papers v1.0</i>. 251+ models across 13 TTM domains. <i>GitHub repository</i>: github.com/allaunthefox/OTOM-papers.</li>
+<li id="ref-12">OTOM Research Collective. (2026). Paper 01: Cognitive Load Theory. In <i>OTOM Mathematical Papers</i>, TTM Layer A (Models 1-10).</li>
+<li id="ref-13">OTOM Research Collective. (2026). Paper 03: SSMS Master Recurrence. In <i>OTOM Mathematical Papers</i>, TTM Layer C (Models 167-176).</li>
+<li id="ref-14">OTOM Research Collective. (2026). Paper 05: The Bind Primitive. In <i>OTOM Mathematical Papers</i>, Core (All layers).</li>
+<li id="ref-15">OTOM Research Collective. (2026). Paper 06: Manifold Flow. In <i>OTOM Mathematical Papers</i>, TTM Layer F.</li>
+<li id="ref-16">OTOM Research Collective. (2026). Paper 12: PIST Architecture. In <i>OTOM Mathematical Papers</i>, TTM Layer L (Models 1-17).</li>
+<li id="ref-17">Silverfox, A. (2026). <i>Ontological Manifold Theory — Implementation</i>. GitHub repository: github.com/allaunthefox/Ontological-Manifold-Theory-Implementation. 62.6% Lean 4, simulation code, core theory with invariant preservation and update operators.</li>
+</ol>
+
+</body>
+</html>

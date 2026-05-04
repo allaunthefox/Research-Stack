@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "The Braid Field Papers: DIAT, AVMR, and Quasi-Periodic Integer Geometry"
+message: "Please cite this work using the metadata below."
+type: report
+authors:
+  - family-names: "Schneider"
+    given-names: "Brandon"
+    affiliation: "No One Everywhere LLC"
+    orcid: "https://orcid.org/0009-0000-1594-0095"
+doi: "10.5281/zenodo.19587644"
+url: "https://doi.org/10.5281/zenodo.19587644"
+license: "CC-BY-4.0"
+date-released: "2026-04-15"
+keywords:
+  - number theory
+  - integer geometry
+  - quasi-periodic structures
+  - algebraic encoding
+  - computational geometry
+  - signal processing
