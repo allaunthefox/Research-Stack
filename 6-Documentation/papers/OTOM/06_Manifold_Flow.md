@@ -1,15 +1,17 @@
-# Manifold Flow: Geometric State Evolution
+# Manifold Flow: Geometric State
 
-**Authors:** Research Stack Team  
-**Date:** April 2026  
-**Domain:** TTM Layer C₁ (Topology)  
+**Authors:** Research Stack Team
+**Date:** April 2026
+**Domain:** TTM Layer A (Compression/Routing) + Manifold Theory
 **OTOM Version:** 2.2
+
+**References:** See [00_Master_References.md](00_Master_References.md) for complete source mapping
 
 ---
 
 ## Abstract
 
-Manifold Flow provides the geometric foundation for state evolution in OTOM. It models computation as flow on a Riemannian manifold, with curvature determining computational difficulty and geodesics representing optimal computation paths.
+Manifold Flow provides the geometric foundation for state evolution in OTOM. It models computation as flow on a Riemannian manifold, with curvature determining computational difficulty and geodesics representing optimal computation paths. The manifold flow is now extended with geometric structure folding (Torus-Menger-Horn) and meta-manifold language merging for cross-linguistic semantic analysis.
 
 ---
 

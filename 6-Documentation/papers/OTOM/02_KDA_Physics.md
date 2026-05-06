@@ -1,15 +1,17 @@
-# KDA Physics: Thermodynamic Energy Recovery Systems
+# KDA Physics: Thermodynamic Energy Recovery# KDA Physics
 
-**Authors:** Research Stack Team  
-**Date:** April 2026  
-**Domain:** TTM Layer G (Energy)  
+**Authors:** Research Stack Team
+**Date:** April 2026
+**Domain:** TTM Layer A (Compression/Routing) + Physics
 **OTOM Version:** 2.2
+
+**References:** See [00_Master_References.md](00_Master_References.md) for complete source mapping
 
 ---
 
 ## Abstract
 
-The KDA (Kinetic-Dynamic-Atomic) Physics framework models shock physics and energy recovery for sovereign energy systems. It establishes the theoretical foundations for Maxwell's Demon efficiency in compression systems.
+The KDA (Kinetic-Dynamic-Atomic) Physics framework models shock physics and energy recovery for sovereign energy systems. It establishes the theoretical foundations for Maxwell's Demon efficiency in compression systems. The physics framework is now extended with geometric structure folding (Torus-Menger-Horn) for energy flow optimization and Mass Number gates for thermodynamic admissibility.
 
 ---
 

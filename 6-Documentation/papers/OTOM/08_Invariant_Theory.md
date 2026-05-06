@@ -1,15 +1,17 @@
-# Invariant Theory: Conservation Laws and Constraints
+# Invariant Theory: Conservation Laws and# Invariant Theory
 
-**Authors:** Research Stack Team  
-**Date:** April 2026  
-**Domain:** TTM Layer D (Invariants)  
+**Authors:** Research Stack Team
+**Date:** April 2026
+**Domain:** TTM Layer A (Compression/Routing) + Invariant Theory
 **OTOM Version:** 2.2
+
+**References:** See [00_Master_References.md](00_Master_References.md) for complete source mapping
 
 ---
 
 ## Abstract
 
-Invariant Theory establishes the conservation laws and constraints governing all OTOM computations. It formalizes the Crystallization Front Invariant, Epistemic Inhibitory Control, and other critical system constraints.
+Invariant Theory establishes the conservation laws and constraints governing all OTOM computations. It formalizes the Crystallization Front Invariant, Epistemic Inhibitory Control, and other critical system constraints. The invariant theory is now extended with NSM semantic primes as anchor points for meta-manifold language merging and Mass Number gates for invariant preservation during fold transitions.
 
 ---
 

@@ -1,15 +1,17 @@
-# The Bind Primitive: Core Abstraction of OTOM
+# The Bind Primitive: Core Abstraction# Bind Primitive
 
-**Authors:** Research Stack Team  
-**Date:** April 2026  
-**Domain:** TTM Layer M (Lean Semantics - Core)  
+**Authors:** Research Stack Team
+**Date:** April 2026
+**Domain:** TTM Layer A (Compression/Routing) + Bind Theory
 **OTOM Version:** 2.2
+
+**References:** See [00_Master_References.md](00_Master_References.md) for complete source mapping
 
 ---
 
 ## Abstract
 
-The `bind` primitive is the fundamental operation underlying all computation in the OTOM framework. It provides a unified interface for state transitions across all domains, with explicit cost functions and invariant preservation guarantees.
+The `bind` primitive is the fundamental operation underlying all computation in the OTOM framework. It provides a unified interface for state transitions across all domains, with explicit cost functions and invariant preservation guarantees. The bind primitive is now extended with geometric structure folding (Torus-Menger-Horn) and Mass Number gates for manifold merging admissibility.
 
 ---
 

@@ -1,15 +1,17 @@
 # SSMS Master Recurrence: State Space Model Synthesis
 
-**Authors:** Research Stack Team  
-**Date:** April 2026  
-**Domain:** TTM Layer J (Dynamics)  
+**Authors:** Research Stack Team
+**Date:** April 2026
+**Domain:** TTM Layer A (Compression/Routing) + Recurrence
 **OTOM Version:** 2.2
+
+**References:** See [00_Master_References.md](00_Master_References.md) for complete source mapping
 
 ---
 
 ## Abstract
 
-The SSMS (State Space Model Synthesis) Master Recurrence provides the unified evolution equation for all agent states in the OTOM framework. It combines selective state space mechanisms with structured evolution rules.
+The SSMS (State Space Model Synthesis) Master Recurrence provides the unified evolution equation for all agent states in the OTOM framework. It combines selective state space mechanisms with structured evolution rules. The recurrence is now extended with geometric structure folding (Torus-Menger-Horn) for state space navigation and Mass Number gates for transition admissibility.
 
 ---
 

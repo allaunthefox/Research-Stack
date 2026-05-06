@@ -1,15 +1,17 @@
-# Braid Structure: Witness Traces and Holonomy
+# Braid Structure: Witness Traces
 
-**Authors:** Research Stack Team  
-**Date:** April 2026  
-**Domain:** TTM Layer C₂ (Braid)  
+**Authors:** Research Stack Team
+**Date:** April 2026
+**Domain:** TTM Layer A (Compression/Routing) + Braid Theory
 **OTOM Version:** 2.2
+
+**References:** See [00_Master_References.md](00_Master_References.md) for complete source mapping
 
 ---
 
 ## Abstract
 
-Braid Structure provides the algebraic foundation for witness traces in OTOM. It formalizes computation paths as braid words, enabling topological verification of program correctness through holonomy invariants.
+Braid Structure provides the algebraic foundation for witness traces in OTOM. It formalizes computation paths as braid words, enabling topological verification of program correctness through holonomy invariants. The braid structure is now extended with geometric structure folding (Torus-Menger-Horn) for topological routing and Mass Number gates for braid transition admissibility.
 
 ---
 

@@ -1,15 +1,17 @@
-# Cognitive Load Theory: Information-Theoretic Compression Routing
+# Cognitive Load Theory: Information-Theoretic# Cognitive Load Theory
 
-**Authors:** Research Stack Team  
-**Date:** April 2026  
-**Domain:** TTM Layer A (Compression/Routing)  
+**Authors:** Research Stack Team
+**Date:** April 2026
+**Domain:** TTM Layer A (Compression/Routing) + Cognitive Load Theory
 **OTOM Version:** 2.2
+
+**References:** See [00_Master_References.md](00_Master_References.md) for complete source mapping
 
 ---
 
 ## Abstract
 
-This paper presents the foundational routing engine for the OTOM framework. Every input byte sequence is evaluated across five load dimensions, enabling optimal compression routing through information-theoretic analysis.
+This paper presents the foundational routing engine for the OTOM framework. Every input byte sequence is evaluated across five load dimensions, enabling optimal compression routing through information-theoretic analysis. The load dimensions are now extended with geometric structure folding (Torus-Menger-Horn) and Mass Number admissibility gates for manifold merging.
 
 ---
 

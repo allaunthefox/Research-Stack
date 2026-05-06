@@ -1,15 +1,17 @@
 # Hutter Prize Equation: Compression Maximization
 
-**Authors:** Research Stack Team  
-**Date:** April 2026  
-**Domain:** TTM Layer A (Compression)  
+**Authors:** Research Stack Team
+**Date:** April 2026
+**Domain:** TTM Layer A (Compression)
 **OTOM Version:** 2.2
+
+**References:** See [00_Master_References.md](00_Master_References.md) for complete source mapping
 
 ---
 
 ## Abstract
 
-This paper presents the winning Hutter Prize compression equation derived through WGSL parallel hypothesis generation. It formalizes the optimal compression strategy balancing representation gain against decoder and resource penalties.
+This paper presents the winning Hutter Prize compression equation derived through WGSL parallel hypothesis generation. It formalizes the optimal compression strategy balancing representation gain against decoder and resource penalties. The compression equation is now integrated with Mass Number gates for admissibility checking and geometric structure folding (Torus-Menger-Horn) for unified compression optimization.
 
 ---
 
