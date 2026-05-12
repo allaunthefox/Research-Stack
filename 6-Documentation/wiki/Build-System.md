@@ -19,7 +19,24 @@ deterministic re-runs and AI-assisted review receipts remain reproducible.
 |---|---|---|
 | Python version | `3.11.15` | `.python-version` |
 | Installer | `uv` (Astral) | VSCode task `Install Python 3.11.15`, npm script `install-python` |
-| Interpreter path | `~/.local/share/uv/python/cpython-3.11-linux-x86_64-gnu/bin/python3.11` | `.vscode/settings.json` (`python.defaultInterpreterPath`) |
+| Interpreter path (Linux example) | `/home/<user>/.local/share/uv/python/cpython-3.11-linux-x86_64-gnu/bin/python3.11` | `.vscode/settings.json` (`python.defaultInterpreterPath`) |
+
+`python.defaultInterpreterPath` is stored as an absolute path — VSCode does
+not shell-expand `~` here. The value committed to `.vscode/settings.json` is
+the Linux uv install path of the original author's machine
+(`/home/allaun/.local/share/uv/python/cpython-3.11-linux-x86_64-gnu/bin/python3.11`).
+macOS and Windows users (and Linux users whose `XDG_DATA_HOME` differs) should
+override this in their user-level VSCode settings rather than editing the
+workspace setting; the per-OS uv install roots are typically:
+
+| Platform | uv-managed CPython 3.11.15 path (example) |
+|---|---|
+| Linux | `/home/<user>/.local/share/uv/python/cpython-3.11-linux-x86_64-gnu/bin/python3.11` |
+| macOS | `/Users/<user>/.local/share/uv/python/cpython-3.11-macos-aarch64-none/bin/python3.11` |
+| Windows | `C:\\Users\\<user>\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe` |
+
+Run `uv python find 3.11.15` after installing the interpreter to print the
+exact path for your platform.
 
 ### Why a pinned `.python-version`
 

@@ -51,7 +51,7 @@ to re-derive the review independently of the model server.
 | `context_files` | string[] | Repo-relative paths to every file that participated in the review prompt context (primary receipt only) |
 | `answer_path` | string | Repo-relative path to the answer markdown |
 | `previous_answer_path` | string | Repo-relative path to the answer being continued (continuation receipt only) |
-| `message_keys` | string[] | Field names returned alongside `content` by the continuation endpoint (e.g. `role`, `content`, `reasoning`) |
+| `message_keys` | string[] | Field names returned alongside `content` by the continuation endpoint (e.g. `role`, `content`, `reasoning`) (continuation receipt only) |
 
 Receipts are committed alongside the answers so that any future agent can:
 
@@ -60,6 +60,23 @@ Receipts are committed alongside the answers so that any future agent can:
 2. Reconstruct the prompt by joining the listed `context_files` against the
    commit at which the receipt was authored.
 3. Audit token usage and cost without re-querying the endpoint.
+
+### Reconstructing context for continuations
+
+Continuation receipts intentionally omit `context_files` — a continuation
+inherits the prompt context of the primary review it extends. To reconstruct
+the full context for a continuation answer:
+
+1. Read `previous_answer_path` from the continuation receipt.
+2. Locate the sibling primary receipt by replacing the `.md` suffix on
+   `previous_answer_path` with `.receipt.json` (the primary receipt and its
+   answer share a stem).
+3. Read `context_files` from that primary receipt and treat it as the
+   continuation's effective context bundle.
+4. The continuation prompt body itself is the primary answer at
+   `previous_answer_path` plus any continuation directive recorded in the
+   continuation answer's preamble; `prompt_sha256` on the continuation
+   receipt covers that combined body.
 
 ### Review Process
 
@@ -133,12 +150,24 @@ When emitting new review artifacts:
 
 1. Write the answer to
    `shared-data/artifacts/deepseek_review/<topic>_deepseek_<model>_<ISO-Z>.md`.
+   The literal `_deepseek_` segment is the **provider tag** and is held
+   constant across all DeepSeek-family reviews; `<model>` is the specific
+   model identifier (e.g. `deepseek-v3.2`, `deepseek-v4-flash`). The two
+   segments are kept separate so future provider-level tooling (rate caps,
+   budget accounting, fleet-wide audits) can filter on the provider tag
+   without parsing the `<model>` slug. This is why the canonical example
+   filenames contain `_deepseek_deepseek-v3.2_` — the doubled `deepseek` is
+   intentional and reflects `<provider>_<model>`.
 2. Write the matching receipt alongside it with the same stem and
    `.receipt.json` suffix, using `ollama_deepseek_review_receipt_v1` for the
    primary review and `ollama_deepseek_review_continuation_receipt_v1` for any
    continuation.
 3. Populate `context_files` with repo-relative paths to every file consumed
-   by the prompt so future agents can reproduce the prompt body.
+   by the prompt so future agents can reproduce the prompt body. Continuation
+   receipts omit `context_files` and `message_keys` records the alternate
+   shape of the continuation response; consumers reconstruct continuation
+   context via the primary receipt indexed by `previous_answer_path` (see
+   [[#Reconstructing context for continuations]] above).
 4. Record `prompt_sha256` and `answer_sha256` for integrity verification.
 5. Commit the answer and receipt together — the receipt is meaningless
    without the answer it indexes, and the answer is unverifiable without the
