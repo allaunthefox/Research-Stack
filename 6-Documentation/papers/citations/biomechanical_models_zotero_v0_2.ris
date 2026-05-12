@@ -1,0 +1,486 @@
+TY  - RPRT
+AU  - Arny Laean
+AU  - OpenAI GPT-5.5 Thinking
+TI  - Biomechanical Pressure-Cavitation-Vibration Model Catalog v0.2
+PY  - 2026
+PB  - Working research notes
+AB  - Working review catalog of pressure gradients, cavitation, shockwave propagation, hydrodynamic vibration, lateral-line sensing, suction, jetting, hydraulic actuation, osmotic projectiles, and Burgers-style shock smoothing.
+UR  - sandbox:/mnt/data/biomechanical_pressure_cavitation_vibration_models_v0_2.md
+N1  - Generated May 3, 2026. Working file; not peer reviewed.
+ER  -
+
+TY  - JOUR
+AU  - Michel Versluis
+AU  - Barbara Schmitz
+AU  - Anna von der Heydt
+AU  - Detlef Lohse
+TI  - How snapping shrimp snap: through cavitating bubbles
+JO  - Science
+JF  - Science
+PY  - 2000
+VL  - 289
+SP  - 2114
+EP  - 2117
+UR  - https://consensus.app/papers/details/a5289f80ad015bda9bcc7c257ed30875/?utm_source=chatgpt
+N1  - Rayleigh-Plesset-type model for snapping-shrimp cavitation bubble dynamics and emitted sound.
+ER  -
+
+TY  - JOUR
+AU  - P. Koukouvinis
+AU  - C. Bruecker
+AU  - M. Gavaises
+TI  - Unveiling the physical mechanism behind pistol shrimp cavitation
+JO  - Scientific Reports
+JF  - Scientific Reports
+PY  - 2017
+VL  - 7
+UR  - https://consensus.app/papers/details/ab6a32e60764588285afe125e7422ed4/?utm_source=chatgpt
+N1  - Immersed-boundary and homogeneous-equilibrium cavitating-flow model for pistol-shrimp claw closure.
+ER  -
+
+TY  - JOUR
+AU  - Sheila N. Patek
+AU  - Wyatt L. Korff
+AU  - Roy L. Caldwell
+TI  - Biomechanics: Deadly strike mechanism of a mantis shrimp
+JO  - Nature
+JF  - Nature
+PY  - 2004
+VL  - 428
+SP  - 819
+EP  - 820
+UR  - https://consensus.app/papers/details/2ed3cf95d4265360aa5824349c29f9ca/?utm_source=chatgpt
+N1  - Spring-latch strike mechanism and cavitation during mantis-shrimp impact.
+ER  -
+
+TY  - JOUR
+AU  - Sheila N. Patek
+AU  - Roy L. Caldwell
+TI  - Extreme impact and cavitation forces of a biological hammer: strike forces of the peacock mantis shrimp Odontodactylus scyllarus
+JO  - Journal of Experimental Biology
+JF  - Journal of Experimental Biology
+PY  - 2005
+VL  - 208
+SP  - 3655
+EP  - 3664
+UR  - https://consensus.app/papers/details/70b2cfb495bc505a82605c4c789a1904/?utm_source=chatgpt
+N1  - Force measurements separating impact and cavitation-collapse force peaks.
+ER  -
+
+TY  - JOUR
+AU  - S. Patek
+TI  - The power of mantis shrimp strikes: interdisciplinary impacts of an extreme cascade of energy release
+JO  - Integrative and Comparative Biology
+JF  - Integrative and Comparative Biology
+PY  - 2019
+UR  - https://consensus.app/papers/details/7582ec60b68f53c8a8aa5c4294513b43/?utm_source=chatgpt
+N1  - Review of spring loading, ultrafast strike mechanics, and cavitation implosion cascade.
+ER  -
+
+TY  - JOUR
+AU  - S. Cox
+AU  - D. Schmidt
+AU  - Y. Modarres-Sadeghi
+AU  - S. Patek
+TI  - A physical model of the extreme mantis shrimp strike: kinematics and cavitation of Ninjabot
+JO  - Bioinspiration & Biomimetics
+JF  - Bioinspiration & Biomimetics
+PY  - 2014
+VL  - 9
+UR  - https://consensus.app/papers/details/27f597eab8bb5b2cb3544cb089bddfd7/?utm_source=chatgpt
+N1  - Physical model isolating kinematic predictors of cavitation inception.
+ER  -
+
+TY  - JOUR
+AU  - M. Muller
+AU  - J. Osse
+AU  - J. Verhagen
+TI  - A quantitative hydrodynamical model of suction feeding in fish
+JO  - Journal of Theoretical Biology
+JF  - Journal of Theoretical Biology
+PY  - 1982
+VL  - 95
+SP  - 49
+EP  - 79
+UR  - https://consensus.app/papers/details/a3231ef45ee35fa7b6675b726a50bbe2/?utm_source=chatgpt
+N1  - Unsteady hydrodynamical model of suction feeding with pressure and velocity equations.
+ER  -
+
+TY  - JOUR
+AU  - P. Wainwright
+AU  - S. Day
+TI  - The forces exerted by aquatic suction feeders on their prey
+JO  - Journal of The Royal Society Interface
+JF  - Journal of The Royal Society Interface
+PY  - 2007
+VL  - 4
+SP  - 553
+EP  - 560
+UR  - https://consensus.app/papers/details/8a962a2f34bd55b8baeedaee011dc8dc/?utm_source=chatgpt
+N1  - Mathematical model showing pressure-gradient force can dominate drag and acceleration reaction.
+ER  -
+
+TY  - JOUR
+AU  - R. Holzman
+AU  - D. Collar
+AU  - R. Mehta
+AU  - P. Wainwright
+TI  - An integrative modeling approach to elucidate suction-feeding performance
+JO  - Journal of Experimental Biology
+JF  - Journal of Experimental Biology
+PY  - 2012
+VL  - 215
+SP  - 1
+EP  - 13
+UR  - https://consensus.app/papers/details/3abd50c82cf454debc183ad4c3a37cf9/?utm_source=chatgpt
+N1  - Suction-Induced Force Field model integrating morphology, kinematics, ram, and fluid mechanics.
+ER  -
+
+TY  - JOUR
+AU  - M. R. Drost
+AU  - M. Muller
+AU  - J. W. M. Osse
+TI  - A quantitative hydrodynamical model of suction feeding in larval fishes: the role of frictional forces
+JO  - Proceedings of the Royal Society of London. Series B. Biological Sciences
+JF  - Proceedings of the Royal Society of London. Series B. Biological Sciences
+PY  - 1988
+VL  - 234
+SP  - 263
+EP  - 281
+UR  - https://consensus.app/papers/details/973637c711b95c0a9853b3d24e0ebe7c/?utm_source=chatgpt
+N1  - Larval fish suction-flow model with friction, power, energy, and prey escape paths.
+ER  -
+
+TY  - JOUR
+AU  - S. Yaniv
+AU  - D. Elad
+AU  - R. Holzman
+TI  - Suction feeding across fish life stages: flow dynamics from larvae to adults and implications for prey capture
+JO  - Journal of Experimental Biology
+JF  - Journal of Experimental Biology
+PY  - 2014
+VL  - 217
+SP  - 3748
+EP  - 3757
+UR  - https://consensus.app/papers/details/2bdd171c3f6b5a7484db2f37ca59eb93/?utm_source=chatgpt
+N1  - Computational scaling model of suction flows across ontogeny.
+ER  -
+
+TY  - JOUR
+AU  - Krishnamoorthy Krishnan
+AU  - A. Nafi
+AU  - R. Gurka
+AU  - R. Holzman
+TI  - The hydrodynamic regime drives flow reversals in suction-feeding larval fishes during early ontogeny
+JO  - Journal of Experimental Biology
+JF  - Journal of Experimental Biology
+PY  - 2020
+VL  - 223
+UR  - https://consensus.app/papers/details/2370371afe265e07a8bddf649159f3d0/?utm_source=chatgpt
+N1  - Numerical model explaining in-and-out prey movement via flow reversal.
+ER  -
+
+TY  - JOUR
+AU  - C. Marshall
+AU  - K. Kovacs
+AU  - C. Lydersen
+TI  - Feeding kinematics, suction and hydraulic jetting capabilities in bearded seals (Erignathus barbatus)
+JO  - Journal of Experimental Biology
+JF  - Journal of Experimental Biology
+PY  - 2008
+VL  - 211
+SP  - 699
+EP  - 708
+UR  - https://consensus.app/papers/details/1f77eea741bd5ae389ad1cf99ff91885/?utm_source=chatgpt
+N1  - Measured suction and hydraulic jetting pressures in bearded seals.
+ER  -
+
+TY  - JOUR
+AU  - M. Krieg
+AU  - K. Mohseni
+TI  - Transient Pressure Modeling in Jetting Animals
+JO  - Journal of Theoretical Biology
+JF  - Journal of Theoretical Biology
+PY  - 2020
+UR  - https://consensus.app/papers/details/a341291c0def51bb85754da84d07114a/?utm_source=chatgpt
+N1  - Circulation-based transient pressure model for jellyfish, squid, and dragonfly larvae.
+ER  -
+
+TY  - JOUR
+AU  - B. Gemmell
+AU  - S. Colin
+AU  - J. Costello
+AU  - J. Dabiri
+TI  - Suction-based propulsion as a basis for efficient animal swimming
+JO  - Nature Communications
+JF  - Nature Communications
+PY  - 2015
+VL  - 6
+UR  - https://consensus.app/papers/details/32f59065f0a65b23bb13efd5050093b6/?utm_source=chatgpt
+N1  - PIV and pressure reconstruction showing low-pressure suction contribution to animal swimming.
+ER  -
+
+TY  - JOUR
+AU  - J. Costello
+AU  - S. Colin
+AU  - B. Gemmell
+AU  - J. Dabiri
+AU  - E. Kanso
+TI  - A fundamental propulsive mechanism employed by swimmers and flyers throughout the animal kingdom
+JO  - Journal of Experimental Biology
+JF  - Journal of Experimental Biology
+PY  - 2023
+VL  - 226
+UR  - https://consensus.app/papers/details/d17c3176baa15e5fad968e6c7659dee1/?utm_source=chatgpt
+N1  - Commentary on suction forces around flexible propulsors.
+ER  -
+
+TY  - JOUR
+AU  - A. James
+AU  - K. Morison
+AU  - S. Todd
+TI  - A mathematical model of the defence mechanism of a bombardier beetle
+JO  - Journal of The Royal Society Interface
+JF  - Journal of The Royal Society Interface
+PY  - 2013
+VL  - 10
+UR  - https://consensus.app/papers/details/8a834e2c692c5df1a9731fe5944a334c/?utm_source=chatgpt
+N1  - Mathematical model of bombardier beetle cyclic/pulsed discharge.
+ER  -
+
+TY  - JOUR
+AU  - J. Dean
+AU  - D. Aneshansley
+AU  - H. Edgerton
+AU  - T. Eisner
+TI  - Defensive spray of the bombardier beetle: a biological pulse jet
+JO  - Science
+JF  - Science
+PY  - 1990
+VL  - 248
+SP  - 1219
+EP  - 1221
+UR  - https://consensus.app/papers/details/2ba8fb30b08a51b7b19b0eac1e2d9f87/?utm_source=chatgpt
+N1  - Experimental observation of pulsed defensive spray around 500 pulses/s.
+ER  -
+
+TY  - JOUR
+AU  - Eric M. Arndt
+AU  - Wendy Moore
+AU  - Wah-Keat Lee
+AU  - Christine Ortiz
+TI  - Mechanistic origins of bombardier beetle (Brachinini) explosion-induced defensive spray pulsation
+JO  - Science
+JF  - Science
+PY  - 2015
+VL  - 348
+SP  - 563
+EP  - 567
+UR  - https://consensus.app/papers/details/0a49f03f885e5ba299a461aef9a98a5e/?utm_source=chatgpt
+N1  - Synchrotron x-ray imaging and kinematic models of chamber/vapor dynamics.
+ER  -
+
+TY  - JOUR
+AU  - N. Beheshti
+AU  - A. McIntosh
+TI  - The bombardier beetle and its use of a pressure relief valve system to deliver a periodic pulsed spray
+JO  - Bioinspiration & Biomimetics
+JF  - Bioinspiration & Biomimetics
+PY  - 2007
+VL  - 2
+SP  - 57
+EP  - 64
+UR  - https://consensus.app/papers/details/a22d73809ad95241a85775ddc1477986/?utm_source=chatgpt
+N1  - Numerical simulations of two-phase ejection and pressure-relief-valve mechanism.
+ER  -
+
+TY  - JOUR
+AU  - S. Deban
+AU  - R. Holzman
+AU  - U. Mueller
+TI  - Suction feeding by small organisms: Performance limits in larval vertebrates and carnivorous plants
+JO  - Integrative and Comparative Biology
+JF  - Integrative and Comparative Biology
+PY  - 2020
+UR  - https://consensus.app/papers/details/3359631edb6752d0b3f81247ac2f1bc6ac43ddbee29586/?utm_source=chatgpt
+N1  - Review of small suction feeders and bladderwort elastic recoil/negative-pressure traps.
+ER  -
+
+TY  - JOUR
+AU  - G. Chapman
+TI  - Versatility of hydraulic systems
+JO  - Journal of Experimental Zoology
+JF  - Journal of Experimental Zoology
+PY  - 1975
+VL  - 194
+SP  - 249
+EP  - 269
+UR  - https://consensus.app/papers/details/bde39679225c5d34a0d496f0be2cf1f4/?utm_source=chatgpt
+N1  - Classic review of animal hydraulic systems and hydrostatic force transmission.
+ER  -
+
+TY  - JOUR
+AU  - Chun-bao Liu
+AU  - Yingjie Wang
+AU  - Luquan Ren
+AU  - L. Ren
+TI  - A Review of Biological Fluid Power Systems and Their Potential Bionic Applications
+JO  - Journal of Bionic Engineering
+JF  - Journal of Bionic Engineering
+PY  - 2019
+VL  - 16
+SP  - 367
+EP  - 399
+UR  - https://consensus.app/papers/details/a2d00eea1ec2534d8c54edd85a549ef3/?utm_source=chatgpt
+N1  - Review defining biological hydraulic systems as power source, cavity, and working medium.
+ER  -
+
+TY  - JOUR
+AU  - A. Sakes
+AU  - Marleen van der Wiel
+AU  - P. Henselmans
+AU  - J. V. van Leeuwen
+AU  - Dimitra Dodou
+AU  - P. Breedveld
+TI  - Shooting Mechanisms in Nature: A Systematic Review
+JO  - PLoS ONE
+JF  - PLoS ONE
+PY  - 2016
+VL  - 11
+UR  - https://consensus.app/papers/details/0a93123278a156f0a4c0aaca6e156b87/?utm_source=chatgpt
+N1  - Systematic review of biological projectile mechanisms including osmotic shooting in cnidarians.
+ER  -
+
+TY  - JOUR
+AU  - S. Nedelec
+AU  - James A. Campbell
+AU  - A. Radford
+AU  - S. Simpson
+AU  - N. Merchant
+TI  - Particle motion: the missing link in underwater acoustic ecology
+JO  - Methods in Ecology and Evolution
+JF  - Methods in Ecology and Evolution
+PY  - 2016
+VL  - 7
+UR  - https://consensus.app/papers/details/b2ac0ce4aec85bd4bf2e7a0e9670fbb2/?utm_source=chatgpt
+N1  - Underwater particle motion measurement and relevance for fish/invertebrate acoustic ecology.
+ER  -
+
+TY  - JOUR
+AU  - J. Engelmann
+AU  - W. Hanke
+AU  - J. Mogdans
+AU  - H. Bleckmann
+TI  - Hydrodynamic stimuli and the fish lateral line
+JO  - Nature
+JF  - Nature
+PY  - 2000
+VL  - 408
+SP  - 51
+EP  - 52
+UR  - https://consensus.app/papers/details/44e7ccbededf56f29071e884879831da/?utm_source=chatgpt
+N1  - Hydrodynamic lateral-line response to minute water motions in flow.
+ER  -
+
+TY  - JOUR
+AU  - Julie Goulet
+AU  - J. Engelmann
+AU  - B. Chagnaud
+AU  - Jan-Moritz P. Franosch
+AU  - M. Suttner
+AU  - J. van Hemmen
+TI  - Object localization through the lateral line system of fish: theory and experiment
+JO  - Journal of Comparative Physiology A
+JF  - Journal of Comparative Physiology A
+PY  - 2007
+VL  - 194
+SP  - 1
+EP  - 17
+UR  - https://consensus.app/papers/details/3c61e4f8684d55ebb6b92dc694466641/?utm_source=chatgpt
+N1  - Hydrodynamic model and experiment for source localization using fish lateral line.
+ER  -
+
+TY  - JOUR
+AU  - J. Mogdans
+TI  - Sensory ecology of the fish lateral-line system: Morphological and physiological adaptations for the perception of hydrodynamic stimuli
+JO  - Journal of Fish Biology
+JF  - Journal of Fish Biology
+PY  - 2019
+UR  - https://consensus.app/papers/details/cd85e9e5b21b55dea761560c21749382/?utm_source=chatgpt
+N1  - Review of lateral-line morphology and hydrodynamic sensing across fish habitats.
+ER  -
+
+TY  - JOUR
+AU  - Jacqueline F. Webb
+TI  - Structural and functional evolution of the mechanosensory lateral line system of fishes
+JO  - Journal of the Acoustical Society of America
+JF  - Journal of the Acoustical Society of America
+PY  - 2023
+VL  - 154
+SP  - 3526
+EP  - 3542
+UR  - https://consensus.app/papers/details/fa8a11846cd15e3c902d29572c0e4c16/?utm_source=chatgpt
+N1  - Review of lateral-line structure/function and low-frequency flow sensing.
+ER  -
+
+TY  - JOUR
+AU  - C. J. Erickson
+TI  - Percussive foraging in the aye-aye, Daubentonia madagascariensis
+JO  - Animal Behaviour
+JF  - Animal Behaviour
+PY  - 1991
+UR  - https://consensus.app/papers/details/b97b44413f24565f971e1cc64d5ff13a/?utm_source=chatgpt
+N1  - Behavioral evidence for aye-aye percussive foraging.
+ER  -
+
+TY  - JOUR
+AU  - C. J. Erickson
+AU  - S. Nowicki
+AU  - L. Dollar
+AU  - N. Goehring
+TI  - Percussive Foraging: Stimuli for Prey Location by Aye-Ayes (Daubentonia madagascariensis)
+JO  - International Journal of Primatology
+JF  - International Journal of Primatology
+PY  - 1998
+UR  - https://consensus.app/papers/details/178f25881c9c528c905749c479e2b3af/?utm_source=chatgpt
+N1  - Experimental evidence for interface/cavity cues in aye-aye prey location.
+ER  -
+
+TY  - JOUR
+AU  - Nihar Masurkar
+AU  - Jiming Kang
+AU  - H. Nemati
+AU  - Ehsan Dehghan-Niri
+TI  - Aye-aye middle finger kinematic modeling and motion tracking during tap-scanning
+JO  - Biomimetic Intelligence and Robotics
+JF  - Biomimetic Intelligence and Robotics
+PY  - 2023
+UR  - https://consensus.app/papers/details/80bd94728c1058419a38683438f904af/?utm_source=chatgpt
+N1  - Two-link robotic-arm / kinematic model for aye-aye tap-scanning.
+ER  -
+
+TY  - JOUR
+AU  - H. Nemati
+AU  - Ehsan Dehghan-Niri
+TI  - The acoustic near-field measurement of aye-ayes' biological auditory system utilizing a biomimetic robotic tap-scanning
+JO  - Bioinspiration & Biomimetics
+JF  - Bioinspiration & Biomimetics
+PY  - 2020
+UR  - https://consensus.app/papers/details/bf4767c8ab865069b79590d4f3585dde/?utm_source=chatgpt
+N1  - Biomimetic measurement of aye-aye near-field acoustic receiver behavior.
+ER  -
+
+TY  - JOUR
+AU  - Lin Chen
+AU  - H. Xiong
+AU  - Xiaohan Sang
+AU  - Cheng Yuan
+AU  - Xiuquan Li
+AU  - Qingzhao Kong
+TI  - An innovative deep neural network-based approach for internal cavity detection of timber columns using percussion sound
+JO  - Structural Health Monitoring
+JF  - Structural Health Monitoring
+PY  - 2021
+UR  - https://consensus.app/papers/details/15d956b46c5654d68dcdc3c561285a34/?utm_source=chatgpt
+N1  - Percussion-sound model for detecting internal timber cavities.
+ER  -
