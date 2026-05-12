@@ -1,3 +1,57 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a9984bf91c62cfeb78cacad71662f7d467a1e0c0198bbb7cd5fcf9d1eeaca788
-size 1417
+{
+  "file_path": "/home/allaun/Research Stack/tools/lean/Semantics/Semantics/Github.lean",
+  "namespace": "Semantics.Github",
+  "imports": [
+    "Semantics.ProvenanceSource"
+  ],
+  "opens": [
+    "Semantics.Q16_16"
+  ],
+  "structures": [
+    {
+      "name": "GithubEvent",
+      "line": 8,
+      "doc": "GithubEvent: Structure for GitHub-side research ingestion."
+    }
+  ],
+  "theorems": [],
+  "definitions": [
+    {
+      "name": "githubPolicy",
+      "line": 14,
+      "doc": "Provider-specific cost policy for the Github compatibility shim."
+    },
+    {
+      "name": "toSourceEvent",
+      "line": 21,
+      "doc": "Convert a legacy Github event into the open provenance-source event surface."
+    },
+    {
+      "name": "githubInvariant",
+      "line": 35,
+      "doc": "Invariant: Github events are lawful if they are intended for the public record and target the research-stack repo."
+    },
+    {
+      "name": "githubCost",
+      "line": 47,
+      "doc": "Cost function: Measures the cost of public publication. Public visibility adds significant informational weight (Q16.16)."
+    },
+    {
+      "name": "githubBind",
+      "line": 53,
+      "doc": "The Github Bind: Marks the idea as \"in full view\"."
+    }
+  ],
+  "documentation": [
+    "GithubEvent: Structure for GitHub-side research ingestion.",
+    "Provider-specific cost policy for the Github compatibility shim.",
+    "Convert a legacy Github event into the open provenance-source event surface.",
+    "Invariant: Github events are lawful if they are intended for the public record and target the research-stack repo.",
+    "Cost function: Measures the cost of public publication. Public visibility adds significant informational weight (Q16.16).",
+    "The Github Bind: Marks the idea as \"in full view\"."
+  ],
+  "total_lines": 56,
+  "gcl_encoded": true,
+  "gcl_sequence": "F00020200",
+  "gcl_length": 9
+}

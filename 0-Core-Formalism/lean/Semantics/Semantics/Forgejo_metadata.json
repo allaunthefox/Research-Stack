@@ -1,3 +1,57 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fb2e56150d3409a4a73954864e4daae4a5529b1c0f688249228972646d312f6b
-size 1479
+{
+  "file_path": "/home/allaun/Research Stack/tools/lean/Semantics/Semantics/Forgejo.lean",
+  "namespace": "Semantics.Forgejo",
+  "imports": [
+    "Semantics.ProvenanceSource"
+  ],
+  "opens": [
+    "Semantics.Q16_16"
+  ],
+  "structures": [
+    {
+      "name": "ForgejoEvent",
+      "line": 8,
+      "doc": "ForgejoEvent: The structure of a Git event in the research stack."
+    }
+  ],
+  "theorems": [],
+  "definitions": [
+    {
+      "name": "forgejoPolicy",
+      "line": 14,
+      "doc": "Provider-specific cost policy for the Forgejo compatibility shim."
+    },
+    {
+      "name": "toSourceEvent",
+      "line": 21,
+      "doc": "Convert a legacy Forgejo event into the open provenance-source event surface."
+    },
+    {
+      "name": "forgejoInvariant",
+      "line": 35,
+      "doc": "Invariant: Forgejo events are lawful if they originate from an allowed repo and the action is within the prescribed set."
+    },
+    {
+      "name": "forgejoCost",
+      "line": 47,
+      "doc": "Cost function: Measures the \"computational friction\" of a git event. Events from external authors have higher cost (Q16.16)."
+    },
+    {
+      "name": "forgejoBind",
+      "line": 53,
+      "doc": "The Forgejo Bind: Connects an event to the research substrate."
+    }
+  ],
+  "documentation": [
+    "ForgejoEvent: The structure of a Git event in the research stack.",
+    "Provider-specific cost policy for the Forgejo compatibility shim.",
+    "Convert a legacy Forgejo event into the open provenance-source event surface.",
+    "Invariant: Forgejo events are lawful if they originate from an allowed repo and the action is within the prescribed set.",
+    "Cost function: Measures the \"computational friction\" of a git event. Events from external authors have higher cost (Q16.16).",
+    "The Forgejo Bind: Connects an event to the research substrate."
+  ],
+  "total_lines": 56,
+  "gcl_encoded": true,
+  "gcl_sequence": "F00020200",
+  "gcl_length": 9
+}
