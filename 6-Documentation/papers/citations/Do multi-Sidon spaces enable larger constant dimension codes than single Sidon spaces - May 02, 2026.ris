@@ -1,0 +1,1216 @@
+TY  - JOUR
+AU  - Hong, Aaron
+AU  - Boucher, Christina
+TI  - Enhancing Data Compression: Recent Innovations in LZ77 Algorithms
+PY  - 2025
+DA  - 2025-05-30
+JO  - Journal of Computational Biology
+VL  - 32
+SP  - 761
+EP  - 780
+DO  - 10.1089/cmb.2024.0879
+UR  - https://consensus.app/papers/enhancing-data-compression-recent-innovations-in-lz77-hong-boucher/9c6f284d0de75588bd2e673b6450053c/
+ER  -
+TY  - JOUR
+AU  - Zhu, Zexuan
+AU  - Zhang, Yongpeng
+AU  - Ji, Zhen
+AU  - He, Shan
+AU  - Yang, X.
+TI  - High-throughput DNA sequence data compression
+PY  - 2013
+DA  - 2013-12-03
+JO  - Briefings in bioinformatics
+VL  - 16 1
+SP  - 1
+EP  - 15
+DO  - 10.1093/bib/bbt087
+UR  - https://consensus.app/papers/highthroughput-dna-sequence-data-compression-zhu-zhang/8fee8d39fa19556a8cfac41948f5b16d/
+ER  -
+TY  - JOUR
+AU  - Roy, Subhankar
+AU  - Maity, Dilip Kumar
+AU  - Mukhopadhyay, Anirban
+TI  - A lossless reference-free sequence compression algorithm leveraging grammatical, statistical, and substitution rules
+PY  - 2025
+DA  - 2025-01-08
+JO  - Briefings in Functional Genomics
+VL  - 24
+SP  -
+EP  -
+DO  - 10.1093/bfgp/elae050
+UR  - https://consensus.app/papers/a-lossless-referencefree-sequence-compression-algorithm-roy-maity/96c641c7ffd95223b45b0a191837d25b/
+ER  -
+TY  - JOUR
+AU  - Shi, Wei
+AU  - Chen, Jianhua
+AU  - Luo, Mao
+AU  - Chen, Min
+TI  - High efficiency referential genome compression algorithm
+PY  - 2019
+DA  - 2019-06-01
+JO  - Bioinformatics
+VL  - 35 12
+SP  - 2058
+EP  - 2065
+DO  - 10.1093/bioinformatics/bty934
+UR  - https://consensus.app/papers/high-efficiency-referential-genome-compression-shi-chen/d03f26fda090542190ba333af414d8d0/
+ER  -
+TY  - JOUR
+AU  - Grabowski, S.
+AU  - Deorowicz, Sebastian
+AU  - Roguski, Lukasz
+TI  - Disk-based compression of data from genome sequencing
+PY  - 2015
+DA  - 2015-05-01
+JO  - Bioinformatics
+VL  - 31 9
+SP  - 1389
+EP  - 1395
+DO  - 10.1093/bioinformatics/btu844
+UR  - https://consensus.app/papers/diskbased-compression-of-data-from-genome-sequencing-grabowski-deorowicz/0fba260571a7534f92886d8a04dedfd2/
+ER  -
+TY  - JOUR
+AU  - Banerjee, Kakoli
+AU  - Bali, V.
+TI  - Design and Development of Bioinformatics Feature Based DNA Sequence Data Compression Algorithm
+PY  - 2020
+DA  - 2020-05-05
+JO  - EAI Endorsed Trans. Pervasive Health Technol.
+VL  - 5
+SP  -
+EP  -
+DO  - 10.4108/eai.13-7-2018.164097
+UR  - https://consensus.app/papers/design-and-development-of-bioinformatics-feature-based-banerjee-bali/8c4a2f6b88755691a3124972c5aeb63c/
+ER  -
+TY  - JOUR
+AU  - Daggubati, Siva Phanindra
+AU  - Kasukurthi, Venkata Rao
+AU  - Pvgd, Prasad Reddy
+TI  - DNA Sequence Compress Algorithm for Compression of Biological Sequences
+PY  - 2024
+DA  - 2024-12-11
+JO  - International Journal of Computational and Experimental Science and Engineering
+VL  -
+SP  -
+EP  -
+DO  - 10.22399/ijcesen.675
+UR  - https://consensus.app/papers/dna-sequence-compress-algorithm-for-compression-of-daggubati-kasukurthi/2ec60958f5c250e19602767b41804db9/
+ER  -
+TY  - JOUR
+AU  - Silva, Milton
+AU  - Pratas, Diogo
+AU  - Pinho, A.
+TI  - Efficient DNA sequence compression with neural networks
+PY  - 2020
+DA  - 2020-11-01
+JO  - GigaScience
+VL  - 9
+SP  -
+EP  -
+DO  - 10.1093/gigascience/giaa119
+UR  - https://consensus.app/papers/efficient-dna-sequence-compression-with-neural-networks-silva-pratas/af0b2114b8ef59b190d18aec0bb6c139/
+ER  -
+TY  - JOUR
+AU  - Al-Okaily, Anas
+AU  - Tbakhi, A.
+TI  - A novel lossless encoding algorithm for data compression–genomics data as an exemplar
+PY  - 2020
+DA  - 2020-08-24
+JO  - Frontiers in Bioinformatics
+VL  - 4
+SP  -
+EP  -
+DO  - 10.1101/2020.08.24.264366
+UR  - https://consensus.app/papers/a-novel-lossless-encoding-algorithm-for-data-al-okaily-tbakhi/67dc9aeee337540d919c12c5aa09d3b2/
+ER  -
+TY  - JOUR
+AU  - Alosta, Mahmud
+AU  - Souri, A.
+TI  - Design of Effective Lossless Data Compression Technique for Multiple Genomic DNA Sequences
+PY  - 2021
+DA  - 2021-01-01
+JO  - Fusion: Practice and Applications
+VL  -
+SP  -
+EP  -
+DO  - 10.54216/fpa.060103
+UR  - https://consensus.app/papers/design-of-effective-lossless-data-compression-technique-alosta-souri/595dfe84372456e48915dd9ec17ac18a/
+ER  -
+TY  - JOUR
+AU  - Brandon, Marty
+AU  - Wallace, D.
+AU  - Baldi, P.
+TI  - Data structures and compression algorithms for genomic sequence data
+PY  - 2009
+DA  - 2009-07-01
+JO  - Bioinformatics
+VL  - 25 14
+SP  - 1731
+EP  - 1738
+DO  - 10.1093/bioinformatics/btp319
+UR  - https://consensus.app/papers/data-structures-and-compression-algorithms-for-genomic-brandon-wallace/53538ae3d5685c58a1dfcd08a08c12ac/
+ER  -
+TY  - JOUR
+AU  - Hernaez, M.
+AU  - Pavlichin, Dmitri
+AU  - Weissman, T.
+AU  - Ochoa, Idoia
+TI  - Genomic Data Compression
+PY  - 2019
+DA  - 2019-07-20
+JO  - Annual Review of Biomedical Data Science
+VL  -
+SP  -
+EP  -
+DO  - 10.1146/annurev-biodatasci-072018-021229
+UR  - https://consensus.app/papers/genomic-data-compression-hernaez-pavlichin/f8078cfa75fe51048c3d97cd968e9d2a/
+ER  -
+TY  - JOUR
+AU  - Cox, A.
+AU  - Bauer, Markus
+AU  - Jakobi, Tobias
+AU  - Rosone, Giovanna
+TI  - Large-scale compression of genomic sequence databases with the Burrows-Wheeler transform
+PY  - 2012
+DA  - 2012-05-01
+JO  - Bioinformatics
+VL  - 28 11
+SP  - 1415
+EP  - 1419
+DO  - 10.1093/bioinformatics/bts173
+UR  - https://consensus.app/papers/largescale-compression-of-genomic-sequence-databases-cox-bauer/e7a9b3c91443565ab09656a3809597fa/
+ER  -
+TY  - CONF
+AU  - S., Sheena
+AU  - Nair, Madhu
+TI  - Lossless DNA Sequence Compression: Exploring Spatial and Sequential Redundancies of DNA Sequence with 2-D CNN Autoencoder
+PY  - 2024
+DA  - 2024-07-12
+JO  - 2024 IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)
+VL  -
+SP  - 1
+EP  - 6
+DO  - 10.1109/conecct62155.2024.10677168
+UR  - https://consensus.app/papers/lossless-dna-sequence-compression-exploring-spatial-and-s-nair/2cfe4851189b5d88b50483147d778fef/
+ER  -
+TY  - JOUR
+AU  - Karasikov, Mikhail
+AU  - Mustafa, Harun
+AU  - Rätsch, G.
+AU  - Kahles, A.
+TI  - Lossless indexing with counting de Bruijn graphs
+PY  - 2021
+DA  - 2021-11-11
+JO  - Genome Research
+VL  - 32
+SP  - 1754
+EP  - 1764
+DO  - 10.1101/2021.11.09.467907
+UR  - https://consensus.app/papers/lossless-indexing-with-counting-de-bruijn-graphs-karasikov-mustafa/0bb2a8ff5b90598e80094b541c9cbfc5/
+ER  -
+TY  - JOUR
+AU  - Eskandar, Parsa
+AU  - Paten, B.
+AU  - Sirén, Jouni
+TI  - Lossless Pangenome Indexing Using Tag Arrays
+PY  - 2026
+DA  - 2026-01-18
+JO  - Research Square
+VL  -
+SP  -
+EP  -
+DO  - 10.21203/rs.3.rs-8233501/v1
+UR  - https://consensus.app/papers/lossless-pangenome-indexing-using-tag-arrays-eskandar-paten/5bd90ad13d705aea8f5f62f2b621d8fd/
+ER  -
+TY  - CONF
+AU  - Nawaz, M.
+AU  - Nawaz, M.
+AU  - Fournier-Viger, Philippe
+AU  - Tseng, Vincent
+TI  - An MDL-Based Genetic Algorithm for Genome Sequence Compression
+PY  - 2024
+DA  - 2024-12-03
+JO  - 2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)
+VL  -
+SP  - 6724
+EP  - 6731
+DO  - 10.1109/bibm62325.2024.10821914
+UR  - https://consensus.app/papers/an-mdlbased-genetic-algorithm-for-genome-sequence-nawaz-nawaz/8aee16541988504eba847b847d4dce74/
+ER  -
+TY  - JOUR
+AU  - S., Sheena
+AU  - Nair, Madhu
+TI  - GenCoder: A Novel Convolutional Neural Network Based Autoencoder for Genomic Sequence Data Compression
+PY  - 2024
+DA  - 2024-02-15
+JO  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+VL  - 21
+SP  - 405
+EP  - 415
+DO  - 10.1109/tcbb.2024.3366240
+UR  - https://consensus.app/papers/gencoder-a-novel-convolutional-neural-network-based-s-nair/c4eb25401ba35e1f85327e2bbb741d3a/
+ER  -
+TY  - JOUR
+AU  - SheenaK., S.
+AU  - Nair, Madhu
+TI  - DNACoder: a CNN-LSTM attention-based network for genomic sequence data compression
+PY  - 2024
+DA  - 2024-07-25
+JO  - Neural Computing and Applications
+VL  - 36
+SP  - 18363
+EP  - 18376
+DO  - 10.1007/s00521-024-10130-4
+UR  - https://consensus.app/papers/dnacoder-a-cnnlstm-attentionbased-network-for-genomic-sheenak-nair/c9cc73897e5c5abb8483413e597e84dd/
+ER  -
+TY  - JOUR
+AU  - Şatır, Esra
+TI  - A DNA Data Storage Method Using Spatial Encoding Based Lossless Compression
+PY  - 2024
+DA  - 2024-12-01
+JO  - Entropy
+VL  - 26
+SP  -
+EP  -
+DO  - 10.3390/e26121116
+UR  - https://consensus.app/papers/a-dna-data-storage-method-using-spatial-encoding-based-atr/daf2a4440843567fb8dc53c65928c6b1/
+ER  -
+TY  - JOUR
+AU  - Daggubati, Siva Phanindra
+AU  - Kasukurthi, Venkata Rao
+AU  - Reddy, P.
+TI  - Advancing Genomic Data Management through TCompress: An Innovative Method for Sequence Compression of Biological Sequence Compression Algorithm using Text-Compression Tools
+PY  - 2025
+DA  - 2025-06-20
+JO  - Indian Journal Of Science And Technology
+VL  -
+SP  -
+EP  -
+DO  - 10.17485/ijst/v18i23.2790
+UR  - https://consensus.app/papers/advancing-genomic-data-management-through-tcompress-an-daggubati-kasukurthi/d8686eeed25d50e78d2274f25a6b6e4d/
+ER  -
+TY  - JOUR
+AU  - Adam, Rani
+AU  - Catchpoole, Daniel
+AU  - Simoff, Simeon
+AU  - Qu, Zhonglin
+AU  - Kennedy, Paul
+AU  - Nguyen, Quang Vinh
+TI  - Lossless Compression with Trie-Based Shared Dictionary for Omics Data in Edge-Cloud Frameworks
+PY  - 2025
+DA  - 2025-04-09
+JO  - J. Sens. Actuator Networks
+VL  - 14
+SP  - 41
+EP  -
+DO  - 10.3390/jsan14020041
+UR  - https://consensus.app/papers/lossless-compression-with-triebased-shared-dictionary-adam-catchpoole/512c279153f1554bbe6564b81a7f043f/
+ER  -
+TY  - JOUR
+AU  - Elnady, Sarah
+AU  - Sayed, Sabah
+AU  - Salah, A.
+TI  - HADC: A Hybrid Compression Approach for DNA Sequences
+PY  - 2022
+DA  -
+JO  - IEEE Access
+VL  - 10
+SP  - 106841
+EP  - 106848
+DO  - 10.1109/access.2022.3212523
+UR  - https://consensus.app/papers/hadc-a-hybrid-compression-approach-for-dna-sequences-elnady-sayed/08b1859013ec53bbbeb858e6eb68fe7f/
+ER  -
+TY  - JOUR
+AU  - Afify, H.
+AU  - Islam, Muhammad
+AU  - Wahed, M.
+TI  - DNA Lossless Differential Compression Algorithm based on Similarity of Genomic Sequence Database
+PY  - 2011
+DA  - 2011-08-30
+JO  - ArXiv
+VL  - abs/1109.0094
+SP  -
+EP  -
+DO  - 10.5121/ijcsit.2011.3412
+UR  - https://consensus.app/papers/dna-lossless-differential-compression-algorithm-based-on-afify-islam/2694cf2397f7540097f591864f2e933c/
+ER  -
+TY  - JOUR
+AU  - Kredens, K.
+AU  - Martins, J.
+AU  - Dordal, O.
+AU  - Ferrandin, M.
+AU  - Herai, R.
+AU  - Scalabrin, E.
+AU  - Ávila, B.
+TI  - Vertical lossless genomic data compression tools for assembled genomes: A systematic literature review
+PY  - 2020
+DA  - 2020-05-26
+JO  - PLoS ONE
+VL  - 15
+SP  -
+EP  -
+DO  - 10.1371/journal.pone.0232942
+UR  - https://consensus.app/papers/vertical-lossless-genomic-data-compression-tools-for-kredens-martins/7ac205b05a055e74873f82898c94f081/
+ER  -
+TY  - JOUR
+AU  - Chen, Xin
+AU  - Kwong, S.
+AU  - Li, Ming
+TI  - A compression algorithm for DNA sequences and its applications in genome comparison
+PY  - 2000
+DA  - 2000-04-08
+JO  - Genome informatics. Workshop on Genome Informatics
+VL  - 10
+SP  - 51
+EP  - 61
+DO  - 10.1145/332306.332352
+UR  - https://consensus.app/papers/a-compression-algorithm-for-dna-sequences-and-its-chen-kwong/2cfd67b4d19452d8ad9c644c25a59876/
+ER  -
+TY  - JOUR
+
+TI  - Genomic Sequence Data Compression using Lempel-Ziv-Welch Algorithm with Indexed Multiple Dictionary
+PY  - 2019
+DA  - 2019-12-30
+JO  - International Journal of Engineering and Advanced Technology
+VL  -
+SP  -
+EP  -
+DO  - 10.35940/ijeat.b3278.129219
+UR  - https://consensus.app/papers/genomic-sequence-data-compression-using-lempelzivwelch/335f91127e1855929a57df8f5483ee62/
+ER  -
+TY  - JOUR
+AU  - Ding, Youde
+AU  - Liao, Y.
+AU  - He, Ji
+AU  - Jianfeng
+AU  - Wei, Xuexia
+AU  - Liu, Xuemei
+AU  - Zhang, Guiying
+AU  - Wang, Jing
+TI  - Enhancing genomic mutation data storage optimization based on the compression of asymmetry of sparsity
+PY  - 2023
+DA  - 2023-06-01
+JO  - Frontiers in Genetics
+VL  - 14
+SP  -
+EP  -
+DO  - 10.3389/fgene.2023.1213907
+UR  - https://consensus.app/papers/enhancing-genomic-mutation-data-storage-optimization-ding-liao/3812aa8e96e8564baad2099b3e652594/
+ER  -
+TY  - JOUR
+AU  - Nazari, Foad
+AU  - Patel, Sneh
+AU  - LaRocca, Melissa
+AU  - Sansevich, Alina
+AU  - Czarny, Ryan
+AU  - Schena, Giana
+AU  - Murray, Emma
+TI  - Lossless and reference-free compression of FASTQ/A files using GeneSqueeze
+PY  - 2025
+DA  - 2025-01-02
+JO  - Scientific Reports
+VL  - 15
+SP  -
+EP  -
+DO  - 10.1038/s41598-024-79258-6
+UR  - https://consensus.app/papers/lossless-and-referencefree-compression-of-fastqa-files-nazari-patel/4dcffae18e4e519894f45642dd2eb04f/
+ER  -
+TY  - JOUR
+AU  - Carpentieri, B.
+TI  - Compression of Next-Generation Sequencing Data and of DNA Digital Files
+PY  - 2020
+DA  - 2020-06-24
+JO  - Algorithms
+VL  - 13
+SP  - 151
+EP  -
+DO  - 10.3390/a13060151
+UR  - https://consensus.app/papers/compression-of-nextgeneration-sequencing-data-and-of-dna-carpentieri/dd2ddf1b59f353ba8ccd7a467f6b983e/
+ER  -
+TY  - JOUR
+AU  - Rahman, Md Ashiqur
+AU  - Tutul, Abdullah Aman
+AU  - Abdullah, S.
+AU  - Bayzid, Md. Shamsuzzoha
+TI  - CHAPAO: Likelihood and hierarchical reference-based representation of biomolecular sequences and applications to compressing multiple sequence alignments
+PY  - 2022
+DA  - 2022-04-18
+JO  - PLoS ONE
+VL  - 17
+SP  -
+EP  -
+DO  - 10.1371/journal.pone.0265360
+UR  - https://consensus.app/papers/chapao-likelihood-and-hierarchical-referencebased-rahman-tutul/ce7e7eb3adaa5044be0c83a4dfb1ab67/
+ER  -
+TY  - JOUR
+AU  - Zhu, Kaiyuan
+AU  - Numanagić, Ibrahim
+AU  - Sahinalp, S.
+TI  - Genomic Data Compression
+PY  - 2019
+DA  - 2019-01-01
+JO  - Encyclopedia of Big Data Technologies
+VL  -
+SP  -
+EP  -
+DO  - 10.1007/978-3-319-77525-8_55
+UR  - https://consensus.app/papers/genomic-data-compression-zhu-numanagi/086c1797fb83590a99d80ed53b83c5c7/
+ER  -
+TY  - JOUR
+AU  - Luo, Xiaolong
+AU  - Chen, Yuxin
+AU  - Liu, Ling
+AU  - Ding, Lulu
+AU  - Li, Yuxiang
+AU  - Li, Shengkang
+AU  - Zhang, Yong
+AU  - Zhu, Zexuan
+TI  - GSC: efficient lossless compression of VCF files with fast query
+PY  - 2024
+DA  - 2024-01-02
+JO  - GigaScience
+VL  - 13
+SP  -
+EP  -
+DO  - 10.1093/gigascience/giae046
+UR  - https://consensus.app/papers/gsc-efficient-lossless-compression-of-vcf-files-with-fast-luo-chen/4e06903189ab59c3a0a2cea53627b64d/
+ER  -
+TY  - JOUR
+AU  - Fritz, Markus Hsi-Yang
+AU  - Leinonen, Rasko
+AU  - Cochrane, G.
+AU  - Birney, E.
+TI  - Efficient storage of high throughput DNA sequencing data using reference-based compression.
+PY  - 2011
+DA  - 2011-01-18
+JO  - Genome research
+VL  - 21 5
+SP  - 734
+EP  - 740
+DO  - 10.1101/gr.114819.110
+UR  - https://consensus.app/papers/efficient-storage-of-high-throughput-dna-sequencing-data-fritz-leinonen/391894eb117e56eaa201b6f6345e8f0c/
+ER  -
+TY  - JOUR
+AU  - Chen, Hansen
+AU  - Chen, Jianhua
+AU  - Lu, Zhiwen
+AU  - Wang, Rongshu
+TI  - CMIC: an efficient quality score compressor with random access functionality
+PY  - 2022
+DA  - 2022-07-23
+JO  - BMC Bioinformatics
+VL  - 23
+SP  -
+EP  -
+DO  - 10.1186/s12859-022-04837-1
+UR  - https://consensus.app/papers/cmic-an-efficient-quality-score-compressor-with-random-chen-chen/438a3568c25251c9af082cfd201249fa/
+ER  -
+TY  - JOUR
+AU  - Deorowicz, Sebastian
+AU  - Grabowski, S.
+TI  - Compression of DNA sequence reads in FASTQ format
+PY  - 2011
+DA  - 2011-03-01
+JO  - Bioinformatics
+VL  - 27 6
+SP  - 860
+EP  - 862
+DO  - 10.1093/bioinformatics/btr014
+UR  - https://consensus.app/papers/compression-of-dna-sequence-reads-in-fastq-format-deorowicz-grabowski/2534d9d782b552228be0a931a8538343/
+ER  -
+TY  - JOUR
+AU  - Fu, Jiabing
+AU  - Ke, Bixin
+AU  - Dong, Shoubin
+TI  - LCQS: an efficient lossless compression tool of quality scores with random access functionality
+PY  - 2020
+DA  - 2020-03-18
+JO  - BMC Bioinformatics
+VL  - 21
+SP  -
+EP  -
+DO  - 10.1186/s12859-020-3428-7
+UR  - https://consensus.app/papers/lcqs-an-efficient-lossless-compression-tool-of-quality-fu-ke/fdadfcbbcfa65170ab5dbc190e0bb3fc/
+ER  -
+TY  - JOUR
+AU  - Popitsch, Niko
+AU  - Von Haeseler, A.
+TI  - NGC: lossless and lossy compression of aligned high-throughput sequencing data
+PY  - 2012
+DA  - 2012-10-12
+JO  - Nucleic Acids Research
+VL  - 41
+SP  -
+EP  -
+DO  - 10.1093/nar/gks939
+UR  - https://consensus.app/papers/ngc-lossless-and-lossy-compression-of-aligned-popitsch-haeseler/cbfcb414cc2c50189446cb4dbbd9fbcf/
+ER  -
+TY  - JOUR
+AU  - Gilmary, Rosario
+AU  - G, M.
+TI  - Bit Reduction based Compression Algorithm for DNA Sequences
+PY  - 2021
+DA  - 2021-10-16
+JO  - International Journal of Scientific Research in Science, Engineering and Technology
+VL  -
+SP  -
+EP  -
+DO  - 10.32628/ijsrset218529
+UR  - https://consensus.app/papers/bit-reduction-based-compression-algorithm-for-dna-gilmary-g/9afe58e1553d52bcb9e066486650130c/
+ER  -
+TY  - CONF
+AU  - Sun, Hui
+AU  - Yi, Liping
+AU  - Huidong
+AU  - Sun, Yongxia
+AU  - Zheng, Yingfeng
+AU  - Cui, Wenwen
+AU  - Yan, Meng
+AU  - Wang, Gang
+AU  - Liu, Xiaoguang
+TI  - Genomics Data Lossless Compression with (S, K)-Mer Encoding and Deep Neural Networks
+PY  - 2025
+DA  - 2025-04-11
+JO  -
+VL  -
+SP  - 12577
+EP  - 12585
+DO  - 10.1609/aaai.v39i12.33371
+UR  - https://consensus.app/papers/genomics-data-lossless-compression-with-s-kmer-encoding-sun-yi/3a90500eeeaa5ce5869c28b0d96a681f/
+ER  -
+TY  - JOUR
+AU  - Rajarajeswari, P.
+AU  - Apparao, A.
+TI  - DNABIT Compress – Genome compression algorithm
+PY  - 2011
+DA  - 2011-01-22
+JO  - Bioinformation
+VL  - 5
+SP  - 350
+EP  - 360
+DO  - 10.6026/97320630005350
+UR  - https://consensus.app/papers/dnabit-compress-%E2%80%93-genome-compression-algorithm-rajarajeswari-apparao/59e25cc1b7f7582e8af3250f97118031/
+ER  -
+TY  - JOUR
+AU  - Chen, Herman
+AU  - Kitaev, Sergey
+AU  - Lang, Xiaoyu
+AU  - Pyatkin, A.
+AU  - Tang, Runbin
+TI  - Efficient k -mer dataset compression using Eulerian covers of de Bruijn graphs and BWT
+PY  - 2025
+DA  - 2025-10-25
+JO  - RAIRO Theor. Informatics Appl.
+VL  - 59
+SP  - 20
+EP  -
+DO  - 10.1051/ita/2025020
+UR  - https://consensus.app/papers/efficient-k-mer-dataset-compression-using-eulerian-covers-chen-kitaev/f119e8a72b815b4f8221f92f5712cac6/
+ER  -
+TY  - JOUR
+AU  - Grumbach, S.
+AU  - Tahi, F.
+TI  - A New Challenge for Compression Algorithms: Genetic Sequences
+PY  - 1994
+DA  - 1994-10-01
+JO  - Inf. Process. Manag.
+VL  - 30
+SP  - 875
+EP  - 886
+DO  - 10.1016/0306-4573(94)90014-0
+UR  - https://consensus.app/papers/a-new-challenge-for-compression-algorithms-genetic-grumbach-tahi/d8849b2699af5c27b4e4db99536addb6/
+ER  -
+TY  - JOUR
+AU  - Betschart, R.
+AU  - Sandberg, Felicia
+AU  - Blankenberg, S.
+AU  - Zoche, M.
+AU  - Zeller, Tanja
+AU  - Ziegler, Andreas
+TI  - A benchmark study of compression software for human short-read sequence data
+PY  - 2025
+DA  - 2025-05-02
+JO  - Scientific Reports
+VL  - 15
+SP  -
+EP  -
+DO  - 10.1038/s41598-025-00491-8
+UR  - https://consensus.app/papers/a-benchmark-study-of-compression-software-for-human-betschart-sandberg/4a2939c5411d5a7cb2f64d172b62f1b9/
+ER  -
+TY  - CONF
+AU  - Alam, S.
+AU  - Agarwal, Saksham
+AU  - Sharma, Anshumaan
+TI  - Network Coding For Data Compression In Genomic Sequencing
+PY  - 2025
+DA  - 2025-03-07
+JO  - 2025 3rd International Conference on Disruptive Technologies (ICDT)
+VL  -
+SP  - 497
+EP  - 502
+DO  - 10.1109/icdt63985.2025.10986470
+UR  - https://consensus.app/papers/network-coding-for-data-compression-in-genomic-sequencing-alam-agarwal/be406b96e4855f4ba94195c52aa8db41/
+ER  -
+TY  - BOOK
+AU  - Li, Wenlong
+AU  - Chen, Jianhua
+AU  - Lu, Zhiwen
+TI  - Study on reference-based FASTQ genome sequences compression
+PY  - 2022
+DA  - 2022-01-21
+JO  - Proceedings of the 2022 2nd International Conference on Bioinformatics and Intelligent Computing
+VL  -
+SP  -
+EP  -
+DO  - 10.1145/3523286.3524511
+UR  - https://consensus.app/papers/study-on-referencebased-fastq-genome-sequences-li-chen/d432092deb2e5659a8d5892456552128/
+ER  -
+TY  - JOUR
+AU  - Pratas, Diogo
+AU  - Hosseini, S.
+AU  - Miguel, Jorge
+AU  - Pinho, A.
+TI  - A Reference-Free Lossless Compression Algorithm for DNA Sequences Using a Competitive Prediction of Two Classes of Weighted Models
+PY  - 2019
+DA  - 2019-11-01
+JO  - Entropy
+VL  - 21
+SP  -
+EP  -
+DO  - 10.3390/e21111074
+UR  - https://consensus.app/papers/a-referencefree-lossless-compression-algorithm-for-dna-pratas-hosseini/527b382137235af5aa021e57e2d793a3/
+ER  -
+TY  - JOUR
+AU  - Mansouri, Deloula
+AU  - Yuan, Xiaohui
+AU  - Saidani, A.
+TI  - A New Lossless DNA Compression Algorithm Based on A Single-Block Encoding Scheme
+PY  - 2020
+DA  - 2020-04-20
+JO  - Algorithms
+VL  - 13
+SP  - 99
+EP  -
+DO  - 10.3390/a13040099
+UR  - https://consensus.app/papers/a-new-lossless-dna-compression-algorithm-based-on-a-mansouri-yuan/3701f3e92b82507e82a861bf8f67d9e0/
+ER  -
+TY  - JOUR
+AU  - Nazari, Foad
+AU  - Patel, Sneh
+AU  - LaRocca, Melissa
+AU  - Czarny, Ryan
+AU  - Schena, Giana
+AU  - Murray, Emma
+TI  - GeneSqueeze: A Novel Lossless, Reference-Free Compression Algorithm for FASTQ/A Files
+PY  - 2024
+DA  - 2024-03-25
+JO  - bioRxiv
+VL  -
+SP  -
+EP  -
+DO  - 10.1101/2024.03.21.586111
+UR  - https://consensus.app/papers/genesqueeze-a-novel-lossless-referencefree-compression-nazari-patel/df27dad46a655d598786d49bfd8d2923/
+ER  -
+TY  - CONF
+AU  - Gudodagi, Raveendra
+AU  - Akash, Thirumala
+AU  - Riyaz, Mohammed
+TI  - Deep Learning Algorithms for Secure and Efficient Compression of Genomic Sequence Data
+PY  - 2023
+DA  - 2023-02-10
+JO  - 2023 IEEE 3rd International Conference on Technology, Engineering, Management for Societal impact using Marketing, Entrepreneurship and Talent (TEMSMET)
+VL  -
+SP  - 1
+EP  - 7
+DO  - 10.1109/temsmet56707.2023.10150044
+UR  - https://consensus.app/papers/deep-learning-algorithms-for-secure-and-efficient-gudodagi-akash/640e4e51158e5141985dc1ef6aab405c/
+ER  -
+TY  - JOUR
+AU  - Chandak, Shubham
+AU  - Tatwawadi, Kedar
+AU  - Weissman, T.
+TI  - Compression of genomic sequencing reads via hash-based reordering: algorithm and analysis
+PY  - 2018
+DA  - 2018-02-15
+JO  - Bioinformatics
+VL  - 34
+SP  - 558
+EP  -
+DO  - 10.1093/bioinformatics/btx639
+UR  - https://consensus.app/papers/compression-of-genomic-sequencing-reads-via-hashbased-chandak-tatwawadi/651e949474ee5940ba5bdb686aa9b3f7/
+ER  -
+TY  - JOUR
+AU  - Ginart, Antonio
+AU  - Hui, Joseph
+AU  - Zhu, Kaiyuan
+AU  - Numanagić, Ibrahim
+AU  - Courtade, T.
+AU  - Sahinalp, S.
+AU  - Tse, David
+TI  - Optimal compressed representation of high throughput sequence data via light assembly
+PY  - 2018
+DA  - 2018-02-08
+JO  - Nature Communications
+VL  - 9
+SP  -
+EP  -
+DO  - 10.1038/s41467-017-02480-6
+UR  - https://consensus.app/papers/optimal-compressed-representation-of-high-throughput-ginart-hui/a7b56eac924f558b8eb4ee22442c2175/
+ER  -
+TY  - JOUR
+AU  - Hossein, Md. Syed Mahamud
+AU  - Vinayak, Neha
+AU  - Bhunia, Moumita
+AU  - Chatterjee, Payel
+AU  - Ghorai, Anwesha
+TI  - DATA COMPRESSION USE IN GENOME SEQUENCE
+PY  - 2024
+DA  - 2024-07-15
+JO  - GLOBAL JOURNAL FOR RESEARCH ANALYSIS
+VL  -
+SP  -
+EP  -
+DO  - 10.36106/gjra/2604442
+UR  - https://consensus.app/papers/data-compression-use-in-genome-sequence-hossein-vinayak/c07144218eaf54239fd8b3339f0b9cc2/
+ER  -
+TY  - JOUR
+
+TI  - Enhanced Index Based DNA Sequence Compression Algorithm
+PY  - 2024
+DA  - 2024-02-29
+JO  - International Journal of Intelligent Engineering and Systems
+VL  -
+SP  -
+EP  -
+DO  - 10.22266/ijies2024.0229.11
+UR  - https://consensus.app/papers/enhanced-index-based-dna-sequence-compression-algorithm/7185c905d7f858069e469f2e03bc186d/
+ER  -
+TY  - JOUR
+AU  - Yao, Haichang
+AU  - Ji, Yimu
+AU  - Li, Kui
+AU  - Liu, Shangdong
+AU  - He, Jing
+AU  - Wang, Ruchuan
+TI  - HRCM: An Efficient Hybrid Referential Compression Method for Genomic Big Data
+PY  - 2019
+DA  - 2019-11-16
+JO  - BioMed Research International
+VL  - 2019
+SP  -
+EP  -
+DO  - 10.1155/2019/3108950
+UR  - https://consensus.app/papers/hrcm-an-efficient-hybrid-referential-compression-method-yao-ji/9e62e4fad9735ea69fad7bbee67443c8/
+ER  -
+TY  - JOUR
+AU  - Břinda, K.
+AU  - Lima, L.
+AU  - Pignotti, Simone
+AU  - Quinones-Olvera, Natalia
+AU  - Salikhov, Kamil
+AU  - Chikhi, R.
+AU  - Kucherov, Gregory
+AU  - Iqbal, Zam
+AU  - Baym, M.
+TI  - Efficient and Robust Search of Microbial Genomes via Phylogenetic Compression
+PY  - 2023
+DA  - 2023-04-18
+JO  - bioRxiv
+VL  -
+SP  -
+EP  -
+DO  - 10.1101/2023.04.15.536996
+UR  - https://consensus.app/papers/efficient-and-robust-search-of-microbial-genomes-via-binda-lima/1d2c0dd49a905d02aae1c2b2bfa8518a/
+ER  -
+TY  - CONF
+AU  - Sarkar, Md. Mehedi Hasan
+AU  - Ashrafi, Adnan Ferdous
+TI  - Genetic Sequence compression using Machine Learning and Arithmetic Encoding Decoding Techniques
+PY  - 2022
+DA  - 2022-12-06
+JO  - 2022 25th International Conference on Computer and Information Technology (ICCIT)
+VL  -
+SP  - 1038
+EP  - 1043
+DO  - 10.1109/iccit57492.2022.10055899
+UR  - https://consensus.app/papers/genetic-sequence-compression-using-machine-learning-and-sarkar-ashrafi/ebecbe060dc95600a4c770b397058f2e/
+ER  -
+TY  - JOUR
+AU  - Liu, Yuanjian
+AU  - Luo, Huihao
+AU  - Han, Zhijun
+AU  - Hu, Yao
+AU  - Yang, Yehui
+AU  - Chard, Kyle
+AU  - Di, Sheng
+AU  - Foster, Ian
+AU  - Wu, Jiesheng
+TI  - FastqZip: An Improved Reference-Based Genome Sequence Lossy Compression Framework
+PY  - 2024
+DA  - 2024-02-22
+JO  - ArXiv
+VL  - abs/2404.02163
+SP  -
+EP  -
+DO  - 10.48550/arxiv.2404.02163
+UR  - https://consensus.app/papers/fastqzip-an-improved-referencebased-genome-sequence-liu-luo/940479fe2c9054b2a2481d50c0e997de/
+ER  -
+TY  - JOUR
+AU  - Saha, Subrata
+AU  - Rajasekaran, S.
+TI  - ERGC: an efficient referential genome compression algorithm
+PY  - 2015
+DA  - 2015-11-01
+JO  - Bioinformatics
+VL  - 31 21
+SP  - 3468
+EP  - 3475
+DO  - 10.1093/bioinformatics/btv399
+UR  - https://consensus.app/papers/ergc-an-efficient-referential-genome-compression-saha-rajasekaran/957251c159a052539eb682ea68934982/
+ER  -
+TY  - JOUR
+AU  - Karasikov, Mikhail
+AU  - Mustafa, Harun
+AU  - Joudaki, Amir
+AU  - No, Sara Javadzadeh
+AU  - Rätsch, G.
+AU  - Kahles, A.
+TI  - Sparse Binary Relation Representations for Genome Graph Annotation
+PY  - 2018
+DA  - 2018-11-12
+JO  - Journal of Computational Biology
+VL  - 27
+SP  - 626
+EP  - 639
+DO  - 10.1089/cmb.2019.0324
+UR  - https://consensus.app/papers/sparse-binary-relation-representations-for-genome-graph-karasikov-mustafa/6deae070956d5807979677b09b5b6a60/
+ER  -
+TY  - JOUR
+AU  - Bhukya, Raju
+AU  - Ram, Hanuman
+AU  - Kumar, Nitish
+AU  - Roy, Avishek
+TI  - DNA Sequence Compression using ERGC and NRGC for Better Compression
+PY  - 2017
+DA  -
+JO  -
+VL  -
+SP  -
+EP  -
+DO  -
+UR  - https://consensus.app/papers/dna-sequence-compression-using-ergc-and-nrgc-for-better-bhukya-ram/03886f45b4af5b04a42d4b026483d168/
+ER  -
+TY  - JOUR
+AU  - Mustafa, Harun
+AU  - Schilken, I.
+AU  - Karasikov, Mikhail
+AU  - Eickhoff, Carsten
+AU  - Rätsch, G.
+AU  - Kahles, A.
+TI  - Dynamic compression schemes for graph coloring
+PY  - 2017
+DA  - 2017-12-26
+JO  - Bioinformatics
+VL  - 35
+SP  - 407
+EP  - 414
+DO  - 10.1093/bioinformatics/bty632
+UR  - https://consensus.app/papers/dynamic-compression-schemes-for-graph-coloring-mustafa-schilken/f8b879cf6ea959c6845b3135d52651c3/
+ER  -
+TY  - JOUR
+AU  - Gudodagi, Raveendra
+AU  - Reddy, R.
+TI  - Security Provisioning and Compression of Diverse Genomic Data based on Advanced Encryption Standard (AES) Algorithm
+PY  - 2021
+DA  - 2021-05-14
+JO  - International Journal of Biology and Biomedical Engineering
+VL  -
+SP  -
+EP  -
+DO  - 10.46300/91011.2021.15.14
+UR  - https://consensus.app/papers/security-provisioning-and-compression-of-diverse-genomic-gudodagi-reddy/08888701a26458e5a2e7f25d59e839ad/
+ER  -
+TY  - JOUR
+AU  - Murugesan, G.
+TI  - Codon Based Compression Algorithm for DNA Sequences with Two Bit Encoding
+PY  - 2020
+DA  - 2020-11-26
+JO  -
+VL  - 7
+SP  - 33
+EP  - 41
+DO  -
+UR  - https://consensus.app/papers/codon-based-compression-algorithm-for-dna-sequences-with-murugesan/d66b62bd30085686810541340f4b99b4/
+ER  -
+TY  - CONF
+AU  - Martins, J.
+AU  - Kredens, K.
+AU  - Dordal, O.
+AU  - Arruda, Paulo
+AU  - Borges, A.
+AU  - Herai, R.
+AU  - Scalabrin, E.
+AU  - Avila, Brulio
+TI  - An Approach to Compression of Genomic Data Based on Image File Format
+PY  - 2018
+DA  - 2018-10-01
+JO  - 2018 IEEE International Conference on Systems, Man, and Cybernetics (SMC)
+VL  -
+SP  - 3274
+EP  - 3279
+DO  - 10.1109/smc.2018.00554
+UR  - https://consensus.app/papers/an-approach-to-compression-of-genomic-data-based-on-image-martins-kredens/a7cf348dc86c56829e6156eed296fd9a/
+ER  -
+TY  - JOUR
+AU  - Cánovas, Rodrigo
+AU  - Moffat, Alistair
+AU  - Turpin, A.
+TI  - Lossy compression of quality scores in genomic data
+PY  - 2014
+DA  - 2014-08-01
+JO  - Bioinformatics
+VL  - 30 15
+SP  - 2130
+EP  - 2136
+DO  - 10.1093/bioinformatics/btu183
+UR  - https://consensus.app/papers/lossy-compression-of-quality-scores-in-genomic-data-c%C3%A1novas-moffat/75aeea7922ec55e69643456f41da3f5f/
+ER  -
+TY  - JOUR
+AU  - Sun, Wenlin
+AU  - Sharma, Ashutosh
+AU  - Asenso, Evans
+TI  - An intelligent ubiquitous compression technique for DNA sequencing using Hadoop
+PY  - 2022
+DA  - 2022-09-07
+JO  - The Journal of Engineering
+VL  -
+SP  -
+EP  -
+DO  - 10.1049/tje2.12193
+UR  - https://consensus.app/papers/an-intelligent-ubiquitous-compression-technique-for-dna-sun-sharma/2bcff58b95395d41b2b0d480b2507325/
+ER  -
+TY  - JOUR
+AU  - Maarala, Altti Ilari
+AU  - Arasalo, Ossi
+AU  - Valenzuela, Daniel
+AU  - Mäkinen, V.
+AU  - Heljanko, Keijo
+TI  - Distributed hybrid-indexing of compressed pan-genomes for scalable and fast sequence alignment
+PY  - 2021
+DA  - 2021-08-03
+JO  - PLoS ONE
+VL  - 16
+SP  -
+EP  -
+DO  - 10.1371/journal.pone.0255260
+UR  - https://consensus.app/papers/distributed-hybridindexing-of-compressed-pangenomes-for-maarala-arasalo/8b260c7886705e0399b867aeb1587aeb/
+ER  -
+TY  - JOUR
+AU  - Sardaraz, Muhammad
+AU  - Tahir, Muhammad
+TI  - SCA-NGS: Secure compression algorithm for next generation sequencing data using genetic operators and block sorting
+PY  - 2021
+DA  - 2021-04-01
+JO  - Science Progress
+VL  - 104
+SP  -
+EP  -
+DO  - 10.1177/00368504211023276
+UR  - https://consensus.app/papers/scangs-secure-compression-algorithm-for-next-generation-sardaraz-tahir/d2747aba9b785149890fed40e469a91a/
+ER  -
+TY  - JOUR
+AU  - Wan, R.
+AU  - Anh, V.
+AU  - Asai, K.
+TI  - Transformations for the compression of FASTQ quality scores of next-generation sequencing data
+PY  - 2012
+DA  - 2012-03-01
+JO  - Bioinformatics
+VL  - 28 5
+SP  - 628
+EP  - 635
+DO  - 10.1093/bioinformatics/btr689
+UR  - https://consensus.app/papers/transformations-for-the-compression-of-fastq-quality-wan-anh/f3edffe7ba1853d7a86f7b0f5c6c1ef1/
+ER  -
+TY  - CONF
+AU  - Cui, Wenwen
+AU  - Yu, Zhaoyang
+AU  - Liu, Zhuangzhuang
+AU  - Wang, Gang
+AU  - Liu, Xiaoguang
+TI  - Compressing Genomic Sequences by Using Deep Learning
+PY  - 2020
+DA  - 2020-09-15
+JO  -
+VL  -
+SP  - 92
+EP  - 104
+DO  - 10.1007/978-3-030-61609-0_8
+UR  - https://consensus.app/papers/compressing-genomic-sequences-by-using-deep-learning-cui-yu/f075aaeeaf335391ac0b789db2830278/
+ER  -
+TY  - JOUR
+AU  - Deorowicz, Sebastian
+AU  - Grabowski, S.
+TI  - Robust relative compression of genomes with random access
+PY  - 2011
+DA  - 2011-11-01
+JO  - Bioinformatics
+VL  - 27 21
+SP  - 2979
+EP  - 2986
+DO  - 10.1093/bioinformatics/btr505
+UR  - https://consensus.app/papers/robust-relative-compression-of-genomes-with-random-access-deorowicz-grabowski/c155a50cff8150a5b13fee4e4da541fb/
+ER  -
+TY  - JOUR
+AU  - Rozov, Roye
+AU  - Shamir, R.
+AU  - Halperin, E.
+TI  - Fast lossless compression via cascading Bloom filters
+PY  - 2014
+DA  - 2014-05-07
+JO  - BMC Bioinformatics
+VL  - 15
+SP  -
+EP  -
+DO  - 10.1186/1471-2105-15-s9-s7
+UR  - https://consensus.app/papers/fast-lossless-compression-via-cascading-bloom-filters-rozov-shamir/f31658fbec8853128e8386aa6613ff6a/
+ER  -
+TY  - JOUR
+AU  - Li, Pinghao
+AU  - Wang, Shuang
+AU  - Kim, Jihoon
+AU  - Xiong, H.
+AU  - Ohno-Machado, L.
+AU  - Jiang, Xiaoqian
+TI  - DNA-COMPACT: DNA COMpression Based on a Pattern-Aware Contextual Modeling Technique
+PY  - 2013
+DA  - 2013-11-25
+JO  - PLoS ONE
+VL  - 8
+SP  -
+EP  -
+DO  - 10.1371/journal.pone.0080377
+UR  - https://consensus.app/papers/dnacompact-dna-compression-based-on-a-patternaware-li-wang/3a0d85b5a96e52c89dcdd7791815c847/
+ER  -
+TY  - JOUR
+AU  - Benoit, Gaëtan
+AU  - Lemaitre, C.
+AU  - Lavenier, D.
+AU  - Drezen, E.
+AU  - Dayris, Thibault
+AU  - Uricaru, R.
+AU  - Rizk, Guillaume
+TI  - Reference-free compression of high throughput sequencing data with a probabilistic de Bruijn graph
+PY  - 2015
+DA  - 2015-09-14
+JO  - BMC Bioinformatics
+VL  - 16
+SP  -
+EP  -
+DO  - 10.1186/s12859-015-0709-7
+UR  - https://consensus.app/papers/referencefree-compression-of-high-throughput-sequencing-benoit-lemaitre/c0f8e178f2a15767956362c62a7fc74c/
+ER  -
+TY  - JOUR
+AU  - Ozan, Ş.
+TI  - DNA Sequence Classification with Compressors
+PY  - 2024
+DA  - 2024-01-25
+JO  - ArXiv
+VL  - abs/2401.14025
+SP  -
+EP  -
+DO  - 10.48550/arxiv.2401.14025
+UR  - https://consensus.app/papers/dna-sequence-classification-with-compressors-ozan/c781be7cc06b58e0925ac0bf8acaaf60/
+ER  -
+TY  - JOUR
+AU  - Deorowicz, Sebastian
+AU  - Danek, Agnieszka
+AU  - Niemiec, Marcin
+TI  - GDC 2: Compression of large collections of genomes
+PY  - 2015
+DA  - 2015-03-05
+JO  - Scientific Reports
+VL  - 5
+SP  -
+EP  -
+DO  - 10.1038/srep11565
+UR  - https://consensus.app/papers/gdc-2-compression-of-large-collections-of-genomes-deorowicz-danek/ad23fc9ada365e78b29b75a26fbd7496/
+ER  -
+TY  - JOUR
+AU  - Song, Hailiang
+AU  - Dong, Tian
+AU  - Wang, Wei
+AU  - Yan, Xiaoyu
+AU  - Geng, Chenfan
+AU  - Bai, Song
+AU  - Hu, Hongxia
+TI  - A Deep Autoencoder Compression-Based Genomic Prediction Method for Whole-Genome Sequencing Data
+PY  - 2025
+DA  - 2025-11-01
+JO  - Biology
+VL  - 14
+SP  -
+EP  -
+DO  - 10.3390/biology14111622
+UR  - https://consensus.app/papers/a-deep-autoencoder-compressionbased-genomic-prediction-song-dong/511e9a0397695017828ff12469cef2c5/
+ER  -
+TY  - JOUR
+AU  - Malysa, G.
+AU  - Hernaez, M.
+AU  - Ochoa, Idoia
+AU  - Rao, Milind
+AU  - Ganesan, K.
+AU  - Weissman, T.
+TI  - QVZ: lossy compression of quality values
+PY  - 2015
+DA  - 2015-10-01
+JO  - Bioinformatics
+VL  - 31 19
+SP  - 3122
+EP  - 3129
+DO  - 10.1093/bioinformatics/btv330
+UR  - https://consensus.app/papers/qvz-lossy-compression-of-quality-values-malysa-hernaez/7ebe98619d175ab1b85dde21aef2831f/
+ER  -
+TY  - CONF
+AU  - Carpentieri, B.
+TI  - Next Generation Sequencing Data and its Compression
+PY  - 2019
+DA  - 2019-11-15
+JO  - IOP Conference Series: Earth and Environmental Science
+VL  - 362
+SP  -
+EP  -
+DO  - 10.1088/1755-1315/362/1/012059
+UR  - https://consensus.app/papers/next-generation-sequencing-data-and-its-compression-carpentieri/848f1ef2a00f592cba5e7a42bf09d44e/
+ER  -
+TY  - JOUR
+AU  - Kuruppu, Shanika
+AU  - Puglisi, S.
+AU  - Zobel, J.
+TI  - Relative Lempel-Ziv Compression of Genomes for Large-Scale Storage and Retrieval
+PY  - 2010
+DA  - 2010-10-11
+JO  - String Processing and Information Retrieval
+VL  - 6393
+SP  - 201
+EP  - 206
+DO  - 10.1007/978-3-642-16321-0_20
+UR  - https://consensus.app/papers/relative-lempelziv-compression-of-genomes-for-largescale-kuruppu-puglisi/603d41cc549e56b992f5ae3d4ea96c98/
+ER  -
+TY  - JOUR
+AU  - Apparo, P.Raja Rajeswari Allam
+AU  - University, V.
+AU  - India
+AU  - University, Jawaharlal Nehru Technological
+AU  - Engineering, S.V.H. College Of
+TI  - Genbit Compress Tool(GBC): A Java-Based Tool to Compress DNA Sequences and Compute Compression Ratio(bits/base) of Genomes
+PY  - 2010
+DA  - 2010-06-07
+JO  - ArXiv
+VL  - abs/1006.1193
+SP  -
+EP  -
+DO  - 10.5121/ijcsit.2010.2313
+UR  - https://consensus.app/papers/genbit-compress-toolgbc-a-javabased-tool-to-compress-dna-apparo-university/a2617cde7e085d7d9337495fc8cbd421/
+ER  -

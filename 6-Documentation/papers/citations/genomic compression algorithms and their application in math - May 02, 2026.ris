@@ -1,0 +1,278 @@
+TY  - JOUR
+AU  - Hong, Aaron
+AU  - Boucher, Christina
+TI  - Enhancing Data Compression: Recent Innovations in LZ77 Algorithms
+PY  - 2025
+DA  - 2025-05-30
+JO  - Journal of Computational Biology
+VL  - 32
+SP  - 761
+EP  - 780
+DO  - 10.1089/cmb.2024.0879
+UR  - https://consensus.app/papers/enhancing-data-compression-recent-innovations-in-lz77-hong-boucher/9c6f284d0de75588bd2e673b6450053c/
+ER  -
+TY  - JOUR
+AU  - Zhu, Zexuan
+AU  - Zhang, Yongpeng
+AU  - Ji, Zhen
+AU  - He, Shan
+AU  - Yang, X.
+TI  - High-throughput DNA sequence data compression
+PY  - 2013
+DA  - 2013-12-03
+JO  - Briefings in bioinformatics
+VL  - 16 1
+SP  - 1
+EP  - 15
+DO  - 10.1093/bib/bbt087
+UR  - https://consensus.app/papers/highthroughput-dna-sequence-data-compression-zhu-zhang/8fee8d39fa19556a8cfac41948f5b16d/
+ER  -
+TY  - JOUR
+AU  - Roy, Subhankar
+AU  - Maity, Dilip Kumar
+AU  - Mukhopadhyay, Anirban
+TI  - A lossless reference-free sequence compression algorithm leveraging grammatical, statistical, and substitution rules
+PY  - 2025
+DA  - 2025-01-08
+JO  - Briefings in Functional Genomics
+VL  - 24
+SP  -
+EP  -
+DO  - 10.1093/bfgp/elae050
+UR  - https://consensus.app/papers/a-lossless-referencefree-sequence-compression-algorithm-roy-maity/96c641c7ffd95223b45b0a191837d25b/
+ER  -
+TY  - JOUR
+AU  - Shi, Wei
+AU  - Chen, Jianhua
+AU  - Luo, Mao
+AU  - Chen, Min
+TI  - High efficiency referential genome compression algorithm
+PY  - 2019
+DA  - 2019-06-01
+JO  - Bioinformatics
+VL  - 35 12
+SP  - 2058
+EP  - 2065
+DO  - 10.1093/bioinformatics/bty934
+UR  - https://consensus.app/papers/high-efficiency-referential-genome-compression-shi-chen/d03f26fda090542190ba333af414d8d0/
+ER  -
+TY  - JOUR
+AU  - Grabowski, S.
+AU  - Deorowicz, Sebastian
+AU  - Roguski, Lukasz
+TI  - Disk-based compression of data from genome sequencing
+PY  - 2015
+DA  - 2015-05-01
+JO  - Bioinformatics
+VL  - 31 9
+SP  - 1389
+EP  - 1395
+DO  - 10.1093/bioinformatics/btu844
+UR  - https://consensus.app/papers/diskbased-compression-of-data-from-genome-sequencing-grabowski-deorowicz/0fba260571a7534f92886d8a04dedfd2/
+ER  -
+TY  - JOUR
+AU  - Banerjee, Kakoli
+AU  - Bali, V.
+TI  - Design and Development of Bioinformatics Feature Based DNA Sequence Data Compression Algorithm
+PY  - 2020
+DA  - 2020-05-05
+JO  - EAI Endorsed Trans. Pervasive Health Technol.
+VL  - 5
+SP  -
+EP  -
+DO  - 10.4108/eai.13-7-2018.164097
+UR  - https://consensus.app/papers/design-and-development-of-bioinformatics-feature-based-banerjee-bali/8c4a2f6b88755691a3124972c5aeb63c/
+ER  -
+TY  - JOUR
+AU  - Daggubati, Siva Phanindra
+AU  - Kasukurthi, Venkata Rao
+AU  - Pvgd, Prasad Reddy
+TI  - DNA Sequence Compress Algorithm for Compression of Biological Sequences
+PY  - 2024
+DA  - 2024-12-11
+JO  - International Journal of Computational and Experimental Science and Engineering
+VL  -
+SP  -
+EP  -
+DO  - 10.22399/ijcesen.675
+UR  - https://consensus.app/papers/dna-sequence-compress-algorithm-for-compression-of-daggubati-kasukurthi/2ec60958f5c250e19602767b41804db9/
+ER  -
+TY  - JOUR
+AU  - Silva, Milton
+AU  - Pratas, Diogo
+AU  - Pinho, A.
+TI  - Efficient DNA sequence compression with neural networks
+PY  - 2020
+DA  - 2020-11-01
+JO  - GigaScience
+VL  - 9
+SP  -
+EP  -
+DO  - 10.1093/gigascience/giaa119
+UR  - https://consensus.app/papers/efficient-dna-sequence-compression-with-neural-networks-silva-pratas/af0b2114b8ef59b190d18aec0bb6c139/
+ER  -
+TY  - JOUR
+AU  - Al-Okaily, Anas
+AU  - Tbakhi, A.
+TI  - A novel lossless encoding algorithm for data compression–genomics data as an exemplar
+PY  - 2020
+DA  - 2020-08-24
+JO  - Frontiers in Bioinformatics
+VL  - 4
+SP  -
+EP  -
+DO  - 10.1101/2020.08.24.264366
+UR  - https://consensus.app/papers/a-novel-lossless-encoding-algorithm-for-data-al-okaily-tbakhi/67dc9aeee337540d919c12c5aa09d3b2/
+ER  -
+TY  - JOUR
+AU  - Alosta, Mahmud
+AU  - Souri, A.
+TI  - Design of Effective Lossless Data Compression Technique for Multiple Genomic DNA Sequences
+PY  - 2021
+DA  - 2021-01-01
+JO  - Fusion: Practice and Applications
+VL  -
+SP  -
+EP  -
+DO  - 10.54216/fpa.060103
+UR  - https://consensus.app/papers/design-of-effective-lossless-data-compression-technique-alosta-souri/595dfe84372456e48915dd9ec17ac18a/
+ER  -
+TY  - JOUR
+AU  - Brandon, Marty
+AU  - Wallace, D.
+AU  - Baldi, P.
+TI  - Data structures and compression algorithms for genomic sequence data
+PY  - 2009
+DA  - 2009-07-01
+JO  - Bioinformatics
+VL  - 25 14
+SP  - 1731
+EP  - 1738
+DO  - 10.1093/bioinformatics/btp319
+UR  - https://consensus.app/papers/data-structures-and-compression-algorithms-for-genomic-brandon-wallace/53538ae3d5685c58a1dfcd08a08c12ac/
+ER  -
+TY  - JOUR
+AU  - Hernaez, M.
+AU  - Pavlichin, Dmitri
+AU  - Weissman, T.
+AU  - Ochoa, Idoia
+TI  - Genomic Data Compression
+PY  - 2019
+DA  - 2019-07-20
+JO  - Annual Review of Biomedical Data Science
+VL  -
+SP  -
+EP  -
+DO  - 10.1146/annurev-biodatasci-072018-021229
+UR  - https://consensus.app/papers/genomic-data-compression-hernaez-pavlichin/f8078cfa75fe51048c3d97cd968e9d2a/
+ER  -
+TY  - JOUR
+AU  - Cox, A.
+AU  - Bauer, Markus
+AU  - Jakobi, Tobias
+AU  - Rosone, Giovanna
+TI  - Large-scale compression of genomic sequence databases with the Burrows-Wheeler transform
+PY  - 2012
+DA  - 2012-05-01
+JO  - Bioinformatics
+VL  - 28 11
+SP  - 1415
+EP  - 1419
+DO  - 10.1093/bioinformatics/bts173
+UR  - https://consensus.app/papers/largescale-compression-of-genomic-sequence-databases-cox-bauer/e7a9b3c91443565ab09656a3809597fa/
+ER  -
+TY  - CONF
+AU  - S., Sheena
+AU  - Nair, Madhu
+TI  - Lossless DNA Sequence Compression: Exploring Spatial and Sequential Redundancies of DNA Sequence with 2-D CNN Autoencoder
+PY  - 2024
+DA  - 2024-07-12
+JO  - 2024 IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)
+VL  -
+SP  - 1
+EP  - 6
+DO  - 10.1109/conecct62155.2024.10677168
+UR  - https://consensus.app/papers/lossless-dna-sequence-compression-exploring-spatial-and-s-nair/2cfe4851189b5d88b50483147d778fef/
+ER  -
+TY  - JOUR
+AU  - Karasikov, Mikhail
+AU  - Mustafa, Harun
+AU  - Rätsch, G.
+AU  - Kahles, A.
+TI  - Lossless indexing with counting de Bruijn graphs
+PY  - 2021
+DA  - 2021-11-11
+JO  - Genome Research
+VL  - 32
+SP  - 1754
+EP  - 1764
+DO  - 10.1101/2021.11.09.467907
+UR  - https://consensus.app/papers/lossless-indexing-with-counting-de-bruijn-graphs-karasikov-mustafa/0bb2a8ff5b90598e80094b541c9cbfc5/
+ER  -
+TY  - JOUR
+AU  - Eskandar, Parsa
+AU  - Paten, B.
+AU  - Sirén, Jouni
+TI  - Lossless Pangenome Indexing Using Tag Arrays
+PY  - 2026
+DA  - 2026-01-18
+JO  - Research Square
+VL  -
+SP  -
+EP  -
+DO  - 10.21203/rs.3.rs-8233501/v1
+UR  - https://consensus.app/papers/lossless-pangenome-indexing-using-tag-arrays-eskandar-paten/5bd90ad13d705aea8f5f62f2b621d8fd/
+ER  -
+TY  - CONF
+AU  - Nawaz, M.
+AU  - Nawaz, M.
+AU  - Fournier-Viger, Philippe
+AU  - Tseng, Vincent
+TI  - An MDL-Based Genetic Algorithm for Genome Sequence Compression
+PY  - 2024
+DA  - 2024-12-03
+JO  - 2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)
+VL  -
+SP  - 6724
+EP  - 6731
+DO  - 10.1109/bibm62325.2024.10821914
+UR  - https://consensus.app/papers/an-mdlbased-genetic-algorithm-for-genome-sequence-nawaz-nawaz/8aee16541988504eba847b847d4dce74/
+ER  -
+TY  - JOUR
+AU  - S., Sheena
+AU  - Nair, Madhu
+TI  - GenCoder: A Novel Convolutional Neural Network Based Autoencoder for Genomic Sequence Data Compression
+PY  - 2024
+DA  - 2024-02-15
+JO  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+VL  - 21
+SP  - 405
+EP  - 415
+DO  - 10.1109/tcbb.2024.3366240
+UR  - https://consensus.app/papers/gencoder-a-novel-convolutional-neural-network-based-s-nair/c4eb25401ba35e1f85327e2bbb741d3a/
+ER  -
+TY  - JOUR
+AU  - SheenaK., S.
+AU  - Nair, Madhu
+TI  - DNACoder: a CNN-LSTM attention-based network for genomic sequence data compression
+PY  - 2024
+DA  - 2024-07-25
+JO  - Neural Computing and Applications
+VL  - 36
+SP  - 18363
+EP  - 18376
+DO  - 10.1007/s00521-024-10130-4
+UR  - https://consensus.app/papers/dnacoder-a-cnnlstm-attentionbased-network-for-genomic-sheenak-nair/c9cc73897e5c5abb8483413e597e84dd/
+ER  -
+TY  - JOUR
+AU  - Şatır, Esra
+TI  - A DNA Data Storage Method Using Spatial Encoding Based Lossless Compression
+PY  - 2024
+DA  - 2024-12-01
+JO  - Entropy
+VL  - 26
+SP  -
+EP  -
+DO  - 10.3390/e26121116
+UR  - https://consensus.app/papers/a-dna-data-storage-method-using-spatial-encoding-based-atr/daf2a4440843567fb8dc53c65928c6b1/
+ER  -
