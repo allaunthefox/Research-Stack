@@ -1,3 +1,86 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8e9a9fabebe3b838a4f3577696803613af29a7ed9212b7c5feb48966e232b867
-size 11402
+{
+  "total_rows": 1277633,
+  "sample_size": 20000,
+  "category_counts": {
+    "natural_language": 7377,
+    "missing_parser_rules_generic": 11552,
+    "missing_parser_rules_dirac": 714,
+    "malformed": 272,
+    "missing_parser_rules_bigo": 69,
+    "undetermined": 16
+  },
+  "samples": {
+    "natural_language": [
+      "ds = T e\u2212i 0 A2 (s)ds \u00b7 T e\u2212 0 Ap (s)ds , (A3) Rt where Ap (t) = Up\u2020 (t)A1 (t)Up (t) and Up (t) = T e\u2212i 0 A2 (s)ds",
+      "i = 2n\u22121 X (\u22121)k sgn(i \u2212 k) Pf(Fi,k c ) dfk , (13) k=0 k\u0338=i for 1 \u2264 i \u2264 2n \u2212 1",
+      "I = (\u03b41 \u03b42 \u2212 \u03b42 \u03b41 )B I = D \u03be2 CJI \u039eJ1 \u2212 \u03be1 CJI \u039eJ2 \u2261 D\u039eI3 = \u03b43 B I , (3) with the parameters of \u03b43 as given in (23)",
+      "j=3 At this point, we will treat the case m = (q + 1)/2 and m = (q + 1)/3 in two separate subsections",
+      "j = 0 this is an equality by (1",
+      "CM < \u221e, independent of n, i, j, and t, such that sup [\u03a0M Vij \u03a0M , A\u03b1i (t)] \u2264 CM",
+      "H = L2 (R) with N = a\u2020 a or H = L2 (R/(2\u03c0Z)) with N = \u2212\u2206 = Dx2",
+      "coth = 209 \u03b2 2h\u0304 2kB T 0 0 (39) (40) (41) and the correlation coefficient is \u03ba = 0",
+      "Sb = U b b b with U1 , U2 \u2208 Mp(d, R) and \u039e atomic metaplectic contraction",
+      "m = z z \u2212 4 g \u03be\u03b1PI ,1 \u00b52m \u2212\u2192 \u03b6\u03b1PI ,1 \u00b52m PI z PI u2g\u22122m gsg \u03b6\u03b1quartic,1 and \u221a \u03b1 2m+1 (\u03b1+2m+1|2m+1) gsg \u03b6a\u03b1 (t) = (C"
+    ],
+    "missing_parser_rules_generic": [
+      "wj = arcsinh{1/ sinh(\u2113(\u03b3j )/2)}",
+      "V = \u03a3a\u2208A Va satisfies Condition 2",
+      "z = 0 also implies u = v = 0, corresponding to rank-0 singularities, we have z \u0338= 0",
+      "v = e\u2208E fv (e)e",
+      "N=2,000 COCO images, K=256, \u03b1cd =1",
+      "L = {0} and L\u03c9 /L = Tc M",
+      "r=0 (2\u2113)!(2\u2113 + 2r)! zr (r!)2 (\u2113 + r)!(\u2113 \u2212 r)! \u2113 2\u22122\u2113 (2\u2113)!\u03c0 \u22122\u2113 X (\u2212\u2113)r (\u2113 + 12 )r z r 1 (1)r r! (\u2113!)2 (A + B)\u2113+ 2 r=0 = 2\u22122\u2113 (2\u2113)!\u03c0 \u22122\u2113 1 (\u2113!)2 (A + B)\u2113+ 2 \u00b7 2 F1 (\u2212\u2113, \u2113 + 21 ; 1; z)",
+      "e = \u03c8",
+      "nd \u2264 nd\u22121",
+      "N = 10, 000 particles to generate sample trajectories"
+    ],
+    "missing_parser_rules_dirac": [
+      "l+m = \u2212(\u03b2 \u2212 1)(A2 z2n + A3 z3n ) \u2212 (d1 \u2212 d2 )\u03b2 l+m + (d1 \u2212 d2 )\u03b2 l \u2212 d1 \u2264 (\u03b2 \u2212 1)(A2 z2n + A3 z3n ) + (d1 \u2212 d2 ) \u03b2 l+m + (d1 \u2212 d2 ) \u03b2 l +|d1 | \u0010 \u0011 \u2264O(1) + N (\u03b2) \u2212 1 (\u03b2 l+m + \u03b2 l + 1) \u226a\u03b2 l+m",
+      "b \u2248 (12) X J\u2282[1,\u2113\u22121] |J|=h \u0012 \u2264n<b b\u22121 b \u0013h J\u2282[1,\u2113\u22121] |J|=h [(n)b ](d) \u0338=0 \u2200d\u2208J J\u2282[1,\u2113\u22121] |J|=h\u22121 [(n)b ](d) \u0338=0 \u2200d\u2208J X \u0012 b \u2212 1 \u0013h\u22121 Y1 1 1 Y1 1 +",
+      "L = {v \u2208 V0 | \u27e8v, w\u27e9 \u2208 OE for any w \u2208 L}",
+      "Sb\u2264R (n)| \u2264 |Ar | \u226aK b\u03c3 r\u2212\u03c3 \u226aK b\u03c3 R1\u2212\u03c3 \u226aK b 2",
+      "XK = {(m, (e, x)) \u2208 Md \u00d7 XK | fP (m) = \u03c0(e)}, (2",
+      "p \u2264 |\u03b2|, |\u03b31 | + \u00b7 \u00b7 \u00b7 + |\u03b3p | = |\u03b2|",
+      "F \u2264 |E(\u03b1)| \u00b7 \u2225A \u2212 H\u2225F \u2264 3|E(\u03b1)|",
+      "k = k X sup j=0 z\u2208S1/k dj X imz e Pm (a) dz j |m|>N",
+      "energy = E NN (Te ) \u2212 E NN (Tb ) + Z Te Z Tb 2 2 \u03c1|v| dxdt",
+      "r = |PII |"
+    ],
+    "malformed": [
+      "p = e \u03b2pq The connection matrix associated with WKB solutions with different reference points is related by \uf8eb \uf8f6 eVpq Cp = \uf8ec \uf8ed \uf8ec e\u2212Vpq \uf8eb \uf8f7 \uf8ec \uf8f7Cq \uf8ec \uf8f8 \uf8ed \uf8f6 e\u2212Vpq eVpq \uf8f7 \uf8f7 =: [Cq ] (Vpq )",
+      "I = I = (2) (i) (i+1) (i+1)b \uf8f3u(i+1) = W (i+1) u b u = a(i+1) (u(i+1) ) b (i) + W \u2113 + b(i+1) \u2212 \u2212 \u25b6 Proposition 2",
+      "C = \uf8ed0 1 0 c12 0 \u2212c23 \uf8f8",
+      "dz = \uf8f0 \u03a5\u2113 (dz) \u03bd\u2113\u2229R (dxi )\uf8fb",
+      "k=\uf8ed",
+      "hj = \uf8ed (\u03c3\u2113z )A\u2113j \uf8f8\u03c3jx",
+      "bn = 0, \u2200n \u2208 N ; an \u2212 bn \u2208 A; 3) it is a continuum if for infinitely many indices n we have \uf8f1 \uf8f4 \uf8f2bn \u0338= 0, an + bn \u2208 A, \uf8f4 \uf8f3a \u2212 b \u2208 A",
+      "M = (d0 r)q r\u22121 for some r \u2208 Dr , and since every such r satisfies r \u2264 min{g, b\u2032 } = min{g, bg/m} = g min{1, b/m}, we obtain \uf8f1 \u0012 \u0013 gq \u00b7g\u22121 \uf8f4 m \u2032 \uf8f4 q g\u22121 \uf8f4 = \u00b7g = mq\u22121 (m \u2264 b) \uf8f4 \uf8f2(d0 g) g M\u2264",
+      "n \u2265 1, \u0011 \u0010 \uf8f1 \u0001 \u221a 2 \uf8f4 6 + ln \uf8f4 ln ln(6",
+      "pz < 0, \u03b6 = +1, \uf8f4 \uf8f3pz > 0, \u03b6 = \u22121, \uf8f1 \uf8f4 \uf8f2pz > 0, \u03b6 = +1, g 0 > 0, Jz > 0 , g 0 < 0, Jz < 0"
+    ],
+    "missing_parser_rules_bigo": [
+      "M = 0) = \u03c9\u030an,\u2113 (yD = ymirror ) = (2n + \u2113) + O(e\u2212\u2113 2 ); see (3",
+      "g = O(1)",
+      "n=0 \u03b2\u2113 1 3\u03b2\u2113 1 \u03b2\u2113 (1 + \u03c4 )\u2212 2 \u2212 2 +iq \u0001 + O((1 + \u03c4 )\u2212 2 \u2212 2 ), (\u03b2\u2113 \u2208 (0, 1)), 1 1 \u0393 2 + iq \u2212 2 \u03b2\u2113 \u221e X \u03b2 \u03b6 n ( sign (q)\u03b2\u2113 )(1 + \u03c4 )\u2212 sign (q)n\u03b2\u2113 \u2212 21 \u2212 sign (q) 2\u2113 +iq \u0001 , (\u03a8\u221e ) (\u03c4, \u221e) = sign (q)\u03b2 (1 + \u03c4 ) \u2113 0 \u2113m \u0393 12 + iq \u2212 (n + 21 ) sign (q)\u03b2\u2113 n=0 = (\u03a8\u221e 0 )\u2113m (\u03c4, \u221e) = \u2212i \u0393 1 2 + iq 1 (\u03b2\u2113 \u2208 i(0, \u221e)), 1 \u0001 (\u03c4 + 1)\u2212 2 +iq (log(1 + \u03c4 ))\u22121 + (log(1 + \u03c4 ))\u22122 O\u221e ((1 + \u03c4 )\u2212 2 ), (\u03b2\u2113 = 0)",
+      "i = c1 + \u221a + O(1/N) N 12c3 \u00b5i c2,i = c2 + \u221a + O(1/N)",
+      "t \u2264 T E(t) = E\u0302(t) + O(\u03c9 \u22122 ), (7",
+      "pk = \u2212pN +1\u2212l + O(2)",
+      "X \u2265 \u226b log R = \u03b4 log y + O(1)",
+      "n = + + O(e\u2212Q ) , (23) m\u03d5 Q m\u03d5 2+n m\u03d5 Q 4 1",
+      "n = 16 + O(N \u22121 )",
+      "t = A1 dw + O(t2 )"
+    ],
+    "undetermined": [
+      "0.003 WebExplorer-RL/Mirothinker SFR-DeepResearch AgentCPM-Explore",
+      "sS \u2260 0 (even on-shell)",
+      "\u00006\u0000F\u0000R\u0000U\u0000H\u0000\u0010\u0000'\u0000L\u0000I\u0000I \u0000\u0013\u0000\u0011\u0000\u0015 \u0000\u0013\u0000\u0011\u0000\u0013\u0000\u0013\u0000\u0011\u0000\u0013 \u0000\u0014\u0000\u0011\u0000\u0013 (i) Llama3-8B on CoLA. \u0000\u0013\u0000\u0011\u0000\u0015 \u0000\u0013\u0000\u0011\u0000\u0017 \u0000\u0013\u0000\u0011\u0000\u0019 \u0000)\u0000D\u0000O\u0000V\u0000H\u0000\u0003\u00003\u0000R\u0000V\u0000L\u0000W\u0000L\u0000Y\u0000H\u0000\u0003\u00005\u0000D\u0000W\u0000H \u00006\u0000F\u0000R\u0000U\u0000H\u0000\u0010\u00005\u0000D\u0000W\u0000L\u0000R \u0000)\u0000H\u0000G\u0000\u0010\u0000O\u0000R\u0000V\u0000V \u0000)\u00007\u0000",
+      "\u00009\u0000* \u00003\u0000H\u0000U\u0000I\u0000R\u0000U\u0000P\u0000D\u0000Q\u0000F\u0000H \u0000\u0014\u0000\u0011\u0000\u0013\u0000\u0013 SIR\u2191 0.862 0.611 0.584 0.546 0.551 0.543 0.502 0.490 0.497 0.441 0.442 0.376 0.297 0.209 0.183 0.052 0.184 0.147 0.068 0.053 Human FCR\u2191 1.000 0.463 0.404 0.209 0.252 0.209 0.000 -0.045 -0.003 -0.202 -0.211 -0.436 -0.769 -1.038 -1.320 -1.088 -1.283 -1.239 -1.503 -1.834 PCR\u2191 1.000 0.667 0.607 0.531 0.504 0.526 0.510 0.264 0.380 0.411 0.336 0.259 0.213 0.108 0.172 0.026 0.111 0.076 0.052 0.049 AVG\u2191 0.966 0.470 0.409 0.356 0.346 0.336 0.308 0.177 0.224 0.193 0.142 0.051 -0.062 -0.180 -0.241 -0.253 -0.247 -0.254 -0.346 -0.433 \u00007\u00006\u00005 \u0000\u0013\u0000\u0011\u0000\u0015\u0000\u001b TSR\u2191 1.000 0.194 0.125 0.056 0.015 0.014 0.042 0.056 0.029 0.015 0.014 0.000 0.000 0.014 0.000 0.000 0.000 0.000 0.000 0.000 Robot FCR\u2191 1.000 0.193 -0.145 -0.592 -0.659 -0.779 -0.724 -0.200 -0.761 -1.208 -0.836 -0.823 -1.714 -1.492 -1.782 -1.794 -2.063 -2.138 -2.027 -2.584 SIR\u2191 0.895 0.528 0.456 0.372 0.366 0.347 0.339 0.467 0.354 0.259 0.339 0.329 0.176 0.216 0.176 0.039 0.126 0.100 0.037 0.035 \u00006\u0000,\u00005 \u0000\u0013\u0000\u0011\u0000\u001b\u0000\u0013 PCR\u2191 1.000 0.533 0.437 0.306 0.222 0.290 0.291 0.302 0.227 0.238 0.258 0.229 0.129 0.110 0.115 0.024 0.073 0.073 0.045 0.057 AVG\u2191 0.974 0.362 0.218 0.035 -0.014 -0.032 -0.013 0.156 -0.038 -0.174 -0.056 -0.066 -0.352 -0.288 -0.372 -0.433 -0.466 -0.491 -0.486 -0.623 TSR\u2191 1.000 0.155 0.064 0.115 0.061 0.053 0.170 0.015 0.023 0.096 0.004 0.004 0.008 0.004 0.000 0.000 0.000 0.000 0.000 0.000 SIR\u2191 0.870 0.593 0.556 0.506 0.509 0.499 0.464 0.485 0.465 0.400 0.419 0.366 0.270 0.210 0.181 0.049 0.171 0.137 0.063 0.049 \u0000)\u0000&\u00005 \u0000\u0014\u0000\u0011\u0000\u0013\u0000\u0013 Overall FCR\u2191 1.000 0.389 0.254 -0.011 0.003 -0.061 -0.197 -0.087 -0.209 -0.467 -0.382 -0.538 -1.029 -1.163 -1.445 -1.281 -1.494 -1.484 -1.616 -2.038 \u0000\u0013\u0000\u0011\u0000\u0015\u0000\u0014 \u0000\u0013\u0000\u0011\u0000\u0019\u0000\u0013 \u0000\u0013\u0000\u0011\u0000\u0013\u0000\u0013 \u0000\u0013\u0000\u0011\u0000\u001a\u0000\u0018 \u0000\u0013\u0000\u0011\u0000\u0013\u0000\u0013 \u0000\u0013\u0000\u0011\u0000\u0014\u0000\u0017 \u0000\u0013\u0000\u0011\u0000\u0017\u0000\u0013 \u0000\u0010\u0000\u0014\u0000\u0011\u0000\u0013\u0000\u0013 \u0000\u0013\u0000\u0011\u0000\u0018\u0000\u0013 \u0000\u0010\u0000\u0013\u0000\u0011\u0000\u0018\u0000\u0013 \u0000\u0013\u0000\u0011\u0000\u0013\u0000\u001a \u0000\u0013\u0000\u0011\u0000\u0015\u0000\u0013 \u0000\u0010\u0000\u0015\u0000\u0011\u0000\u0013\u0000\u0013 \u0000\u0013\u0000\u0011\u0000\u0015\u0000\u0018 \u0000\u0013 \u0000\u0014 \u0000/\u0000H\u0000Y\u0000H\u0000O \u0000\u0015 \u0000\u0016 \u0000\u0013\u0000\u0011\u0000\u0013\u0000\u0013 \u0000\u0013 \u0000\u0014 \u0000/\u0000H\u0000Y\u0000H\u0000O \u0000*\u0000H\u0000P\u0000L\u0000Q\u0000L\u0000\u0010\u0000\u0015\u0000\u0011\u0000\u0018\u0000\u0010\u0000)\u0000O\u0000D\u0000V\u0000K \u0000\u0015 \u0000\u0016 \u0000\u0013\u0000\u0011\u0000\u0013\u0000\u0013 \u0000\u0013 \u0000\u0014 \u00004\u0000Z\u0000H\u0000Q\u0000\u0015\u0000\u0011\u0000\u0018\u0000\u0010\u00009\u0000/\u0000\u0010\u0000\u001a\u0000\u0015\u0000% \u0000/\u0000H\u0000Y\u0000H\u0000O \u0000\u0015 \u0000\u0016 \u0000\u0010\u0000\u0016\u0000\u0011\u0000\u0013\u0000\u0013 \u0000\u0013 \u0000/\u0000/\u0000D\u00009\u0000",
+      "\u0000/\u0000 \u0000\u0014\u0000\u0013\u0000\u0003\u0000(\u0000[\u0000D\u0000F\u0000W\u0000\u0003\u0000J\u0000U\u0000R\u0000X\u0000Q\u0000G\u0000\u0003\u0000V\u0000W\u0000D\u0000W\u0000H \u0000/\u0000 \u0000\u0014\u0000\u0013\u0000\u0003\u0000*\u0000U\u0000R\u0000X\u0000Q\u0000G\u0000\u0003\u0000V\u0000W\u0000D\u0000W\u0000H\u0000\u0003\u0000(\u0000%\u0000",
+      "th sardine . 57 - Each coordinate",
+      "\\n\\n Check both values [...] :\\n\\n - For",
+      "12.2/month, memory is",
+      "12/M output), a single method evaluation costs approximately",
+      "Radiology Fellow Agent 3D Chest CT Multi-region Segmentation Dual-Stream ViT3D \ud835\udc9c Resident Agent (Llama-2-Chat-7B) Retrieval Agent \ud835\udc9c \ud835\udc9c !\"# %\"& Fellow Agent i Instruction Image-to-Image Stage 3: Consensus-Driven Finalization \ud835\udc9c !\""
+    ]
+  }
+}

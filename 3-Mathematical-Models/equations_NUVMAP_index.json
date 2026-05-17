@@ -1,3 +1,61 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dfe3c7addfcb3c33210966c48d9ae2f926f192f970c3184184be0f6c1f9bc036
-size 2140
+{
+  "files": {
+    "chain_equations_20260504_134248": {
+      "chain": "best_general",
+      "compressed": "chain_equations_20260504_134248.compressed",
+      "compressed_mb": 0.6105031967163086,
+      "ratio": 4.955248617921485,
+      "raw_mb": 3.0251951217651367
+    },
+    "coupling_equations_20260504_134248": {
+      "chain": "best_general",
+      "compressed": "coupling_equations_20260504_134248.compressed",
+      "compressed_mb": 3.132744789123535,
+      "ratio": 4.953677729236106,
+      "raw_mb": 15.518608093261719
+    },
+    "entropy_equations_20260504_134248": {
+      "chain": "best_general",
+      "compressed": "entropy_equations_20260504_134248.compressed",
+      "compressed_mb": 0.3930168151855469,
+      "ratio": 4.50599842759665,
+      "raw_mb": 1.7709331512451172
+    },
+    "feedback_equations_20260504_134248": {
+      "chain": "best_general",
+      "compressed": "feedback_equations_20260504_134248.compressed",
+      "compressed_mb": 0.8723917007446289,
+      "ratio": 4.833831273250405,
+      "raw_mb": 4.216994285583496
+    },
+    "gradient_equations_20260504_134248": {
+      "chain": "best_general",
+      "compressed": "gradient_equations_20260504_134248.compressed",
+      "compressed_mb": 3.871823310852051,
+      "ratio": 5.125069059565738,
+      "raw_mb": 19.843361854553223
+    },
+    "mass_equations_20260504_134248": {
+      "chain": "best_general",
+      "compressed": "mass_equations_20260504_134248.compressed",
+      "compressed_mb": 3.311905860900879,
+      "ratio": 4.805759642477147,
+      "raw_mb": 15.916223526000977
+    },
+    "scaling_equations_20260504_134248": {
+      "chain": "best_general",
+      "compressed": "scaling_equations_20260504_134248.compressed",
+      "compressed_mb": 0.4381551742553711,
+      "ratio": 4.666234255254778,
+      "raw_mb": 2.044534683227539
+    },
+    "unknown_equations_20260504_134248": {
+      "chain": "best_general",
+      "compressed": "unknown_equations_20260504_134248.compressed",
+      "compressed_mb": 24.228981018066406,
+      "ratio": 5.824996473264035,
+      "raw_mb": 141.13372898101807
+    }
+  },
+  "manifest": "compression_manifest.json"
+}
