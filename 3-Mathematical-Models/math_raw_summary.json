@@ -1,3 +1,46 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3892964cffcc1b255ef3604f01bbc8af8fb11f7d95272a4a6d1c3f17bdf846bc
-size 1040
+{
+  "timestamp": "20260504_145319",
+  "total_equations": 1512873,
+  "has_refined_text": 1512873,
+  "columns": [
+    "uuid",
+    "equation",
+    "refined_equation"
+  ],
+  "dropped_columns": [
+    "equation_id",
+    "pattern",
+    "domain",
+    "confidence",
+    "source",
+    "source_type",
+    "category",
+    "year",
+    "title",
+    "authors",
+    "doi",
+    "length",
+    "has_operator",
+    "has_derivative",
+    "has_integral",
+    "has_sum",
+    "has_product",
+    "has_fraction",
+    "has_matrix",
+    "has_vector",
+    "has_function_call",
+    "has_subscript",
+    "has_superscript",
+    "has_sqrt",
+    "is_short",
+    "is_medium",
+    "is_long",
+    "num_operators",
+    "num_variables",
+    "extracted_at",
+    "text_to_classify",
+    "unified_pattern"
+  ],
+  "input_file": "/home/allaun/Documents/Research Stack/3-Mathematical-Models/equations_parquet_tagged/equations_unified_9pattern.parquet",
+  "output_file": "/home/allaun/Documents/Research Stack/3-Mathematical-Models/equations_parquet_tagged/equations_math_raw.parquet"
+}

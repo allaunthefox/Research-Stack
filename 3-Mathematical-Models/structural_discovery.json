@@ -1,3 +1,206 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9caede372c7d8c020ba75b8696682ae57b454eb4c729b3373b29d433c2faa7ee
-size 3201
+{
+  "top_structures": [
+    {
+      "structure": "v0 = 0",
+      "count": 943
+    },
+    {
+      "structure": "v0 = 1,",
+      "count": 418
+    },
+    {
+      "structure": "v0 = 1",
+      "count": 354
+    },
+    {
+      "structure": "v0 > 0",
+      "count": 248
+    },
+    {
+      "structure": "v0 = v1",
+      "count": 185
+    },
+    {
+      "structure": "v0 \u2265 1",
+      "count": 184
+    },
+    {
+      "structure": "v0 \u2265 0",
+      "count": 164
+    },
+    {
+      "structure": "v0 = 2",
+      "count": 157
+    },
+    {
+      "structure": "v0 < 0",
+      "count": 147
+    },
+    {
+      "structure": "v0 \u2264 v1",
+      "count": 142
+    },
+    {
+      "structure": "v0 \u2265 2",
+      "count": 107
+    },
+    {
+      "structure": "v0=0",
+      "count": 99
+    },
+    {
+      "structure": "v0 = 0,",
+      "count": 84
+    },
+    {
+      "structure": "v0 = 3",
+      "count": 67
+    },
+    {
+      "structure": "v0 = 1, 2,",
+      "count": 67
+    },
+    {
+      "structure": "v0/v1 = 0",
+      "count": 66
+    },
+    {
+      "structure": "v0 < v1",
+      "count": 65
+    },
+    {
+      "structure": "v0 = 1, 2",
+      "count": 65
+    },
+    {
+      "structure": "v0 =",
+      "count": 54
+    },
+    {
+      "structure": "v0 > 1",
+      "count": 52
+    },
+    {
+      "structure": "v0 \u2265 3",
+      "count": 50
+    },
+    {
+      "structure": "v0 = 0, 1,",
+      "count": 50
+    },
+    {
+      "structure": "v0=1,",
+      "count": 45
+    },
+    {
+      "structure": "v0=1",
+      "count": 43
+    },
+    {
+      "structure": "v0 = 4",
+      "count": 42
+    },
+    {
+      "structure": "v0 \u2265 v1",
+      "count": 41
+    },
+    {
+      "structure": "v0\u22650",
+      "count": 38
+    },
+    {
+      "structure": "v0 > v1",
+      "count": 36
+    },
+    {
+      "structure": "v0 = (x1 ,",
+      "count": 32
+    },
+    {
+      "structure": "v0 \u2264 v1 - 1",
+      "count": 32
+    },
+    {
+      "structure": "v0 = 2,",
+      "count": 31
+    },
+    {
+      "structure": "v0 = 5",
+      "count": 31
+    },
+    {
+      "structure": "v0 < 1",
+      "count": 29
+    },
+    {
+      "structure": "v0 \u2248 0",
+      "count": 29
+    },
+    {
+      "structure": "v0=1 Proof",
+      "count": 29
+    },
+    {
+      "structure": "v0 =0",
+      "count": 28
+    },
+    {
+      "structure": "v0 > 2",
+      "count": 25
+    },
+    {
+      "structure": "v0>0",
+      "count": 24
+    },
+    {
+      "structure": "v0 \u2264 0",
+      "count": 23
+    },
+    {
+      "structure": "v0 = -0",
+      "count": 22
+    },
+    {
+      "structure": "v0 = 1)",
+      "count": 22
+    },
+    {
+      "structure": "rrb =0",
+      "count": 21
+    },
+    {
+      "structure": "v0 = -1",
+      "count": 21
+    },
+    {
+      "structure": "v0 = 1, 2, 3",
+      "count": 21
+    },
+    {
+      "structure": "v0 \u2265 4",
+      "count": 20
+    },
+    {
+      "structure": "v0 = 0)",
+      "count": 19
+    },
+    {
+      "structure": "v0 = \u2205",
+      "count": 19
+    },
+    {
+      "structure": "v0\u2264v1",
+      "count": 19
+    },
+    {
+      "structure": "v0 = v0",
+      "count": 18
+    },
+    {
+      "structure": "v0\u22651",
+      "count": 17
+    }
+  ],
+  "unique_structures_count": 38502,
+  "total_sample": 50000
+}
